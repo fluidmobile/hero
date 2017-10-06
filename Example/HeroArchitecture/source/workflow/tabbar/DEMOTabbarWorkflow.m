@@ -13,6 +13,7 @@
 #import "DEMOMainWorkflow.h"
 #import "DEMOLoginWorkflow.h"
 #import "DEMONotesWorkflow.h"
+#import "DEMOContainerWorkflow.h"
 
 #import "DEMOTabbarWorkflowContract.h"
 
@@ -21,6 +22,7 @@
 @interface DEMOTabbarWorkflow () <DEMOLoginParentWorkflowInput, DEMOMainParentWorkflowInput>
 @property (nonatomic, strong) HEROBaseWorkflow* workflowMain;
 @property (nonatomic, strong) HEROBaseWorkflow* workflowNotes;
+@property (nonatomic, strong) HEROBaseWorkflow* workflowEditing;
 
 @end
 
@@ -31,7 +33,7 @@
 }
 
 -(HEROBaseCoordinator *)tabbarCoordinator{
-	NSArray* coordinators = @[[self.workflowMain initialCoordinator],  [self.workflowNotes initialCoordinator]];
+	NSArray* coordinators = @[[self.workflowMain initialCoordinator],  [self.workflowNotes initialCoordinator], [self.workflowEditing initialCoordinator]];
 	HEROBaseCoordinator* coordinator = [[HEROBaseCoordinator alloc] initWithUsecase:nil];
 	DEMOTabbarRouter* router = [[DEMOTabbarRouter alloc] initWithCoordinator:coordinator workflowControl:self coordinators:coordinators transition:[DEMOTabbarTransition new] selectedRouter:nil];
 	coordinator.router = router;
@@ -52,6 +54,14 @@
 		self.workflowNotes.parentWorkflow = self;
 	}
 	return _workflowNotes;
+}
+
+-(HEROBaseWorkflow *)workflowEditing{
+	if (!_workflowEditing){
+		self.workflowEditing = [DEMOContainerWorkflow new];
+		self.workflowEditing.parentWorkflow = self;
+	}
+	return _workflowEditing;
 }
 
 -(void)loggedInOnRouter:(HEROBaseRouter*)router{

@@ -23,6 +23,10 @@
     return self;
 }
 
+- (void)requestContentUpdate{
+	[self requestViewUpdate];
+}
+
 -(NSArray<DEMOEditingPonso*>*)createEditingControls{
 	NSMutableArray<DEMOEditingPonso*>* editingControls = [@[] mutableCopy];
 	[editingControls addObject:[[DEMOEditingPonso alloc] initWithTitle:@"add" mode:DEMOEditingModeAdd]];
