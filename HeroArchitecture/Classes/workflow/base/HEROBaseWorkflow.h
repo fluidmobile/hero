@@ -12,12 +12,10 @@
 @interface HEROBaseWorkflow : NSObject <HEROBaseWorkflowInterface>
 
 @property (nonatomic, weak) HEROBaseWorkflow* parentWorkflow;
-@property (nonatomic, strong) NSMutableArray <HERORouterReference*>* routers;
 
 - (void)tabbarDidSelectRouter:(HEROBaseRouter*)router;
-- (HEROBaseCoordinator*)coordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
-- (HEROBaseRouter*)existingRouterForClass:(Class)routerClass;
-- (HEROBaseWorkflow*)workflowForWorkflow:(Class)workflowClass;
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
+- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
 - (HEROBaseCoordinator *)initialCoordinator;
 - (void)addRouter:(HEROBaseRouter*)router;
 @end

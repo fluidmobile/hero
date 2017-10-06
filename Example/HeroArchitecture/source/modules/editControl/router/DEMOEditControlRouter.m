@@ -18,7 +18,7 @@
 
 #pragma mark - DEMOEditControlRouterInput
 - (void)switchedToEditingMode:(DEMOEditingMode)editingMode {
-	[(id<DEMOEditControlRouterWorkflowControl>)self.workflow editControlSwitchedToEditingMode:editingMode onRouter:self];
+	[(id<DEMOEditControlWorkflowInput>)self.workflow editControlSwitchedToEditingMode:editingMode onRouter:self];
 }
 
 @end

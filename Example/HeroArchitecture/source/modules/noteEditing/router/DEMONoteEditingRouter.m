@@ -18,7 +18,7 @@
 
 #pragma mark - DEMONoteEditingRouterInput
 -(void)didFinishEditing{
-	[(id<DEMONoteEditingRouterWorkflowControl>)self.workflow noteEditingDidFinishEditingOnRouter:self];
+	[(id<DEMONoteEditingWorkflowInput>)self.workflow noteEditingDidFinishEditingOnRouter:self];
 }
 
 @end

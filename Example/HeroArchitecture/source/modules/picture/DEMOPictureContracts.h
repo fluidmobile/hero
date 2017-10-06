@@ -6,7 +6,7 @@
 @protocol DEMOPictureRouterOutput <NSObject>
 @end
 
-@protocol DEMOPictureRouterWorkflowControl <NSObject>
+@protocol DEMOPictureWorkflowInput <NSObject>
 @end
 
 #pragma mark - Usecase

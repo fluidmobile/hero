@@ -9,7 +9,7 @@
 @protocol DEMOMainRouterOutput <NSObject>
 @end
 
-@protocol DEMOMainRouterWorkflowControl <NSObject>
+@protocol DEMOMainWorkflowInput <NSObject>
 -(void)selectedSelection:(DEMOMainSelection)selection onRouter:(HEROBaseRouter*)router;
 @end
 

@@ -18,49 +18,42 @@
 #import "DEMONotesCoordinator.h"
 #import "DEMONotesContracts.h"
 
-@interface DEMOContainerWorkflow () <DEMOContainerRouterWorkflowControl, DEMONotesRouterWorkflowControl>
+#import "DEMONoteEditingRouter.h"
+#import "DEMONoteEditingUsecase.h"
+#import "DEMONoteEditingCoordinator.h"
+#import "DEMONoteEditingContracts.h"
+
+@interface DEMOContainerWorkflow () <DEMOContainerWorkflowInput, DEMONotesWorkflowInput>
 @end
 
 @implementation DEMOContainerWorkflow
 
 - (HEROBaseCoordinator*)createInitialCoordinator{
-	
-	NSAssert(NO,@"EMPTY ROUTER");
-	return nil;
+	DEMOContainerCoordinator* containerCoordinator = [self containerCoordinator];
+	DEMOContainerRouter* router = (DEMOContainerRouter*)containerCoordinator.router;
+	[router updateMasterRouter:[self editCoordinator].router];
+	[router updateDetailRouter:[self notesCoordinator].router];
+	return containerCoordinator;
 }
 
 #pragma mark - router creation
 
-//- (HEROBaseRouter*)editRouter{
-//	HEROBaseRouter* router = [self existingRouterForClass:[<#class#>Router class]];
-//	if (!router) {
-//		router = [self routerForRouter:[<#class#>Router class] coordinator:[<#class#>Coordinator class] usecase:[<#class#>Usecase class]];
-//	}
-//	return router;
-//}
-
-- (HEROBaseCoordinator*)notesCoordinator{
-	HEROBaseRouter* router = [self existingRouterForClass:[DEMONotesRouter class]];
-	if (!router) {
-		HEROBaseCoordinator* coordinator =  [self coordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
-		return coordinator;
-	}
-	return router.coordinator;
+- (DEMONoteEditingCoordinator*)editCoordinator{
+	return (DEMONoteEditingCoordinator*)[self dequeueCoordinatorForRouter:[DEMONoteEditingRouter class] coordinator:[DEMONoteEditingCoordinator class] usecase:[DEMONoteEditingUsecase class]];
 }
 
-- (HEROBaseCoordinator*)containerCoordinator{
-	HEROBaseRouter* router = [self existingRouterForClass:[DEMOContainerRouter class]];
-	if (!router) {
-		
-		HEROBaseCoordinator* coordinator =  [self coordinatorForRouter:[DEMOContainerRouter class] coordinator:[DEMOContainerCoordinator class] usecase:[DEMOContainerUsecase class]];
-		return coordinator;
-	}
-	return router.coordinator;
+- (DEMONotesCoordinator*)notesCoordinator{
+	return (DEMONotesCoordinator*)[self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
 }
 
-#pragma mark - DEMOContainerRouterWorkflowControl
+- (DEMOContainerCoordinator*)containerCoordinator{
+	return (DEMOContainerCoordinator*)[self dequeueCoordinatorForRouter:[DEMOContainerRouter class] coordinator:[DEMOContainerCoordinator class] usecase:[DEMOContainerUsecase class]];
+}
 
-#pragma mark - DEMONotesRouterWorkflowControl
+
+#pragma mark - DEMOContainerWorkflowInput
+
+#pragma mark - DEMONotesWorkflowInput
 
 
 @end

@@ -7,7 +7,7 @@
 @protocol DEMOLoginRouterOutput <NSObject>
 @end
 
-@protocol DEMOLoginRouterWorkflowControl <NSObject>
+@protocol DEMOLoginWorkflowInput <NSObject>
 -(void)loggedInOnRouter:(HEROBaseRouter*)router;
 @end
 

@@ -21,7 +21,7 @@
 }
 
 - (void)presentForLoggedIn{
-	[(id <DEMOLoginRouterWorkflowControl>)self.workflow loggedInOnRouter:self];
+	[(id <DEMOLoginWorkflowInput>)self.workflow loggedInOnRouter:self];
 }
 
 @end

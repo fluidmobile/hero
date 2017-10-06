@@ -6,7 +6,7 @@
 @protocol DEMOContainerRouterOutput <NSObject>
 @end
 
-@protocol DEMOContainerRouterWorkflowControl <NSObject>
+@protocol DEMOContainerWorkflowInput <NSObject>
 @end
 
 #pragma mark - Usecase

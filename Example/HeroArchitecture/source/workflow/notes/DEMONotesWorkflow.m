@@ -17,7 +17,7 @@
 }
 
 -(HEROBaseCoordinator *)notesCoordinator{
-	return [self coordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
+	return [self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
 }
 
 

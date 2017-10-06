@@ -20,7 +20,7 @@
 #import "DEMOLoginUsecase.h"
 
 #import "HEROAppWorkflow.h"
-@interface DEMOLoginWorkflow () <DEMOLoginRouterWorkflowControl>
+@interface DEMOLoginWorkflow () <DEMOLoginWorkflowInput>
 
 @end
 
@@ -36,10 +36,7 @@
 }
 
 -(HEROBaseCoordinator *)routerLoggedOut{
-	
-	HEROBaseCoordinator* coordinator = [self coordinatorForRouter:[DEMOLoginRouter class] coordinator:[DEMOLoginCoordinator class] usecase:[DEMOLoginUsecase class]];
-	[self addRouter:coordinator.router];
-	return coordinator;
+	return [self dequeueCoordinatorForRouter:[DEMOLoginRouter class] coordinator:[DEMOLoginCoordinator class] usecase:[DEMOLoginUsecase class]];
 }
 
 

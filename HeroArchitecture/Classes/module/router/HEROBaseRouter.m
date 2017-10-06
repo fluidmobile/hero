@@ -20,14 +20,14 @@
 @implementation HEROBaseRouter
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl{
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(id)workflow{
 	self = [super init];
 	if (!self) {
 		return nil;
 	}
 	_coordinator = coordinator;
 	self.coordinator.router = self;
-	_workflow = workflowControl;
+	_workflow = workflow;
 	
 	return self;
 }

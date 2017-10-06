@@ -16,7 +16,7 @@
 @property (nonatomic, assign) BOOL hasNavigationInTabBar;
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl;
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(id)workflow;
 
 - (void)pushOnRouter:(HEROBaseRouter*)router;
 

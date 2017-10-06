@@ -6,7 +6,7 @@
 @protocol DEMONotesRouterOutput <NSObject>
 @end
 
-@protocol DEMONotesRouterWorkflowControl <NSObject>
+@protocol DEMONotesWorkflowInput <NSObject>
 @end
 
 @protocol DEMONotesUsecaseOutput <NSObject>

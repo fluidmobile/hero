@@ -24,13 +24,15 @@
     return [[self initialWorkflow] initialCoordinator];
 }
 
--(HEROBaseWorkflow*)loggedInWorkflow{
-	HEROBaseWorkflow* workflow = [self workflowForWorkflow:[DEMOTabbarWorkflow class]];
+-(DEMOTabbarWorkflow*)loggedInWorkflow{
+	DEMOTabbarWorkflow* workflow = [DEMOTabbarWorkflow new];
+	workflow.parentWorkflow = self;
 	return workflow;
 }
 
--(HEROBaseWorkflow *)loggedOutWorkflow{
-	HEROBaseWorkflow* workflow = [self workflowForWorkflow:[DEMOLoginWorkflow class]];
+-(DEMOLoginWorkflow*)loggedOutWorkflow{
+	DEMOLoginWorkflow* workflow = [DEMOLoginWorkflow new];
+	workflow.parentWorkflow = self;
 	return workflow;
 }
 

@@ -457,8 +457,8 @@
 		96837D061F86775A00591FFD /* categories */ = {
 			isa = PBXGroup;
 			children = (
-				96837D071F86775A00591FFD /* UIView+Frame.m */,
 				96837D081F86775A00591FFD /* UIView+Frame.h */,
+				96837D071F86775A00591FFD /* UIView+Frame.m */,
 			);
 			path = categories;
 			sourceTree = "<group>";
@@ -466,10 +466,10 @@
 		96837D091F86775A00591FFD /* helper */ = {
 			isa = PBXGroup;
 			children = (
-				96837D0A1F86775A00591FFD /* DEMOAppFont.h */,
-				96837D0B1F86775A00591FFD /* DEMOAppColor.m */,
-				96837D0C1F86775A00591FFD /* DEMOAppFont.m */,
 				96837D0D1F86775A00591FFD /* DEMOAppColor.h */,
+				96837D0B1F86775A00591FFD /* DEMOAppColor.m */,
+				96837D0A1F86775A00591FFD /* DEMOAppFont.h */,
+				96837D0C1F86775A00591FFD /* DEMOAppFont.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -478,17 +478,16 @@
 			isa = PBXGroup;
 			children = (
 				96837D0F1F86775A00591FFD /* settings */,
-				96837D1F1F86775A00591FFD /* Test */,
-				96837D241F86775A00591FFD /* Picture */,
+				96837D241F86775A00591FFD /* picture */,
 				96837D371F86775A00591FFD /* tabbar */,
-				96837D3E1F86775A00591FFD /* EditControl */,
-				96837D541F86775A00591FFD /* Container */,
+				96837D3E1F86775A00591FFD /* editControl */,
+				96837D541F86775A00591FFD /* container */,
 				96837D641F86775A00591FFD /* common */,
 				96837D6F1F86775A00591FFD /* notes */,
 				96837D871F86775A00591FFD /* main */,
 				96837D991F86775A00591FFD /* login */,
 				96837DAC1F86775A00591FFD /* base */,
-				96837DB81F86775A00591FFD /* NoteEditing */,
+				96837DB81F86775A00591FFD /* noteEditing */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -543,46 +542,7 @@
 			path = router;
 			sourceTree = "<group>";
 		};
-		96837D1F1F86775A00591FFD /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				96837D201F86775A00591FFD /* coordinator */,
-				96837D211F86775A00591FFD /* view */,
-				96837D221F86775A00591FFD /* usecase */,
-				96837D231F86775A00591FFD /* router */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
-		96837D201F86775A00591FFD /* coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = coordinator;
-			sourceTree = "<group>";
-		};
-		96837D211F86775A00591FFD /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		96837D221F86775A00591FFD /* usecase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = usecase;
-			sourceTree = "<group>";
-		};
-		96837D231F86775A00591FFD /* router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		96837D241F86775A00591FFD /* Picture */ = {
+		96837D241F86775A00591FFD /* picture */ = {
 			isa = PBXGroup;
 			children = (
 				96837D251F86775A00591FFD /* DEMOPictureContracts.h */,
@@ -592,7 +552,7 @@
 				96837D311F86775A00591FFD /* useCase */,
 				96837D341F86775A00591FFD /* router */,
 			);
-			path = Picture;
+			path = picture;
 			sourceTree = "<group>";
 		};
 		96837D261F86775A00591FFD /* coordinator */ = {
@@ -669,7 +629,7 @@
 			path = router;
 			sourceTree = "<group>";
 		};
-		96837D3E1F86775A00591FFD /* EditControl */ = {
+		96837D3E1F86775A00591FFD /* editControl */ = {
 			isa = PBXGroup;
 			children = (
 				96837D3F1F86775A00591FFD /* coordinator */,
@@ -679,7 +639,7 @@
 				96837D4E1F86775A00591FFD /* useCase */,
 				96837D511F86775A00591FFD /* router */,
 			);
-			path = EditControl;
+			path = editControl;
 			sourceTree = "<group>";
 		};
 		96837D3F1F86775A00591FFD /* coordinator */ = {
@@ -732,7 +692,7 @@
 			path = router;
 			sourceTree = "<group>";
 		};
-		96837D541F86775A00591FFD /* Container */ = {
+		96837D541F86775A00591FFD /* container */ = {
 			isa = PBXGroup;
 			children = (
 				96837D551F86775A00591FFD /* coordinator */,
@@ -741,7 +701,7 @@
 				96837D601F86775A00591FFD /* DEMOContainerContracts.h */,
 				96837D611F86775A00591FFD /* router */,
 			);
-			path = Container;
+			path = container;
 			sourceTree = "<group>";
 		};
 		96837D551F86775A00591FFD /* coordinator */ = {
@@ -1029,7 +989,7 @@
 			path = service;
 			sourceTree = "<group>";
 		};
-		96837DB81F86775A00591FFD /* NoteEditing */ = {
+		96837DB81F86775A00591FFD /* noteEditing */ = {
 			isa = PBXGroup;
 			children = (
 				96837DB91F86775A00591FFD /* coordinator */,
@@ -1040,7 +1000,7 @@
 				96837DC41F86775A00591FFD /* useCase */,
 				96837DC71F86775A00591FFD /* router */,
 			);
-			path = NoteEditing;
+			path = noteEditing;
 			sourceTree = "<group>";
 		};
 		96837DB91F86775A00591FFD /* coordinator */ = {
@@ -1085,8 +1045,8 @@
 			isa = PBXGroup;
 			children = (
 				96837DCB1F86775A00591FFD /* DEMOEntity.h */,
-				96837DCC1F86775A00591FFD /* DEMONoteEntity.h */,
 				96837DCD1F86775A00591FFD /* DEMOEntity.m */,
+				96837DCC1F86775A00591FFD /* DEMONoteEntity.h */,
 				96837DCE1F86775A00591FFD /* DEMONoteEntity.m */,
 			);
 			path = entity;
@@ -1103,8 +1063,8 @@
 		96837DD11F86775A00591FFD /* factory */ = {
 			isa = PBXGroup;
 			children = (
-				96837DD21F86775A00591FFD /* HEROViewFactory.m */,
 				96837DD31F86775A00591FFD /* HEROViewFactory.h */,
+				96837DD21F86775A00591FFD /* HEROViewFactory.m */,
 			);
 			path = factory;
 			sourceTree = "<group>";
@@ -1235,6 +1195,9 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "fluidmobile GmbH";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 3DS8DSN8UK;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -1611,7 +1574,7 @@
 			baseConfigurationReference = B0FF78566CCCDA951078887E /* Pods-HeroArchitecture_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3DS8DSN8UK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeroArchitecture/HeroArchitecture-Prefix.pch";
 				INFOPLIST_FILE = "HeroArchitecture/HeroArchitecture-Info.plist";
@@ -1627,7 +1590,7 @@
 			baseConfigurationReference = DE9033E42F76F7C0DB75659A /* Pods-HeroArchitecture_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3DS8DSN8UK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeroArchitecture/HeroArchitecture-Prefix.pch";
 				INFOPLIST_FILE = "HeroArchitecture/HeroArchitecture-Info.plist";

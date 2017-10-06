@@ -34,7 +34,7 @@
 #import "DEMOPictureContracts.h"
 
 
-@interface DEMOMainWorkflow() <DEMOMainRouterWorkflowControl, DEMOSettingsWorkflowControl, DEMOPictureRouterWorkflowControl>
+@interface DEMOMainWorkflow() <DEMOMainWorkflowInput, DEMOSettingsWorkflowControl, DEMOPictureWorkflowInput>
 @end
 
 @implementation DEMOMainWorkflow
@@ -47,39 +47,19 @@
 #pragma mark - router creation
 
 - (HEROBaseCoordinator*)mainCoordinator{
-	HEROBaseRouter* router = [self existingRouterForClass:[DEMOMainRouter class]];
-	if (!router) {
-		HEROBaseCoordinator* coordinator = [self coordinatorForRouter:[DEMOMainRouter class] coordinator:[DEMOMainCoordinator class] usecase:[DEMOMainUsecase class]];
-		return coordinator;
-	}
-	return router.coordinator;
+	return [self dequeueCoordinatorForRouter:[DEMOMainRouter class] coordinator:[DEMOMainCoordinator class] usecase:[DEMOMainUsecase class]];
 }
 
 - (HEROBaseCoordinator*)settingsCoordinator{
-	HEROBaseRouter* router = [self existingRouterForClass:[DEMOSettingsRouter class]];
-	if (!router) {
-		HEROBaseCoordinator* coordinator = [self coordinatorForRouter:[DEMOSettingsRouter class] coordinator:[DEMOSettingsCoordinator class] usecase:[DEMOSettingsUsecase class]];
-		return coordinator;
-	}
-	return router.coordinator;
+	return [self dequeueCoordinatorForRouter:[DEMOSettingsRouter class] coordinator:[DEMOSettingsCoordinator class] usecase:[DEMOSettingsUsecase class]];
 }
 
 - (HEROBaseCoordinator*)notesCoordinator{
-	HEROBaseRouter* router = [self existingRouterForClass:[DEMONotesRouter class]];
-	if (!router) {
-		HEROBaseCoordinator* coordinator = [self coordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
-		return coordinator;
-	}
-	return router.coordinator;
+	return [self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
 }
 
 - (HEROBaseCoordinator*)pictureCoordinator{
-	HEROBaseRouter* router = [self existingRouterForClass:[DEMOPictureRouter class]];
-	if (!router) {
-		HEROBaseCoordinator* coordinator = [self coordinatorForRouter:[DEMOPictureRouter class] coordinator:[DEMOPictureCoordinator class] usecase:[DEMOPictureUsecase class]];
-		return coordinator;
-	}
-	return router.coordinator;
+	return [self dequeueCoordinatorForRouter:[DEMOPictureRouter class] coordinator:[DEMOPictureCoordinator class] usecase:[DEMOPictureUsecase class]];
 }
 
 

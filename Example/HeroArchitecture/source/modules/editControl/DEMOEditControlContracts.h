@@ -8,7 +8,7 @@
 @protocol DEMOEditControlRouterOutput <NSObject>
 @end
 
-@protocol DEMOEditControlRouterWorkflowControl <NSObject>
+@protocol DEMOEditControlWorkflowInput <NSObject>
 -(void)editControlSwitchedToEditingMode:(DEMOEditingMode)editingMode onRouter:(HEROBaseRouter*)router;
 @end
 

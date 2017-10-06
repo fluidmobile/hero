@@ -15,7 +15,7 @@
 }
 
 -(void)selectedSelection:(DEMOMainSelection)selection{
-	[(id <DEMOMainRouterWorkflowControl>)self.workflow selectedSelection:selection onRouter:self];
+	[(id <DEMOMainWorkflowInput>)self.workflow selectedSelection:selection onRouter:self];
 }
 
 - (void)presentRouterInDetailView:(HEROBaseRouter*)router{

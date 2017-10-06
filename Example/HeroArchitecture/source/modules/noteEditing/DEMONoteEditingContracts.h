@@ -8,7 +8,7 @@
 -(void)updateNoteID:(NSString*)noteID;
 @end
 
-@protocol DEMONoteEditingRouterWorkflowControl <NSObject>
+@protocol DEMONoteEditingWorkflowInput <NSObject>
 -(void)noteEditingDidFinishEditingOnRouter:(HEROBaseRouter*)router;
 @end
 

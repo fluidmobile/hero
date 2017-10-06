@@ -9,6 +9,10 @@
 #import "HEROBaseUsecase.h"
 #import "HERORouterReference.h"
 
+@interface HEROBaseWorkflow()
+@property (nonatomic, strong) NSMutableArray <HERORouterReference*>* routers;
+@end
+
 @implementation HEROBaseWorkflow
 
 - (instancetype)init{
@@ -33,10 +37,20 @@
 	return nil;
 }
 
-- (HEROBaseCoordinator*)coordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
+	HEROBaseRouter* router = [self existingRouterForClass:routerClass];
+	if (!router) {
+		return [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
+	}
+	else{
+		return router.coordinator;
+	}
+}
+
+- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
 	HEROBaseUsecase* usecase = [usecaseClass new];
 	HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
-	HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflowControl:self];
+	HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
 	router.workflow = self;
 	[self addRouter:router];
 	return coordinator;
@@ -51,7 +65,6 @@
 - (HEROBaseRouter*)existingRouterForClass:(Class)routerClass{
 	for (HERORouterReference* reference in self.routers) {
 		if ([reference.router isKindOfClass:routerClass]) {
-#warning wir sollten hier einen key eintragen zur genauen identifikation
 			return reference.router;
 		}
 	}

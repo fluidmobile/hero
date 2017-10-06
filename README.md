@@ -25,7 +25,7 @@ The ViewController implements the `ViewInput` protocol to handle view updates an
 #### Router
 The `Router` component is a module's connection to a workflow. No database entities or `PONSO`s shall be used in this component.
 
-Use this component to connect to a workflow using the `RouterWorkflowControl` which has to be implemented by the chosen workflow.
+Use this component to connect to a workflow using the `WorkflowInput` which has to be implemented by the chosen workflow.
 ###### Protocols to implement
 The `Router` component implements a single protocol:
 - `RouterInput`

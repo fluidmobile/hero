@@ -4,7 +4,6 @@ target 'HeroArchitecture_Example' do
   pod 'HeroArchitecture', :path => '../'
   pod 'Realm'
   pod 'MBProgressHUD'
-  pod 'Smooch'
 
   target 'HeroArchitecture_Tests' do
     inherit! :search_paths
