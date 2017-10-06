@@ -91,11 +91,16 @@ Run the command `gem install generamba`.
 To setup `Generamba` simply run the command `generamba setup` and follow the steps.
 
 #### 3. Install a template
-Open the `Rambafile` and modify the template source like this:
+Open the `Rambafile` and add the following lines:
 
 ```
+# a shared template catalog
+catalogs:
+- 'https://github.com/fluidmobile/heroTemplates'
+
+# add template by name
 templates:
-- {name: HeroTemplate, git: 'https://github.com/fluidmobile/HeroTemplate'}
+- {name: HeroModule}
 ```
 
 After adding the template source run the command `generamba install template` to install the template.
