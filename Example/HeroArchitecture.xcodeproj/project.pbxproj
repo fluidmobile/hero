@@ -81,7 +81,6 @@
 		96837E0A1F86775A00591FFD /* FMBaseFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB51F86775A00591FFD /* FMBaseFileService.m */; };
 		96837E0B1F86775A00591FFD /* FMBaseICloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB61F86775A00591FFD /* FMBaseICloudService.m */; };
 		96837E0C1F86775A00591FFD /* DEMONoteEditingCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DBA1F86775A00591FFD /* DEMONoteEditingCoordinator.m */; };
-		96837E0D1F86775A00591FFD /* DEMONoteEditPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DBE1F86775A00591FFD /* DEMONoteEditPonso.m */; };
 		96837E0E1F86775A00591FFD /* DEMONoteEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC11F86775A00591FFD /* DEMONoteEditingView.m */; };
 		96837E0F1F86775A00591FFD /* DEMONoteEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC21F86775A00591FFD /* DEMONoteEditingViewController.m */; };
 		96837E101F86775A00591FFD /* DEMONoteEditingUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC51F86775A00591FFD /* DEMONoteEditingUsecase.m */; };
@@ -128,6 +127,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HeroArchitecture.podspec; path = ../HeroArchitecture.podspec; sourceTree = "<group>"; };
 		7FC1D29C053F3FC5FC5E91F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8EDA89A21F879B2F00770C40 /* DEMONoteEditPonso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditPonso.h; sourceTree = "<group>"; };
+		8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditPonso.m; sourceTree = "<group>"; };
 		95A6F7447C4E1A553078CE0D /* libPods-HeroArchitecture_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroArchitecture_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96837D011F86770E00591FFD /* img0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img0.jpg; sourceTree = "<group>"; };
 		96837D021F86770E00591FFD /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
@@ -254,9 +255,7 @@
 		96837DB71F86775A00591FFD /* FMBasePhoneService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBasePhoneService.h; sourceTree = "<group>"; };
 		96837DBA1F86775A00591FFD /* DEMONoteEditingCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingCoordinator.m; sourceTree = "<group>"; };
 		96837DBB1F86775A00591FFD /* DEMONoteEditingCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingCoordinator.h; sourceTree = "<group>"; };
-		96837DBC1F86775A00591FFD /* DEMONoteEditPonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditPonso.h; sourceTree = "<group>"; };
 		96837DBD1F86775A00591FFD /* DEMONoteEditingContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingContracts.h; sourceTree = "<group>"; };
-		96837DBE1F86775A00591FFD /* DEMONoteEditPonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditPonso.m; sourceTree = "<group>"; };
 		96837DC01F86775A00591FFD /* DEMONoteEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingViewController.h; sourceTree = "<group>"; };
 		96837DC11F86775A00591FFD /* DEMONoteEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingView.m; sourceTree = "<group>"; };
 		96837DC21F86775A00591FFD /* DEMONoteEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingViewController.m; sourceTree = "<group>"; };
@@ -422,6 +421,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		8EDA89A11F879B2F00770C40 /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				8EDA89A21F879B2F00770C40 /* DEMONoteEditPonso.h */,
+				8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
 		96837CFE1F8676FC00591FFD /* source */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,10 +524,10 @@
 		96837D141F86775A00591FFD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				96837D151F86775A00591FFD /* DEMOSettingsViewController.h */,
-				96837D161F86775A00591FFD /* DEMOSettingsView.m */,
-				96837D171F86775A00591FFD /* DEMOSettingsViewController.m */,
 				96837D181F86775A00591FFD /* DEMOSettingsView.h */,
+				96837D161F86775A00591FFD /* DEMOSettingsView.m */,
+				96837D151F86775A00591FFD /* DEMOSettingsViewController.h */,
+				96837D171F86775A00591FFD /* DEMOSettingsViewController.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -992,10 +1000,9 @@
 		96837DB81F86775A00591FFD /* noteEditing */ = {
 			isa = PBXGroup;
 			children = (
+				8EDA89A11F879B2F00770C40 /* ponso */,
 				96837DB91F86775A00591FFD /* coordinator */,
-				96837DBC1F86775A00591FFD /* DEMONoteEditPonso.h */,
 				96837DBD1F86775A00591FFD /* DEMONoteEditingContracts.h */,
-				96837DBE1F86775A00591FFD /* DEMONoteEditPonso.m */,
 				96837DBF1F86775A00591FFD /* view */,
 				96837DC41F86775A00591FFD /* useCase */,
 				96837DC71F86775A00591FFD /* router */,
@@ -1393,7 +1400,6 @@
 				96837E031F86775A00591FFD /* DEMOLoginViewController.m in Sources */,
 				96837DFC1F86775A00591FFD /* DEMOMainCoordinator.m in Sources */,
 				96837DFA1F86775A00591FFD /* DEMONotesUsecase.m in Sources */,
-				96837E0D1F86775A00591FFD /* DEMONoteEditPonso.m in Sources */,
 				96837E101F86775A00591FFD /* DEMONoteEditingUsecase.m in Sources */,
 				96837DF51F86775A00591FFD /* DEMONotesViewTableViewCell.m in Sources */,
 				96837DFF1F86775A00591FFD /* DEMOMainUsecase.m in Sources */,
