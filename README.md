@@ -113,14 +113,14 @@ Creating a workflow can be done the same way. However if your module has a workf
 
 If you choose to create your modules manually, you have to subclass these classes to create a module:
 - View Layer
-  - HEROBaseViewController
-  - HEROBaseView
+  - `HEROBaseViewController`
+  - `HEROBaseView`
 - Coordinator
-    - HEROBaseCoordinator
+    - `HEROBaseCoordinator`
 - Router
-  - HEROBaseRouter
-- Use Case
-  - HEROBaseUsecase
+  - `HEROBaseRouter`
+- UseCase
+  - `HEROBaseUsecase`
 
 Additionally you need to add a single header file to declare your View-, Router-, UseCase-Inputs and Output protocols and override the base classes base protocol methods.
 
@@ -128,7 +128,7 @@ Creating a workflow can be done the same way. However if your module has a workf
 
 ## Documentation
 
-Detailed documentation is available [here](https://github.com/fluidmobile/hero-documentation).˚
+Detailed documentation is available [here](https://github.com/fluidmobile/hero-documentation).
 
 ## Example
 
