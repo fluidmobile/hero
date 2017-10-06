@@ -9,7 +9,6 @@
 #import "HEROAppDelegate.h"
 #import "HEROAppWorkflow.h"
 #import "HEROBaseRouter.h"
-#import <Smooch/Smooch.h>
 #import "DEMOAppFont.h"
 
 @interface HEROAppDelegate ()

@@ -9,7 +9,6 @@
 #import "DEMOLoginViewController.h"
 #import "DEMOLoginView.h"
 #import "DEMOLoginContracts.h"
-//#import <Smooch/Smooch.h>
 
 @interface DEMOLoginViewController () <DEMOLoginViewDelegate, DEMOLoginViewInput>
 @property (nonatomic, strong) DEMOLoginView* viewLogin;
@@ -39,7 +38,6 @@
 
 -(void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
-//	[Smooch show];
 }
 
 - (void)userDidSelectLogin{
