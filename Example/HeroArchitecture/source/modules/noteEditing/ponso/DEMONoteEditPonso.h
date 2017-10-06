@@ -12,6 +12,6 @@
 @interface DEMONoteEditPonso : NSObject
 @property (nonatomic, readonly) NSString* noteID;
 @property (nonatomic, readonly) NSString* title;
-@property (nonatomic, readonly) NSString* note;
--(instancetype)initWithNoteID:(NSString*)noteID title:(NSString*)title note:(NSString*)note;
+@property (nonatomic, readonly) NSString* text;
+-(instancetype)initWithNoteID:(NSString*)noteID title:(NSString*)title text:(NSString*)text;
 @end

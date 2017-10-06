@@ -11,14 +11,14 @@
 #import "DEMONoteEditPonso.h"
 
 @implementation DEMONoteEditPonso
--(instancetype)initWithNoteID:(NSString*)noteID title:(NSString*)title note:(NSString*)note{
+-(instancetype)initWithNoteID:(NSString*)noteID title:(NSString*)title text:(NSString*)text{
 	self = [super init];
 	if (!self) {
 		return nil;
 	}
 	_noteID = noteID;
 	_title = title;
-	_note = note;
+	_text = text;
 	return self;
 }
 

@@ -36,7 +36,7 @@
 }
 
 -(void)updateNote:(DEMONoteEditPonso *)note{
-#warning moritz not implemented
+	[self.viewNoteEditing updateNote:note];
 }
 
 #pragma mark - DEMONoteEditingViewInput

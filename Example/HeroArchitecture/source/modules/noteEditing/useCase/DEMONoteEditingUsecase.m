@@ -41,7 +41,7 @@
 
 - (void)updateNoteID:(NSString *)noteID {
 	DEMONoteEntity* noteObject = [DEMONoteEntity objectForBeID:self.currentNote.noteID];
-	self.currentNote = [[DEMONoteEditPonso alloc] initWithNoteID:[noteObject beID] title:[noteObject title] note:[noteObject text]];
+	self.currentNote = [[DEMONoteEditPonso alloc] initWithNoteID:[noteObject beID] title:[noteObject title] text:[noteObject text]];
 	[self requestContentUpdate];
 }
 

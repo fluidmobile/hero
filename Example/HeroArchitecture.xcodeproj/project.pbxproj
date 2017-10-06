@@ -22,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7BAD4A5513E5B34FDA3090E7 /* libPods-HeroArchitecture_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A26A00883ACD194CDF9AD /* libPods-HeroArchitecture_Tests.a */; };
+		8EA7D2DD1F87A2E10083CF55 /* DEMONoteEditPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */; };
 		96837D031F86770E00591FFD /* img0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96837D011F86770E00591FFD /* img0.jpg */; };
 		96837D041F86770E00591FFD /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96837D021F86770E00591FFD /* img1.jpg */; };
 		96837DD41F86775A00591FFD /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D071F86775A00591FFD /* UIView+Frame.m */; };
@@ -372,7 +373,6 @@
 			children = (
 				96837CFF1F8676FC00591FFD /* resource */,
 				96837CFE1F8676FC00591FFD /* source */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F59C195388D20070C39A /* HEROAppDelegate.h */,
 				6003F59D195388D20070C39A /* HEROAppDelegate.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -421,6 +421,14 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		8EA7D2DC1F87A2870083CF55 /* launchStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+			);
+			path = launchStoryboard;
+			sourceTree = "<group>";
+		};
 		8EDA89A11F879B2F00770C40 /* ponso */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +455,7 @@
 		96837CFF1F8676FC00591FFD /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				8EA7D2DC1F87A2870083CF55 /* launchStoryboard */,
 				96837D001F86770E00591FFD /* images */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 			);
@@ -1417,6 +1426,7 @@
 				96837E111F86775A00591FFD /* DEMONoteEditingRouter.m in Sources */,
 				96837DF91F86775A00591FFD /* DEMONoteService.m in Sources */,
 				96837DF61F86775A00591FFD /* DEMONotesViewController.m in Sources */,
+				8EA7D2DD1F87A2E10083CF55 /* DEMONoteEditPonso.m in Sources */,
 				96837DD81F86775A00591FFD /* DEMOSettingsView.m in Sources */,
 				96837DED1F86775A00591FFD /* DEMOContainerView.m in Sources */,
 				96837E0B1F86775A00591FFD /* FMBaseICloudService.m in Sources */,
