@@ -1,9 +1,9 @@
 # HeroArchitecture
 
 [![CI Status](http://img.shields.io/travis/fluidmobile/hero.svg?style=flat)](https://travis-ci.org/fluidmobile/hero)
+[![License](http://img.shields.io/badge/license-MIT-orange.svg?style=flat)](http://mit-license.org)
 [![Version](https://img.shields.io/cocoapods/v/HeroArchitecture.svg?style=flat)](http://cocoapods.org/pods/HeroArchitecture)
-[![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
-[![Platform](https://img.shields.io/cocoapods/p/HeroArchitecture.svg?style=flat)](http://cocoapods.org/pods/HeroArchitecture)
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat)](http://cocoapods.org/pods/HeroArchitecture)
 [![Twitter](https://img.shields.io/badge/twitter-@fluidmobile-blue.svg?style=flat)](https://twitter.com/fluidmobile)
 
 ## Introduction
