@@ -14,6 +14,18 @@
 
 @implementation HEROViewFactory
 
+#pragma mark - UIImageView
+
++(UIImageView*)imageViewWithImageNamed:(NSString*)imageName{
+	return [[self class] imageViewWithImage:[UIImage imageNamed:imageName]];
+}
+
++(UIImageView*)imageViewWithImage:(UIImage*)image{
+	UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
+	imageView.contentMode = UIViewContentModeScaleAspectFit;
+	return imageView;
+}
+
 #pragma mark - UILabel
 +(UILabel*)labelWithText:(NSString *)text{
 	return [self labelWithText:text textColor:[[DEMOAppColor currentTheme] labelText]  backgroundColor:[[DEMOAppColor currentTheme] labelBackground]];
@@ -27,18 +39,6 @@
 	label.text = text;
 	label.numberOfLines = 0;
 	return label;
-}
-
-#pragma mark - UIImageView
-
-+(UIImageView*)imageViewWithImageNamed:(NSString*)imageName{
-	return [[self class] imageViewWithImage:[UIImage imageNamed:imageName]];
-}
-
-+(UIImageView*)imageViewWithImage:(UIImage*)image{
-	UIImageView* imageView = [[UIImageView alloc] initWithImage:image];
-	imageView.contentMode = UIViewContentModeScaleAspectFit;
-	return imageView;
 }
 
 #pragma mark - UIButton
@@ -56,6 +56,22 @@
 	[button setTitleColor:colorDisabled forState:UIControlStateDisabled];
 	button.backgroundColor = backgroundColor;
 	return button;
+}
+
+#pragma mark - UITextField
++(UITextField*)textFieldWithText:(NSString*)text{
+	UITextField* textField = [UITextField new];
+	textField.font = [DEMOAppFont fontForTextStyle:UIFontTextStyleBody];
+	textField.text = text;
+	return textField;
+}
+
+#pragma mark - UITextView
++(UITextView*)textViewWithText:(NSString*)text{
+	UITextView* textView = [UITextView new];
+	textView.font = [DEMOAppFont fontForTextStyle:UIFontTextStyleBody];
+	textView.text = text;
+	return textView;
 }
 
 #pragma mark - UICollectionView

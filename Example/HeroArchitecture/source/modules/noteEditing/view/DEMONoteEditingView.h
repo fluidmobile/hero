@@ -7,13 +7,12 @@
 //
 
 #import "HEROBaseView.h"
-
+@class DEMONoteEditPonso;
 @protocol DEMONoteEditingViewDelegate <NSObject>
-
 @end
 
 @interface DEMONoteEditingView : HEROBaseView
 @property (nonatomic, weak) id <DEMONoteEditingViewDelegate> delegate;
-
+-(void)updateNote:(DEMONoteEditPonso*)note;
 
 @end
