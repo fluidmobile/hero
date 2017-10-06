@@ -1,0 +1,1718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		096964D97BB647E49147AC04 /* libPods-HeroArchitecture_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A6F7447C4E1A553078CE0D /* libPods-HeroArchitecture_Example.a */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* HEROAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* HEROAppDelegate.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		7BAD4A5513E5B34FDA3090E7 /* libPods-HeroArchitecture_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A26A00883ACD194CDF9AD /* libPods-HeroArchitecture_Tests.a */; };
+		96837D031F86770E00591FFD /* img0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96837D011F86770E00591FFD /* img0.jpg */; };
+		96837D041F86770E00591FFD /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96837D021F86770E00591FFD /* img1.jpg */; };
+		96837DD41F86775A00591FFD /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D071F86775A00591FFD /* UIView+Frame.m */; };
+		96837DD51F86775A00591FFD /* DEMOAppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D0B1F86775A00591FFD /* DEMOAppColor.m */; };
+		96837DD61F86775A00591FFD /* DEMOAppFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D0C1F86775A00591FFD /* DEMOAppFont.m */; };
+		96837DD71F86775A00591FFD /* DEMOSettingsCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D111F86775A00591FFD /* DEMOSettingsCoordinator.m */; };
+		96837DD81F86775A00591FFD /* DEMOSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D161F86775A00591FFD /* DEMOSettingsView.m */; };
+		96837DD91F86775A00591FFD /* DEMOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D171F86775A00591FFD /* DEMOSettingsViewController.m */; };
+		96837DDA1F86775A00591FFD /* DEMOSettingsUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D1A1F86775A00591FFD /* DEMOSettingsUsecase.m */; };
+		96837DDB1F86775A00591FFD /* DEMOSettingsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D1D1F86775A00591FFD /* DEMOSettingsRouter.m */; };
+		96837DDC1F86775A00591FFD /* DEMOPictureCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D271F86775A00591FFD /* DEMOPictureCoordinator.m */; };
+		96837DDD1F86775A00591FFD /* DEMOPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D2C1F86775A00591FFD /* DEMOPictureView.m */; };
+		96837DDE1F86775A00591FFD /* DEMOPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D2D1F86775A00591FFD /* DEMOPictureViewController.m */; };
+		96837DDF1F86775A00591FFD /* DEMOPicturePonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D301F86775A00591FFD /* DEMOPicturePonso.m */; };
+		96837DE01F86775A00591FFD /* DEMOPictureUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D331F86775A00591FFD /* DEMOPictureUsecase.m */; };
+		96837DE11F86775A00591FFD /* DEMOPictureRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D361F86775A00591FFD /* DEMOPictureRouter.m */; };
+		96837DE21F86775A00591FFD /* DEMOTabbarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D3A1F86775A00591FFD /* DEMOTabbarTransition.m */; };
+		96837DE31F86775A00591FFD /* DEMOTabbarRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D3D1F86775A00591FFD /* DEMOTabbarRouter.m */; };
+		96837DE41F86775A00591FFD /* DEMOEditControlCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D401F86775A00591FFD /* DEMOEditControlCoordinator.m */; };
+		96837DE51F86775A00591FFD /* DEMOEditControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D461F86775A00591FFD /* DEMOEditControlView.m */; };
+		96837DE61F86775A00591FFD /* DEMOEditingControlCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D471F86775A00591FFD /* DEMOEditingControlCollectionViewCell.m */; };
+		96837DE71F86775A00591FFD /* DEMOEditControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D481F86775A00591FFD /* DEMOEditControlViewController.m */; };
+		96837DE81F86775A00591FFD /* DEMOEditingPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D4B1F86775A00591FFD /* DEMOEditingPonso.m */; };
+		96837DE91F86775A00591FFD /* DEMOEditControlUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D4F1F86775A00591FFD /* DEMOEditControlUsecase.m */; };
+		96837DEA1F86775A00591FFD /* DEMOEditControlRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D531F86775A00591FFD /* DEMOEditControlRouter.m */; };
+		96837DEB1F86775A00591FFD /* DEMOContainerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D561F86775A00591FFD /* DEMOContainerCoordinator.m */; };
+		96837DEC1F86775A00591FFD /* DEMOContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D591F86775A00591FFD /* DEMOContainerViewController.m */; };
+		96837DED1F86775A00591FFD /* DEMOContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D5A1F86775A00591FFD /* DEMOContainerView.m */; };
+		96837DEE1F86775A00591FFD /* DEMOContainerUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D5E1F86775A00591FFD /* DEMOContainerUsecase.m */; };
+		96837DEF1F86775A00591FFD /* DEMOContainerRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D621F86775A00591FFD /* DEMOContainerRouter.m */; };
+		96837DF01F86775A00591FFD /* DEMOExplanationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D671F86775A00591FFD /* DEMOExplanationView.m */; };
+		96837DF11F86775A00591FFD /* DEMOCommonUserDefaultService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D6B1F86775A00591FFD /* DEMOCommonUserDefaultService.m */; };
+		96837DF21F86775A00591FFD /* DEMOSizeCategoryService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D6C1F86775A00591FFD /* DEMOSizeCategoryService.m */; };
+		96837DF31F86775A00591FFD /* DEMOCommonLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D6D1F86775A00591FFD /* DEMOCommonLoginService.m */; };
+		96837DF41F86775A00591FFD /* DEMONotesCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D721F86775A00591FFD /* DEMONotesCoordinator.m */; };
+		96837DF51F86775A00591FFD /* DEMONotesViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D751F86775A00591FFD /* DEMONotesViewTableViewCell.m */; };
+		96837DF61F86775A00591FFD /* DEMONotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D781F86775A00591FFD /* DEMONotesViewController.m */; };
+		96837DF71F86775A00591FFD /* DEMONotesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D7A1F86775A00591FFD /* DEMONotesView.m */; };
+		96837DF81F86775A00591FFD /* DEMONotePonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D7D1F86775A00591FFD /* DEMONotePonso.m */; };
+		96837DF91F86775A00591FFD /* DEMONoteService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D801F86775A00591FFD /* DEMONoteService.m */; };
+		96837DFA1F86775A00591FFD /* DEMONotesUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D821F86775A00591FFD /* DEMONotesUsecase.m */; };
+		96837DFB1F86775A00591FFD /* DEMONotesRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D851F86775A00591FFD /* DEMONotesRouter.m */; };
+		96837DFC1F86775A00591FFD /* DEMOMainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D8A1F86775A00591FFD /* DEMOMainCoordinator.m */; };
+		96837DFD1F86775A00591FFD /* DEMOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D8C1F86775A00591FFD /* DEMOMainViewController.m */; };
+		96837DFE1F86775A00591FFD /* DEMOMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D8D1F86775A00591FFD /* DEMOMainView.m */; };
+		96837DFF1F86775A00591FFD /* DEMOMainUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D941F86775A00591FFD /* DEMOMainUsecase.m */; };
+		96837E001F86775A00591FFD /* DEMOMainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D971F86775A00591FFD /* DEMOMainRouter.m */; };
+		96837E011F86775A00591FFD /* DEMOLoginTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D9B1F86775A00591FFD /* DEMOLoginTransition.m */; };
+		96837E021F86775A00591FFD /* DEMOLoginCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837D9F1F86775A00591FFD /* DEMOLoginCoordinator.m */; };
+		96837E031F86775A00591FFD /* DEMOLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DA41F86775A00591FFD /* DEMOLoginViewController.m */; };
+		96837E041F86775A00591FFD /* DEMOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DA51F86775A00591FFD /* DEMOLoginView.m */; };
+		96837E051F86775A00591FFD /* DEMOLoginUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DA71F86775A00591FFD /* DEMOLoginUsecase.m */; };
+		96837E061F86775A00591FFD /* DEMOLoginRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DAB1F86775A00591FFD /* DEMOLoginRouter.m */; };
+		96837E071F86775A00591FFD /* FMBasePhoneService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB21F86775A00591FFD /* FMBasePhoneService.m */; };
+		96837E081F86775A00591FFD /* FMBaseAppAnalyzerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB31F86775A00591FFD /* FMBaseAppAnalyzerService.m */; };
+		96837E091F86775A00591FFD /* FMBaseApplicationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB41F86775A00591FFD /* FMBaseApplicationService.m */; };
+		96837E0A1F86775A00591FFD /* FMBaseFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB51F86775A00591FFD /* FMBaseFileService.m */; };
+		96837E0B1F86775A00591FFD /* FMBaseICloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DB61F86775A00591FFD /* FMBaseICloudService.m */; };
+		96837E0C1F86775A00591FFD /* DEMONoteEditingCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DBA1F86775A00591FFD /* DEMONoteEditingCoordinator.m */; };
+		96837E0D1F86775A00591FFD /* DEMONoteEditPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DBE1F86775A00591FFD /* DEMONoteEditPonso.m */; };
+		96837E0E1F86775A00591FFD /* DEMONoteEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC11F86775A00591FFD /* DEMONoteEditingView.m */; };
+		96837E0F1F86775A00591FFD /* DEMONoteEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC21F86775A00591FFD /* DEMONoteEditingViewController.m */; };
+		96837E101F86775A00591FFD /* DEMONoteEditingUsecase.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC51F86775A00591FFD /* DEMONoteEditingUsecase.m */; };
+		96837E111F86775A00591FFD /* DEMONoteEditingRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DC81F86775A00591FFD /* DEMONoteEditingRouter.m */; };
+		96837E121F86775A00591FFD /* DEMOEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DCD1F86775A00591FFD /* DEMOEntity.m */; };
+		96837E131F86775A00591FFD /* DEMONoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DCE1F86775A00591FFD /* DEMONoteEntity.m */; };
+		96837E141F86775A00591FFD /* HEROViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837DD21F86775A00591FFD /* HEROViewFactory.m */; };
+		96837E2D1F86777200591FFD /* HEROAppWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837E181F86777100591FFD /* HEROAppWorkflow.m */; };
+		96837E2E1F86777200591FFD /* DEMOTabbarWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837E1B1F86777100591FFD /* DEMOTabbarWorkflow.m */; };
+		96837E2F1F86777200591FFD /* DEMOContainerWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837E1E1F86777100591FFD /* DEMOContainerWorkflow.m */; };
+		96837E301F86777200591FFD /* DEMONotesWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837E221F86777100591FFD /* DEMONotesWorkflow.m */; };
+		96837E311F86777200591FFD /* DEMOMainWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837E281F86777100591FFD /* DEMOMainWorkflow.m */; };
+		96837E321F86777200591FFD /* DEMOLoginWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 96837E2C1F86777100591FFD /* DEMOLoginWorkflow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = HeroArchitecture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6003F58A195388D20070C39A /* HeroArchitecture_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroArchitecture_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* HeroArchitecture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeroArchitecture-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* HeroArchitecture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeroArchitecture-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* HEROAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HEROAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* HEROAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HEROAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* HeroArchitecture_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeroArchitecture_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HeroArchitecture.podspec; path = ../HeroArchitecture.podspec; sourceTree = "<group>"; };
+		7FC1D29C053F3FC5FC5E91F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		95A6F7447C4E1A553078CE0D /* libPods-HeroArchitecture_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroArchitecture_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96837D011F86770E00591FFD /* img0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img0.jpg; sourceTree = "<group>"; };
+		96837D021F86770E00591FFD /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
+		96837D071F86775A00591FFD /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		96837D081F86775A00591FFD /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		96837D0A1F86775A00591FFD /* DEMOAppFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOAppFont.h; sourceTree = "<group>"; };
+		96837D0B1F86775A00591FFD /* DEMOAppColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOAppColor.m; sourceTree = "<group>"; };
+		96837D0C1F86775A00591FFD /* DEMOAppFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOAppFont.m; sourceTree = "<group>"; };
+		96837D0D1F86775A00591FFD /* DEMOAppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOAppColor.h; sourceTree = "<group>"; };
+		96837D111F86775A00591FFD /* DEMOSettingsCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSettingsCoordinator.m; sourceTree = "<group>"; };
+		96837D121F86775A00591FFD /* DEMOSettingsCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSettingsCoordinator.h; sourceTree = "<group>"; };
+		96837D131F86775A00591FFD /* DEMOSettingsContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSettingsContracts.h; sourceTree = "<group>"; };
+		96837D151F86775A00591FFD /* DEMOSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSettingsViewController.h; sourceTree = "<group>"; };
+		96837D161F86775A00591FFD /* DEMOSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSettingsView.m; sourceTree = "<group>"; };
+		96837D171F86775A00591FFD /* DEMOSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSettingsViewController.m; sourceTree = "<group>"; };
+		96837D181F86775A00591FFD /* DEMOSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSettingsView.h; sourceTree = "<group>"; };
+		96837D1A1F86775A00591FFD /* DEMOSettingsUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSettingsUsecase.m; sourceTree = "<group>"; };
+		96837D1B1F86775A00591FFD /* DEMOSettingsUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSettingsUsecase.h; sourceTree = "<group>"; };
+		96837D1D1F86775A00591FFD /* DEMOSettingsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSettingsRouter.m; sourceTree = "<group>"; };
+		96837D1E1F86775A00591FFD /* DEMOSettingsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSettingsRouter.h; sourceTree = "<group>"; };
+		96837D251F86775A00591FFD /* DEMOPictureContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPictureContracts.h; sourceTree = "<group>"; };
+		96837D271F86775A00591FFD /* DEMOPictureCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPictureCoordinator.m; sourceTree = "<group>"; };
+		96837D281F86775A00591FFD /* DEMOPictureCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPictureCoordinator.h; sourceTree = "<group>"; };
+		96837D2A1F86775A00591FFD /* DEMOPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPictureViewController.h; sourceTree = "<group>"; };
+		96837D2B1F86775A00591FFD /* DEMOPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPictureView.h; sourceTree = "<group>"; };
+		96837D2C1F86775A00591FFD /* DEMOPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPictureView.m; sourceTree = "<group>"; };
+		96837D2D1F86775A00591FFD /* DEMOPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPictureViewController.m; sourceTree = "<group>"; };
+		96837D2F1F86775A00591FFD /* DEMOPicturePonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPicturePonso.h; sourceTree = "<group>"; };
+		96837D301F86775A00591FFD /* DEMOPicturePonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPicturePonso.m; sourceTree = "<group>"; };
+		96837D321F86775A00591FFD /* DEMOPictureUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPictureUsecase.h; sourceTree = "<group>"; };
+		96837D331F86775A00591FFD /* DEMOPictureUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPictureUsecase.m; sourceTree = "<group>"; };
+		96837D351F86775A00591FFD /* DEMOPictureRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOPictureRouter.h; sourceTree = "<group>"; };
+		96837D361F86775A00591FFD /* DEMOPictureRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOPictureRouter.m; sourceTree = "<group>"; };
+		96837D391F86775A00591FFD /* DEMOTabbarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOTabbarTransition.h; sourceTree = "<group>"; };
+		96837D3A1F86775A00591FFD /* DEMOTabbarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOTabbarTransition.m; sourceTree = "<group>"; };
+		96837D3C1F86775A00591FFD /* DEMOTabbarRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOTabbarRouter.h; sourceTree = "<group>"; };
+		96837D3D1F86775A00591FFD /* DEMOTabbarRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOTabbarRouter.m; sourceTree = "<group>"; };
+		96837D401F86775A00591FFD /* DEMOEditControlCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditControlCoordinator.m; sourceTree = "<group>"; };
+		96837D411F86775A00591FFD /* DEMOEditControlCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditControlCoordinator.h; sourceTree = "<group>"; };
+		96837D431F86775A00591FFD /* DEMOEditingControlCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditingControlCollectionViewCell.h; sourceTree = "<group>"; };
+		96837D441F86775A00591FFD /* DEMOEditControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditControlView.h; sourceTree = "<group>"; };
+		96837D451F86775A00591FFD /* DEMOEditControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditControlViewController.h; sourceTree = "<group>"; };
+		96837D461F86775A00591FFD /* DEMOEditControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditControlView.m; sourceTree = "<group>"; };
+		96837D471F86775A00591FFD /* DEMOEditingControlCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditingControlCollectionViewCell.m; sourceTree = "<group>"; };
+		96837D481F86775A00591FFD /* DEMOEditControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditControlViewController.m; sourceTree = "<group>"; };
+		96837D4A1F86775A00591FFD /* DEMOEditingPonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditingPonso.h; sourceTree = "<group>"; };
+		96837D4B1F86775A00591FFD /* DEMOEditingPonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditingPonso.m; sourceTree = "<group>"; };
+		96837D4C1F86775A00591FFD /* DEMOEditingMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditingMode.h; sourceTree = "<group>"; };
+		96837D4D1F86775A00591FFD /* DEMOEditControlContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditControlContracts.h; sourceTree = "<group>"; };
+		96837D4F1F86775A00591FFD /* DEMOEditControlUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditControlUsecase.m; sourceTree = "<group>"; };
+		96837D501F86775A00591FFD /* DEMOEditControlUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditControlUsecase.h; sourceTree = "<group>"; };
+		96837D521F86775A00591FFD /* DEMOEditControlRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEditControlRouter.h; sourceTree = "<group>"; };
+		96837D531F86775A00591FFD /* DEMOEditControlRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEditControlRouter.m; sourceTree = "<group>"; };
+		96837D561F86775A00591FFD /* DEMOContainerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOContainerCoordinator.m; sourceTree = "<group>"; };
+		96837D571F86775A00591FFD /* DEMOContainerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerCoordinator.h; sourceTree = "<group>"; };
+		96837D591F86775A00591FFD /* DEMOContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOContainerViewController.m; sourceTree = "<group>"; };
+		96837D5A1F86775A00591FFD /* DEMOContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOContainerView.m; sourceTree = "<group>"; };
+		96837D5B1F86775A00591FFD /* DEMOContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerViewController.h; sourceTree = "<group>"; };
+		96837D5C1F86775A00591FFD /* DEMOContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerView.h; sourceTree = "<group>"; };
+		96837D5E1F86775A00591FFD /* DEMOContainerUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOContainerUsecase.m; sourceTree = "<group>"; };
+		96837D5F1F86775A00591FFD /* DEMOContainerUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerUsecase.h; sourceTree = "<group>"; };
+		96837D601F86775A00591FFD /* DEMOContainerContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerContracts.h; sourceTree = "<group>"; };
+		96837D621F86775A00591FFD /* DEMOContainerRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOContainerRouter.m; sourceTree = "<group>"; };
+		96837D631F86775A00591FFD /* DEMOContainerRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerRouter.h; sourceTree = "<group>"; };
+		96837D661F86775A00591FFD /* DEMOExplanationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOExplanationView.h; sourceTree = "<group>"; };
+		96837D671F86775A00591FFD /* DEMOExplanationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOExplanationView.m; sourceTree = "<group>"; };
+		96837D691F86775A00591FFD /* DEMOCommonLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOCommonLoginService.h; sourceTree = "<group>"; };
+		96837D6A1F86775A00591FFD /* DEMOSizeCategoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSizeCategoryService.h; sourceTree = "<group>"; };
+		96837D6B1F86775A00591FFD /* DEMOCommonUserDefaultService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOCommonUserDefaultService.m; sourceTree = "<group>"; };
+		96837D6C1F86775A00591FFD /* DEMOSizeCategoryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSizeCategoryService.m; sourceTree = "<group>"; };
+		96837D6D1F86775A00591FFD /* DEMOCommonLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOCommonLoginService.m; sourceTree = "<group>"; };
+		96837D6E1F86775A00591FFD /* DEMOCommonUserDefaultService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOCommonUserDefaultService.h; sourceTree = "<group>"; };
+		96837D711F86775A00591FFD /* DEMONotesCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesCoordinator.h; sourceTree = "<group>"; };
+		96837D721F86775A00591FFD /* DEMONotesCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesCoordinator.m; sourceTree = "<group>"; };
+		96837D731F86775A00591FFD /* DEMONotesContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesContracts.h; sourceTree = "<group>"; };
+		96837D751F86775A00591FFD /* DEMONotesViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesViewTableViewCell.m; sourceTree = "<group>"; };
+		96837D761F86775A00591FFD /* DEMONotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesViewController.h; sourceTree = "<group>"; };
+		96837D771F86775A00591FFD /* DEMONotesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesView.h; sourceTree = "<group>"; };
+		96837D781F86775A00591FFD /* DEMONotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesViewController.m; sourceTree = "<group>"; };
+		96837D791F86775A00591FFD /* DEMONotesViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesViewTableViewCell.h; sourceTree = "<group>"; };
+		96837D7A1F86775A00591FFD /* DEMONotesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesView.m; sourceTree = "<group>"; };
+		96837D7C1F86775A00591FFD /* DEMONotePonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotePonso.h; sourceTree = "<group>"; };
+		96837D7D1F86775A00591FFD /* DEMONotePonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotePonso.m; sourceTree = "<group>"; };
+		96837D7F1F86775A00591FFD /* DEMONoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteService.h; sourceTree = "<group>"; };
+		96837D801F86775A00591FFD /* DEMONoteService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteService.m; sourceTree = "<group>"; };
+		96837D821F86775A00591FFD /* DEMONotesUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesUsecase.m; sourceTree = "<group>"; };
+		96837D831F86775A00591FFD /* DEMONotesUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesUsecase.h; sourceTree = "<group>"; };
+		96837D851F86775A00591FFD /* DEMONotesRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesRouter.m; sourceTree = "<group>"; };
+		96837D861F86775A00591FFD /* DEMONotesRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesRouter.h; sourceTree = "<group>"; };
+		96837D891F86775A00591FFD /* DEMOMainCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainCoordinator.h; sourceTree = "<group>"; };
+		96837D8A1F86775A00591FFD /* DEMOMainCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMainCoordinator.m; sourceTree = "<group>"; };
+		96837D8C1F86775A00591FFD /* DEMOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMainViewController.m; sourceTree = "<group>"; };
+		96837D8D1F86775A00591FFD /* DEMOMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMainView.m; sourceTree = "<group>"; };
+		96837D8E1F86775A00591FFD /* DEMOMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainViewController.h; sourceTree = "<group>"; };
+		96837D8F1F86775A00591FFD /* DEMOMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainView.h; sourceTree = "<group>"; };
+		96837D911F86775A00591FFD /* DEMOMainSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainSelection.h; sourceTree = "<group>"; };
+		96837D931F86775A00591FFD /* DEMOMainUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainUsecase.h; sourceTree = "<group>"; };
+		96837D941F86775A00591FFD /* DEMOMainUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMainUsecase.m; sourceTree = "<group>"; };
+		96837D951F86775A00591FFD /* DEMOMainContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainContracts.h; sourceTree = "<group>"; };
+		96837D971F86775A00591FFD /* DEMOMainRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMainRouter.m; sourceTree = "<group>"; };
+		96837D981F86775A00591FFD /* DEMOMainRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainRouter.h; sourceTree = "<group>"; };
+		96837D9B1F86775A00591FFD /* DEMOLoginTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginTransition.m; sourceTree = "<group>"; };
+		96837D9C1F86775A00591FFD /* DEMOLoginTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginTransition.h; sourceTree = "<group>"; };
+		96837D9E1F86775A00591FFD /* DEMOLoginCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginCoordinator.h; sourceTree = "<group>"; };
+		96837D9F1F86775A00591FFD /* DEMOLoginCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginCoordinator.m; sourceTree = "<group>"; };
+		96837DA01F86775A00591FFD /* DEMOLoginContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginContracts.h; sourceTree = "<group>"; };
+		96837DA21F86775A00591FFD /* DEMOLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginViewController.h; sourceTree = "<group>"; };
+		96837DA31F86775A00591FFD /* DEMOLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginView.h; sourceTree = "<group>"; };
+		96837DA41F86775A00591FFD /* DEMOLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginViewController.m; sourceTree = "<group>"; };
+		96837DA51F86775A00591FFD /* DEMOLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginView.m; sourceTree = "<group>"; };
+		96837DA71F86775A00591FFD /* DEMOLoginUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginUsecase.m; sourceTree = "<group>"; };
+		96837DA81F86775A00591FFD /* DEMOLoginUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginUsecase.h; sourceTree = "<group>"; };
+		96837DAA1F86775A00591FFD /* DEMOLoginRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginRouter.h; sourceTree = "<group>"; };
+		96837DAB1F86775A00591FFD /* DEMOLoginRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginRouter.m; sourceTree = "<group>"; };
+		96837DAE1F86775A00591FFD /* FMBaseApplicationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseApplicationService.h; sourceTree = "<group>"; };
+		96837DAF1F86775A00591FFD /* FMBaseAppAnalyzerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseAppAnalyzerService.h; sourceTree = "<group>"; };
+		96837DB01F86775A00591FFD /* FMBaseICloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseICloudService.h; sourceTree = "<group>"; };
+		96837DB11F86775A00591FFD /* FMBaseFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseFileService.h; sourceTree = "<group>"; };
+		96837DB21F86775A00591FFD /* FMBasePhoneService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBasePhoneService.m; sourceTree = "<group>"; };
+		96837DB31F86775A00591FFD /* FMBaseAppAnalyzerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseAppAnalyzerService.m; sourceTree = "<group>"; };
+		96837DB41F86775A00591FFD /* FMBaseApplicationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseApplicationService.m; sourceTree = "<group>"; };
+		96837DB51F86775A00591FFD /* FMBaseFileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseFileService.m; sourceTree = "<group>"; };
+		96837DB61F86775A00591FFD /* FMBaseICloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseICloudService.m; sourceTree = "<group>"; };
+		96837DB71F86775A00591FFD /* FMBasePhoneService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBasePhoneService.h; sourceTree = "<group>"; };
+		96837DBA1F86775A00591FFD /* DEMONoteEditingCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingCoordinator.m; sourceTree = "<group>"; };
+		96837DBB1F86775A00591FFD /* DEMONoteEditingCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingCoordinator.h; sourceTree = "<group>"; };
+		96837DBC1F86775A00591FFD /* DEMONoteEditPonso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditPonso.h; sourceTree = "<group>"; };
+		96837DBD1F86775A00591FFD /* DEMONoteEditingContracts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingContracts.h; sourceTree = "<group>"; };
+		96837DBE1F86775A00591FFD /* DEMONoteEditPonso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditPonso.m; sourceTree = "<group>"; };
+		96837DC01F86775A00591FFD /* DEMONoteEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingViewController.h; sourceTree = "<group>"; };
+		96837DC11F86775A00591FFD /* DEMONoteEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingView.m; sourceTree = "<group>"; };
+		96837DC21F86775A00591FFD /* DEMONoteEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingViewController.m; sourceTree = "<group>"; };
+		96837DC31F86775A00591FFD /* DEMONoteEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingView.h; sourceTree = "<group>"; };
+		96837DC51F86775A00591FFD /* DEMONoteEditingUsecase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingUsecase.m; sourceTree = "<group>"; };
+		96837DC61F86775A00591FFD /* DEMONoteEditingUsecase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingUsecase.h; sourceTree = "<group>"; };
+		96837DC81F86775A00591FFD /* DEMONoteEditingRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditingRouter.m; sourceTree = "<group>"; };
+		96837DC91F86775A00591FFD /* DEMONoteEditingRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditingRouter.h; sourceTree = "<group>"; };
+		96837DCB1F86775A00591FFD /* DEMOEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOEntity.h; sourceTree = "<group>"; };
+		96837DCC1F86775A00591FFD /* DEMONoteEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONoteEntity.h; sourceTree = "<group>"; };
+		96837DCD1F86775A00591FFD /* DEMOEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOEntity.m; sourceTree = "<group>"; };
+		96837DCE1F86775A00591FFD /* DEMONoteEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEntity.m; sourceTree = "<group>"; };
+		96837DD01F86775A00591FFD /* DEMOConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOConstants.h; sourceTree = "<group>"; };
+		96837DD21F86775A00591FFD /* HEROViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEROViewFactory.m; sourceTree = "<group>"; };
+		96837DD31F86775A00591FFD /* HEROViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEROViewFactory.h; sourceTree = "<group>"; };
+		96837E171F86777100591FFD /* HEROAppWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEROAppWorkflow.h; sourceTree = "<group>"; };
+		96837E181F86777100591FFD /* HEROAppWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEROAppWorkflow.m; sourceTree = "<group>"; };
+		96837E1A1F86777100591FFD /* DEMOTabbarWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOTabbarWorkflow.h; sourceTree = "<group>"; };
+		96837E1B1F86777100591FFD /* DEMOTabbarWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOTabbarWorkflow.m; sourceTree = "<group>"; };
+		96837E1C1F86777100591FFD /* DEMOTabbarWorkflowContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOTabbarWorkflowContract.h; sourceTree = "<group>"; };
+		96837E1E1F86777100591FFD /* DEMOContainerWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOContainerWorkflow.m; sourceTree = "<group>"; };
+		96837E1F1F86777100591FFD /* DEMOContainerWorkflowContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerWorkflowContract.h; sourceTree = "<group>"; };
+		96837E201F86777100591FFD /* DEMOContainerWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOContainerWorkflow.h; sourceTree = "<group>"; };
+		96837E221F86777100591FFD /* DEMONotesWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONotesWorkflow.m; sourceTree = "<group>"; };
+		96837E231F86777100591FFD /* DEMONotesWorkflowContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesWorkflowContract.h; sourceTree = "<group>"; };
+		96837E241F86777100591FFD /* DEMONotesWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONotesWorkflow.h; sourceTree = "<group>"; };
+		96837E261F86777100591FFD /* DEMOMainWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainWorkflow.h; sourceTree = "<group>"; };
+		96837E271F86777100591FFD /* DEMOMainWorkflowContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMainWorkflowContract.h; sourceTree = "<group>"; };
+		96837E281F86777100591FFD /* DEMOMainWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMainWorkflow.m; sourceTree = "<group>"; };
+		96837E2A1F86777100591FFD /* DEMOLoginWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginWorkflow.h; sourceTree = "<group>"; };
+		96837E2B1F86777100591FFD /* DEMOLoginWorkflowContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOLoginWorkflowContract.h; sourceTree = "<group>"; };
+		96837E2C1F86777100591FFD /* DEMOLoginWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOLoginWorkflow.m; sourceTree = "<group>"; };
+		B0FF78566CCCDA951078887E /* Pods-HeroArchitecture_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroArchitecture_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroArchitecture_Example/Pods-HeroArchitecture_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BB051773B3A379569F32437E /* Pods-HeroArchitecture_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroArchitecture_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroArchitecture_Tests/Pods-HeroArchitecture_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC64F6BC6BE24E38F804BAE2 /* Pods-HeroArchitecture_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroArchitecture_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroArchitecture_Tests/Pods-HeroArchitecture_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D37FEAC505E09AFB0AA1622A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DE9033E42F76F7C0DB75659A /* Pods-HeroArchitecture_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroArchitecture_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroArchitecture_Example/Pods-HeroArchitecture_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E57A26A00883ACD194CDF9AD /* libPods-HeroArchitecture_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroArchitecture_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				096964D97BB647E49147AC04 /* libPods-HeroArchitecture_Example.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				7BAD4A5513E5B34FDA3090E7 /* libPods-HeroArchitecture_Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B92E0ECA694C5BD32992242 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0FF78566CCCDA951078887E /* Pods-HeroArchitecture_Example.debug.xcconfig */,
+				DE9033E42F76F7C0DB75659A /* Pods-HeroArchitecture_Example.release.xcconfig */,
+				BB051773B3A379569F32437E /* Pods-HeroArchitecture_Tests.debug.xcconfig */,
+				CC64F6BC6BE24E38F804BAE2 /* Pods-HeroArchitecture_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* HeroArchitectureExample */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				1B92E0ECA694C5BD32992242 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* HeroArchitecture_Example.app */,
+				6003F5AE195388D20070C39A /* HeroArchitecture_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				95A6F7447C4E1A553078CE0D /* libPods-HeroArchitecture_Example.a */,
+				E57A26A00883ACD194CDF9AD /* libPods-HeroArchitecture_Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* HeroArchitectureExample */ = {
+			isa = PBXGroup;
+			children = (
+				96837CFF1F8676FC00591FFD /* resource */,
+				96837CFE1F8676FC00591FFD /* source */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F59C195388D20070C39A /* HEROAppDelegate.h */,
+				6003F59D195388D20070C39A /* HEROAppDelegate.m */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = HeroArchitectureExample;
+			path = HeroArchitecture;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* HeroArchitecture-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* HeroArchitecture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */,
+				7FC1D29C053F3FC5FC5E91F4 /* README.md */,
+				D37FEAC505E09AFB0AA1622A /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		96837CFE1F8676FC00591FFD /* source */ = {
+			isa = PBXGroup;
+			children = (
+				96837D061F86775A00591FFD /* categories */,
+				96837DCF1F86775A00591FFD /* configuration */,
+				96837DCA1F86775A00591FFD /* entity */,
+				96837DD11F86775A00591FFD /* factory */,
+				96837D091F86775A00591FFD /* helper */,
+				96837D0E1F86775A00591FFD /* modules */,
+				96837E151F86777100591FFD /* workflow */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		96837CFF1F8676FC00591FFD /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				96837D001F86770E00591FFD /* images */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		96837D001F86770E00591FFD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				96837D011F86770E00591FFD /* img0.jpg */,
+				96837D021F86770E00591FFD /* img1.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		96837D061F86775A00591FFD /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				96837D071F86775A00591FFD /* UIView+Frame.m */,
+				96837D081F86775A00591FFD /* UIView+Frame.h */,
+			);
+			path = categories;
+			sourceTree = "<group>";
+		};
+		96837D091F86775A00591FFD /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				96837D0A1F86775A00591FFD /* DEMOAppFont.h */,
+				96837D0B1F86775A00591FFD /* DEMOAppColor.m */,
+				96837D0C1F86775A00591FFD /* DEMOAppFont.m */,
+				96837D0D1F86775A00591FFD /* DEMOAppColor.h */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		96837D0E1F86775A00591FFD /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				96837D0F1F86775A00591FFD /* settings */,
+				96837D1F1F86775A00591FFD /* Test */,
+				96837D241F86775A00591FFD /* Picture */,
+				96837D371F86775A00591FFD /* tabbar */,
+				96837D3E1F86775A00591FFD /* EditControl */,
+				96837D541F86775A00591FFD /* Container */,
+				96837D641F86775A00591FFD /* common */,
+				96837D6F1F86775A00591FFD /* notes */,
+				96837D871F86775A00591FFD /* main */,
+				96837D991F86775A00591FFD /* login */,
+				96837DAC1F86775A00591FFD /* base */,
+				96837DB81F86775A00591FFD /* NoteEditing */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		96837D0F1F86775A00591FFD /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				96837D101F86775A00591FFD /* coordinator */,
+				96837D131F86775A00591FFD /* DEMOSettingsContracts.h */,
+				96837D141F86775A00591FFD /* view */,
+				96837D191F86775A00591FFD /* useCase */,
+				96837D1C1F86775A00591FFD /* router */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		96837D101F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D111F86775A00591FFD /* DEMOSettingsCoordinator.m */,
+				96837D121F86775A00591FFD /* DEMOSettingsCoordinator.h */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D141F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D151F86775A00591FFD /* DEMOSettingsViewController.h */,
+				96837D161F86775A00591FFD /* DEMOSettingsView.m */,
+				96837D171F86775A00591FFD /* DEMOSettingsViewController.m */,
+				96837D181F86775A00591FFD /* DEMOSettingsView.h */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D191F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837D1A1F86775A00591FFD /* DEMOSettingsUsecase.m */,
+				96837D1B1F86775A00591FFD /* DEMOSettingsUsecase.h */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837D1C1F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D1D1F86775A00591FFD /* DEMOSettingsRouter.m */,
+				96837D1E1F86775A00591FFD /* DEMOSettingsRouter.h */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D1F1F86775A00591FFD /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				96837D201F86775A00591FFD /* coordinator */,
+				96837D211F86775A00591FFD /* view */,
+				96837D221F86775A00591FFD /* usecase */,
+				96837D231F86775A00591FFD /* router */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		96837D201F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D211F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D221F86775A00591FFD /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		96837D231F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D241F86775A00591FFD /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				96837D251F86775A00591FFD /* DEMOPictureContracts.h */,
+				96837D261F86775A00591FFD /* coordinator */,
+				96837D291F86775A00591FFD /* view */,
+				96837D2E1F86775A00591FFD /* ponso */,
+				96837D311F86775A00591FFD /* useCase */,
+				96837D341F86775A00591FFD /* router */,
+			);
+			path = Picture;
+			sourceTree = "<group>";
+		};
+		96837D261F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D271F86775A00591FFD /* DEMOPictureCoordinator.m */,
+				96837D281F86775A00591FFD /* DEMOPictureCoordinator.h */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D291F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D2A1F86775A00591FFD /* DEMOPictureViewController.h */,
+				96837D2B1F86775A00591FFD /* DEMOPictureView.h */,
+				96837D2C1F86775A00591FFD /* DEMOPictureView.m */,
+				96837D2D1F86775A00591FFD /* DEMOPictureViewController.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D2E1F86775A00591FFD /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				96837D2F1F86775A00591FFD /* DEMOPicturePonso.h */,
+				96837D301F86775A00591FFD /* DEMOPicturePonso.m */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
+		96837D311F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837D321F86775A00591FFD /* DEMOPictureUsecase.h */,
+				96837D331F86775A00591FFD /* DEMOPictureUsecase.m */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837D341F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D351F86775A00591FFD /* DEMOPictureRouter.h */,
+				96837D361F86775A00591FFD /* DEMOPictureRouter.m */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D371F86775A00591FFD /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				96837D381F86775A00591FFD /* transition */,
+				96837D3B1F86775A00591FFD /* router */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
+		96837D381F86775A00591FFD /* transition */ = {
+			isa = PBXGroup;
+			children = (
+				96837D391F86775A00591FFD /* DEMOTabbarTransition.h */,
+				96837D3A1F86775A00591FFD /* DEMOTabbarTransition.m */,
+			);
+			path = transition;
+			sourceTree = "<group>";
+		};
+		96837D3B1F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D3C1F86775A00591FFD /* DEMOTabbarRouter.h */,
+				96837D3D1F86775A00591FFD /* DEMOTabbarRouter.m */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D3E1F86775A00591FFD /* EditControl */ = {
+			isa = PBXGroup;
+			children = (
+				96837D3F1F86775A00591FFD /* coordinator */,
+				96837D421F86775A00591FFD /* view */,
+				96837D491F86775A00591FFD /* ponso */,
+				96837D4D1F86775A00591FFD /* DEMOEditControlContracts.h */,
+				96837D4E1F86775A00591FFD /* useCase */,
+				96837D511F86775A00591FFD /* router */,
+			);
+			path = EditControl;
+			sourceTree = "<group>";
+		};
+		96837D3F1F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D401F86775A00591FFD /* DEMOEditControlCoordinator.m */,
+				96837D411F86775A00591FFD /* DEMOEditControlCoordinator.h */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D421F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D431F86775A00591FFD /* DEMOEditingControlCollectionViewCell.h */,
+				96837D441F86775A00591FFD /* DEMOEditControlView.h */,
+				96837D451F86775A00591FFD /* DEMOEditControlViewController.h */,
+				96837D461F86775A00591FFD /* DEMOEditControlView.m */,
+				96837D471F86775A00591FFD /* DEMOEditingControlCollectionViewCell.m */,
+				96837D481F86775A00591FFD /* DEMOEditControlViewController.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D491F86775A00591FFD /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				96837D4A1F86775A00591FFD /* DEMOEditingPonso.h */,
+				96837D4B1F86775A00591FFD /* DEMOEditingPonso.m */,
+				96837D4C1F86775A00591FFD /* DEMOEditingMode.h */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
+		96837D4E1F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837D4F1F86775A00591FFD /* DEMOEditControlUsecase.m */,
+				96837D501F86775A00591FFD /* DEMOEditControlUsecase.h */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837D511F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D521F86775A00591FFD /* DEMOEditControlRouter.h */,
+				96837D531F86775A00591FFD /* DEMOEditControlRouter.m */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D541F86775A00591FFD /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				96837D551F86775A00591FFD /* coordinator */,
+				96837D581F86775A00591FFD /* view */,
+				96837D5D1F86775A00591FFD /* useCase */,
+				96837D601F86775A00591FFD /* DEMOContainerContracts.h */,
+				96837D611F86775A00591FFD /* router */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		96837D551F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D561F86775A00591FFD /* DEMOContainerCoordinator.m */,
+				96837D571F86775A00591FFD /* DEMOContainerCoordinator.h */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D581F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D591F86775A00591FFD /* DEMOContainerViewController.m */,
+				96837D5A1F86775A00591FFD /* DEMOContainerView.m */,
+				96837D5B1F86775A00591FFD /* DEMOContainerViewController.h */,
+				96837D5C1F86775A00591FFD /* DEMOContainerView.h */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D5D1F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837D5E1F86775A00591FFD /* DEMOContainerUsecase.m */,
+				96837D5F1F86775A00591FFD /* DEMOContainerUsecase.h */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837D611F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D621F86775A00591FFD /* DEMOContainerRouter.m */,
+				96837D631F86775A00591FFD /* DEMOContainerRouter.h */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D641F86775A00591FFD /* common */ = {
+			isa = PBXGroup;
+			children = (
+				96837D651F86775A00591FFD /* view */,
+				96837D681F86775A00591FFD /* service */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		96837D651F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D661F86775A00591FFD /* DEMOExplanationView.h */,
+				96837D671F86775A00591FFD /* DEMOExplanationView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D681F86775A00591FFD /* service */ = {
+			isa = PBXGroup;
+			children = (
+				96837D691F86775A00591FFD /* DEMOCommonLoginService.h */,
+				96837D6A1F86775A00591FFD /* DEMOSizeCategoryService.h */,
+				96837D6B1F86775A00591FFD /* DEMOCommonUserDefaultService.m */,
+				96837D6C1F86775A00591FFD /* DEMOSizeCategoryService.m */,
+				96837D6D1F86775A00591FFD /* DEMOCommonLoginService.m */,
+				96837D6E1F86775A00591FFD /* DEMOCommonUserDefaultService.h */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		96837D6F1F86775A00591FFD /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				96837D701F86775A00591FFD /* coordinator */,
+				96837D731F86775A00591FFD /* DEMONotesContracts.h */,
+				96837D741F86775A00591FFD /* view */,
+				96837D7B1F86775A00591FFD /* ponso */,
+				96837D7E1F86775A00591FFD /* service */,
+				96837D811F86775A00591FFD /* useCase */,
+				96837D841F86775A00591FFD /* router */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
+		96837D701F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D711F86775A00591FFD /* DEMONotesCoordinator.h */,
+				96837D721F86775A00591FFD /* DEMONotesCoordinator.m */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D741F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D751F86775A00591FFD /* DEMONotesViewTableViewCell.m */,
+				96837D761F86775A00591FFD /* DEMONotesViewController.h */,
+				96837D771F86775A00591FFD /* DEMONotesView.h */,
+				96837D781F86775A00591FFD /* DEMONotesViewController.m */,
+				96837D791F86775A00591FFD /* DEMONotesViewTableViewCell.h */,
+				96837D7A1F86775A00591FFD /* DEMONotesView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D7B1F86775A00591FFD /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				96837D7C1F86775A00591FFD /* DEMONotePonso.h */,
+				96837D7D1F86775A00591FFD /* DEMONotePonso.m */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
+		96837D7E1F86775A00591FFD /* service */ = {
+			isa = PBXGroup;
+			children = (
+				96837D7F1F86775A00591FFD /* DEMONoteService.h */,
+				96837D801F86775A00591FFD /* DEMONoteService.m */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		96837D811F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837D821F86775A00591FFD /* DEMONotesUsecase.m */,
+				96837D831F86775A00591FFD /* DEMONotesUsecase.h */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837D841F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D851F86775A00591FFD /* DEMONotesRouter.m */,
+				96837D861F86775A00591FFD /* DEMONotesRouter.h */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D871F86775A00591FFD /* main */ = {
+			isa = PBXGroup;
+			children = (
+				96837D881F86775A00591FFD /* coordinator */,
+				96837D8B1F86775A00591FFD /* view */,
+				96837D901F86775A00591FFD /* ponso */,
+				96837D921F86775A00591FFD /* usecase */,
+				96837D951F86775A00591FFD /* DEMOMainContracts.h */,
+				96837D961F86775A00591FFD /* router */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		96837D881F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D891F86775A00591FFD /* DEMOMainCoordinator.h */,
+				96837D8A1F86775A00591FFD /* DEMOMainCoordinator.m */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837D8B1F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837D8C1F86775A00591FFD /* DEMOMainViewController.m */,
+				96837D8D1F86775A00591FFD /* DEMOMainView.m */,
+				96837D8E1F86775A00591FFD /* DEMOMainViewController.h */,
+				96837D8F1F86775A00591FFD /* DEMOMainView.h */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837D901F86775A00591FFD /* ponso */ = {
+			isa = PBXGroup;
+			children = (
+				96837D911F86775A00591FFD /* DEMOMainSelection.h */,
+			);
+			path = ponso;
+			sourceTree = "<group>";
+		};
+		96837D921F86775A00591FFD /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				96837D931F86775A00591FFD /* DEMOMainUsecase.h */,
+				96837D941F86775A00591FFD /* DEMOMainUsecase.m */,
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		96837D961F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837D971F86775A00591FFD /* DEMOMainRouter.m */,
+				96837D981F86775A00591FFD /* DEMOMainRouter.h */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837D991F86775A00591FFD /* login */ = {
+			isa = PBXGroup;
+			children = (
+				96837D9A1F86775A00591FFD /* transition */,
+				96837D9D1F86775A00591FFD /* coordinator */,
+				96837DA01F86775A00591FFD /* DEMOLoginContracts.h */,
+				96837DA11F86775A00591FFD /* view */,
+				96837DA61F86775A00591FFD /* useCase */,
+				96837DA91F86775A00591FFD /* router */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		96837D9A1F86775A00591FFD /* transition */ = {
+			isa = PBXGroup;
+			children = (
+				96837D9B1F86775A00591FFD /* DEMOLoginTransition.m */,
+				96837D9C1F86775A00591FFD /* DEMOLoginTransition.h */,
+			);
+			path = transition;
+			sourceTree = "<group>";
+		};
+		96837D9D1F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837D9E1F86775A00591FFD /* DEMOLoginCoordinator.h */,
+				96837D9F1F86775A00591FFD /* DEMOLoginCoordinator.m */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837DA11F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837DA21F86775A00591FFD /* DEMOLoginViewController.h */,
+				96837DA31F86775A00591FFD /* DEMOLoginView.h */,
+				96837DA41F86775A00591FFD /* DEMOLoginViewController.m */,
+				96837DA51F86775A00591FFD /* DEMOLoginView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837DA61F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837DA71F86775A00591FFD /* DEMOLoginUsecase.m */,
+				96837DA81F86775A00591FFD /* DEMOLoginUsecase.h */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837DA91F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837DAA1F86775A00591FFD /* DEMOLoginRouter.h */,
+				96837DAB1F86775A00591FFD /* DEMOLoginRouter.m */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837DAC1F86775A00591FFD /* base */ = {
+			isa = PBXGroup;
+			children = (
+				96837DAD1F86775A00591FFD /* service */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		96837DAD1F86775A00591FFD /* service */ = {
+			isa = PBXGroup;
+			children = (
+				96837DAE1F86775A00591FFD /* FMBaseApplicationService.h */,
+				96837DAF1F86775A00591FFD /* FMBaseAppAnalyzerService.h */,
+				96837DB01F86775A00591FFD /* FMBaseICloudService.h */,
+				96837DB11F86775A00591FFD /* FMBaseFileService.h */,
+				96837DB21F86775A00591FFD /* FMBasePhoneService.m */,
+				96837DB31F86775A00591FFD /* FMBaseAppAnalyzerService.m */,
+				96837DB41F86775A00591FFD /* FMBaseApplicationService.m */,
+				96837DB51F86775A00591FFD /* FMBaseFileService.m */,
+				96837DB61F86775A00591FFD /* FMBaseICloudService.m */,
+				96837DB71F86775A00591FFD /* FMBasePhoneService.h */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		96837DB81F86775A00591FFD /* NoteEditing */ = {
+			isa = PBXGroup;
+			children = (
+				96837DB91F86775A00591FFD /* coordinator */,
+				96837DBC1F86775A00591FFD /* DEMONoteEditPonso.h */,
+				96837DBD1F86775A00591FFD /* DEMONoteEditingContracts.h */,
+				96837DBE1F86775A00591FFD /* DEMONoteEditPonso.m */,
+				96837DBF1F86775A00591FFD /* view */,
+				96837DC41F86775A00591FFD /* useCase */,
+				96837DC71F86775A00591FFD /* router */,
+			);
+			path = NoteEditing;
+			sourceTree = "<group>";
+		};
+		96837DB91F86775A00591FFD /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				96837DBA1F86775A00591FFD /* DEMONoteEditingCoordinator.m */,
+				96837DBB1F86775A00591FFD /* DEMONoteEditingCoordinator.h */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		96837DBF1F86775A00591FFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				96837DC01F86775A00591FFD /* DEMONoteEditingViewController.h */,
+				96837DC11F86775A00591FFD /* DEMONoteEditingView.m */,
+				96837DC21F86775A00591FFD /* DEMONoteEditingViewController.m */,
+				96837DC31F86775A00591FFD /* DEMONoteEditingView.h */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		96837DC41F86775A00591FFD /* useCase */ = {
+			isa = PBXGroup;
+			children = (
+				96837DC51F86775A00591FFD /* DEMONoteEditingUsecase.m */,
+				96837DC61F86775A00591FFD /* DEMONoteEditingUsecase.h */,
+			);
+			path = useCase;
+			sourceTree = "<group>";
+		};
+		96837DC71F86775A00591FFD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				96837DC81F86775A00591FFD /* DEMONoteEditingRouter.m */,
+				96837DC91F86775A00591FFD /* DEMONoteEditingRouter.h */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		96837DCA1F86775A00591FFD /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				96837DCB1F86775A00591FFD /* DEMOEntity.h */,
+				96837DCC1F86775A00591FFD /* DEMONoteEntity.h */,
+				96837DCD1F86775A00591FFD /* DEMOEntity.m */,
+				96837DCE1F86775A00591FFD /* DEMONoteEntity.m */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		96837DCF1F86775A00591FFD /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				96837DD01F86775A00591FFD /* DEMOConstants.h */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
+		96837DD11F86775A00591FFD /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				96837DD21F86775A00591FFD /* HEROViewFactory.m */,
+				96837DD31F86775A00591FFD /* HEROViewFactory.h */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
+		96837E151F86777100591FFD /* workflow */ = {
+			isa = PBXGroup;
+			children = (
+				96837E161F86777100591FFD /* app */,
+				96837E191F86777100591FFD /* tabbar */,
+				96837E1D1F86777100591FFD /* container */,
+				96837E211F86777100591FFD /* notes */,
+				96837E251F86777100591FFD /* main */,
+				96837E291F86777100591FFD /* login */,
+			);
+			path = workflow;
+			sourceTree = "<group>";
+		};
+		96837E161F86777100591FFD /* app */ = {
+			isa = PBXGroup;
+			children = (
+				96837E171F86777100591FFD /* HEROAppWorkflow.h */,
+				96837E181F86777100591FFD /* HEROAppWorkflow.m */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		96837E191F86777100591FFD /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				96837E1A1F86777100591FFD /* DEMOTabbarWorkflow.h */,
+				96837E1B1F86777100591FFD /* DEMOTabbarWorkflow.m */,
+				96837E1C1F86777100591FFD /* DEMOTabbarWorkflowContract.h */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
+		96837E1D1F86777100591FFD /* container */ = {
+			isa = PBXGroup;
+			children = (
+				96837E1E1F86777100591FFD /* DEMOContainerWorkflow.m */,
+				96837E1F1F86777100591FFD /* DEMOContainerWorkflowContract.h */,
+				96837E201F86777100591FFD /* DEMOContainerWorkflow.h */,
+			);
+			path = container;
+			sourceTree = "<group>";
+		};
+		96837E211F86777100591FFD /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				96837E221F86777100591FFD /* DEMONotesWorkflow.m */,
+				96837E231F86777100591FFD /* DEMONotesWorkflowContract.h */,
+				96837E241F86777100591FFD /* DEMONotesWorkflow.h */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
+		96837E251F86777100591FFD /* main */ = {
+			isa = PBXGroup;
+			children = (
+				96837E261F86777100591FFD /* DEMOMainWorkflow.h */,
+				96837E271F86777100591FFD /* DEMOMainWorkflowContract.h */,
+				96837E281F86777100591FFD /* DEMOMainWorkflow.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		96837E291F86777100591FFD /* login */ = {
+			isa = PBXGroup;
+			children = (
+				96837E2A1F86777100591FFD /* DEMOLoginWorkflow.h */,
+				96837E2B1F86777100591FFD /* DEMOLoginWorkflowContract.h */,
+				96837E2C1F86777100591FFD /* DEMOLoginWorkflow.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* HeroArchitecture_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "HeroArchitecture_Example" */;
+			buildPhases = (
+				4DCE57EE5B519FFF2F143A6D /* [CP] Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				B6DBDC49F92052CA70C36BE3 /* [CP] Embed Pods Frameworks */,
+				6EBB238BA7DAFDA03F7DF48A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeroArchitecture_Example;
+			productName = HeroArchitecture;
+			productReference = 6003F58A195388D20070C39A /* HeroArchitecture_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* HeroArchitecture_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "HeroArchitecture_Tests" */;
+			buildPhases = (
+				3A49F3393D348C2EC62B788C /* [CP] Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				98A6DD594F8DAA0A3C059D39 /* [CP] Embed Pods Frameworks */,
+				7BEE071A7FE48BBABACD6C50 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = HeroArchitecture_Tests;
+			productName = HeroArchitectureTests;
+			productReference = 6003F5AE195388D20070C39A /* HeroArchitecture_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HERO;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "fluidmobile GmbH";
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "HeroArchitecture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* HeroArchitecture_Example */,
+				6003F5AD195388D20070C39A /* HeroArchitecture_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96837D031F86770E00591FFD /* img0.jpg in Resources */,
+				96837D041F86770E00591FFD /* img1.jpg in Resources */,
+				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A49F3393D348C2EC62B788C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeroArchitecture_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DCE57EE5B519FFF2F143A6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeroArchitecture_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EBB238BA7DAFDA03F7DF48A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroArchitecture_Example/Pods-HeroArchitecture_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BEE071A7FE48BBABACD6C50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroArchitecture_Tests/Pods-HeroArchitecture_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A6DD594F8DAA0A3C059D39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroArchitecture_Tests/Pods-HeroArchitecture_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6DBDC49F92052CA70C36BE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HeroArchitecture_Example/Pods-HeroArchitecture_Example-frameworks.sh",
+				"${PODS_ROOT}/Smooch/Smooch.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Smooch.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroArchitecture_Example/Pods-HeroArchitecture_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96837DF41F86775A00591FFD /* DEMONotesCoordinator.m in Sources */,
+				96837DE91F86775A00591FFD /* DEMOEditControlUsecase.m in Sources */,
+				96837DE11F86775A00591FFD /* DEMOPictureRouter.m in Sources */,
+				96837E081F86775A00591FFD /* FMBaseAppAnalyzerService.m in Sources */,
+				96837E321F86777200591FFD /* DEMOLoginWorkflow.m in Sources */,
+				96837DF71F86775A00591FFD /* DEMONotesView.m in Sources */,
+				96837E121F86775A00591FFD /* DEMOEntity.m in Sources */,
+				96837DDD1F86775A00591FFD /* DEMOPictureView.m in Sources */,
+				96837E0F1F86775A00591FFD /* DEMONoteEditingViewController.m in Sources */,
+				96837DDB1F86775A00591FFD /* DEMOSettingsRouter.m in Sources */,
+				96837DD71F86775A00591FFD /* DEMOSettingsCoordinator.m in Sources */,
+				96837DE81F86775A00591FFD /* DEMOEditingPonso.m in Sources */,
+				96837E071F86775A00591FFD /* FMBasePhoneService.m in Sources */,
+				96837DFD1F86775A00591FFD /* DEMOMainViewController.m in Sources */,
+				96837E0E1F86775A00591FFD /* DEMONoteEditingView.m in Sources */,
+				96837E011F86775A00591FFD /* DEMOLoginTransition.m in Sources */,
+				96837DDE1F86775A00591FFD /* DEMOPictureViewController.m in Sources */,
+				96837DDC1F86775A00591FFD /* DEMOPictureCoordinator.m in Sources */,
+				96837DEA1F86775A00591FFD /* DEMOEditControlRouter.m in Sources */,
+				96837E2D1F86777200591FFD /* HEROAppWorkflow.m in Sources */,
+				96837DDA1F86775A00591FFD /* DEMOSettingsUsecase.m in Sources */,
+				96837E2E1F86777200591FFD /* DEMOTabbarWorkflow.m in Sources */,
+				96837DF01F86775A00591FFD /* DEMOExplanationView.m in Sources */,
+				96837DD41F86775A00591FFD /* UIView+Frame.m in Sources */,
+				96837DE21F86775A00591FFD /* DEMOTabbarTransition.m in Sources */,
+				96837DE71F86775A00591FFD /* DEMOEditControlViewController.m in Sources */,
+				96837DE31F86775A00591FFD /* DEMOTabbarRouter.m in Sources */,
+				6003F59E195388D20070C39A /* HEROAppDelegate.m in Sources */,
+				96837DEF1F86775A00591FFD /* DEMOContainerRouter.m in Sources */,
+				96837DEB1F86775A00591FFD /* DEMOContainerCoordinator.m in Sources */,
+				96837E131F86775A00591FFD /* DEMONoteEntity.m in Sources */,
+				96837DEC1F86775A00591FFD /* DEMOContainerViewController.m in Sources */,
+				96837E061F86775A00591FFD /* DEMOLoginRouter.m in Sources */,
+				96837DF21F86775A00591FFD /* DEMOSizeCategoryService.m in Sources */,
+				96837DD51F86775A00591FFD /* DEMOAppColor.m in Sources */,
+				96837DFE1F86775A00591FFD /* DEMOMainView.m in Sources */,
+				96837E0C1F86775A00591FFD /* DEMONoteEditingCoordinator.m in Sources */,
+				96837DF31F86775A00591FFD /* DEMOCommonLoginService.m in Sources */,
+				96837E031F86775A00591FFD /* DEMOLoginViewController.m in Sources */,
+				96837DFC1F86775A00591FFD /* DEMOMainCoordinator.m in Sources */,
+				96837DFA1F86775A00591FFD /* DEMONotesUsecase.m in Sources */,
+				96837E0D1F86775A00591FFD /* DEMONoteEditPonso.m in Sources */,
+				96837E101F86775A00591FFD /* DEMONoteEditingUsecase.m in Sources */,
+				96837DF51F86775A00591FFD /* DEMONotesViewTableViewCell.m in Sources */,
+				96837DFF1F86775A00591FFD /* DEMOMainUsecase.m in Sources */,
+				96837E051F86775A00591FFD /* DEMOLoginUsecase.m in Sources */,
+				96837DE01F86775A00591FFD /* DEMOPictureUsecase.m in Sources */,
+				96837E0A1F86775A00591FFD /* FMBaseFileService.m in Sources */,
+				96837DF81F86775A00591FFD /* DEMONotePonso.m in Sources */,
+				96837DDF1F86775A00591FFD /* DEMOPicturePonso.m in Sources */,
+				96837DD91F86775A00591FFD /* DEMOSettingsViewController.m in Sources */,
+				96837DE51F86775A00591FFD /* DEMOEditControlView.m in Sources */,
+				96837E301F86777200591FFD /* DEMONotesWorkflow.m in Sources */,
+				96837DE61F86775A00591FFD /* DEMOEditingControlCollectionViewCell.m in Sources */,
+				96837DE41F86775A00591FFD /* DEMOEditControlCoordinator.m in Sources */,
+				96837DFB1F86775A00591FFD /* DEMONotesRouter.m in Sources */,
+				96837E111F86775A00591FFD /* DEMONoteEditingRouter.m in Sources */,
+				96837DF91F86775A00591FFD /* DEMONoteService.m in Sources */,
+				96837DF61F86775A00591FFD /* DEMONotesViewController.m in Sources */,
+				96837DD81F86775A00591FFD /* DEMOSettingsView.m in Sources */,
+				96837DED1F86775A00591FFD /* DEMOContainerView.m in Sources */,
+				96837E0B1F86775A00591FFD /* FMBaseICloudService.m in Sources */,
+				96837E091F86775A00591FFD /* FMBaseApplicationService.m in Sources */,
+				96837E141F86775A00591FFD /* HEROViewFactory.m in Sources */,
+				96837DF11F86775A00591FFD /* DEMOCommonUserDefaultService.m in Sources */,
+				96837E2F1F86777200591FFD /* DEMOContainerWorkflow.m in Sources */,
+				96837E001F86775A00591FFD /* DEMOMainRouter.m in Sources */,
+				96837E311F86777200591FFD /* DEMOMainWorkflow.m in Sources */,
+				96837DEE1F86775A00591FFD /* DEMOContainerUsecase.m in Sources */,
+				96837DD61F86775A00591FFD /* DEMOAppFont.m in Sources */,
+				96837E021F86775A00591FFD /* DEMOLoginCoordinator.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				96837E041F86775A00591FFD /* DEMOLoginView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* HeroArchitecture_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71719F9E1E33DC2100824A3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FF78566CCCDA951078887E /* Pods-HeroArchitecture_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeroArchitecture/HeroArchitecture-Prefix.pch";
+				INFOPLIST_FILE = "HeroArchitecture/HeroArchitecture-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE9033E42F76F7C0DB75659A /* Pods-HeroArchitecture_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeroArchitecture/HeroArchitecture-Prefix.pch";
+				INFOPLIST_FILE = "HeroArchitecture/HeroArchitecture-Info.plist";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB051773B3A379569F32437E /* Pods-HeroArchitecture_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroArchitecture_Example.app/HeroArchitecture_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC64F6BC6BE24E38F804BAE2 /* Pods-HeroArchitecture_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeroArchitecture_Example.app/HeroArchitecture_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "HeroArchitecture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "HeroArchitecture_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "HeroArchitecture_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

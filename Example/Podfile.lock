@@ -1,0 +1,27 @@
+PODS:
+  - HeroArchitecture (0.1.0)
+  - MBProgressHUD (1.0.0)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - Smooch (6.1.0)
+
+DEPENDENCIES:
+  - HeroArchitecture (from `../`)
+  - MBProgressHUD
+  - Realm
+  - Smooch
+
+EXTERNAL SOURCES:
+  HeroArchitecture:
+    :path: ../
+
+SPEC CHECKSUMS:
+  HeroArchitecture: 3ec7cade58fc77031e5315f39d649eae175100b7
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  Smooch: c27e6e931059717222130801b716d2712318ee93
+
+PODFILE CHECKSUM: 079f192a28fa3adba6224b01c25286611b37e635
+
+COCOAPODS: 1.3.1

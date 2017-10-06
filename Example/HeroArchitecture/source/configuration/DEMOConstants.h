@@ -1,0 +1,2 @@
+
+#define LAYOUT_BORDER_DEFAULT 10

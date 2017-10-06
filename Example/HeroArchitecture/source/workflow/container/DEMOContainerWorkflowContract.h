@@ -1,0 +1,2 @@
+@protocol DEMOContainerParentWorkflowInput <NSObject>
+@end
