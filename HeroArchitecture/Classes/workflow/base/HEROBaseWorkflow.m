@@ -24,7 +24,7 @@
 	return self;
 }
 
-- (HEROBaseCoordinator*)initialCoordinator{
+- (HEROBaseCoordinator*)initialCoordinator {
 	
 		HEROBaseCoordinator* initialCoordinator = [self createInitialCoordinator];
 		NSAssert(initialCoordinator, @"createInitialCoordinator returns nil");
@@ -32,12 +32,12 @@
 	return initialCoordinator;
 }
 
-- (HEROBaseRouter *)createInitialCoordinator{
+- (HEROBaseCoordinator *)createInitialCoordinator {
 	NSAssert(NO, @"OVERRIDE: createInitialCoordinator in %@",[[self class] description]);
 	return nil;
 }
 
-- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
 	HEROBaseRouter* router = [self existingRouterForClass:routerClass];
 	if (!router) {
 		return [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
@@ -47,7 +47,7 @@
 	}
 }
 
-- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
+- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
 	HEROBaseUsecase* usecase = [usecaseClass new];
 	HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
 	HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
@@ -56,13 +56,13 @@
 	return coordinator;
 }
 
-- (void)addRouter:(HEROBaseRouter*)router{
+- (void)addRouter:(HEROBaseRouter*)router {
 	HERORouterReference* reference = [HERORouterReference new];
 	reference.router = router;
 	[self.routers addObject:reference];
 }
 
-- (HEROBaseRouter*)existingRouterForClass:(Class)routerClass{
+- (HEROBaseRouter*)existingRouterForClass:(Class)routerClass {
 	for (HERORouterReference* reference in self.routers) {
 		if ([reference.router isKindOfClass:routerClass]) {
 			return reference.router;
@@ -71,7 +71,7 @@
 	return nil;
 }
 
-- (HEROBaseWorkflow*)workflowForWorkflow:(Class)workflowClass{
+- (HEROBaseWorkflow*)createAndConnectWorkflowForClass:(Class)workflowClass {
 	HEROBaseWorkflow* workflow = [workflowClass new];
 	workflow.parentWorkflow = self;
 	return workflow;
