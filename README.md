@@ -104,7 +104,7 @@ templates:
 - {name: HeroModule}
 ```
 
-After adding the template source run the command `generamba install template` to install the template.
+After adding the template source run the command `generamba template install` to install the template.
 
 #### 4. Generate a module
 Once `Generamba` is set up correctly just run the command `generamba gen [MODULE_NAME] [TEMPLATE_NAME]` to create your module from the template.

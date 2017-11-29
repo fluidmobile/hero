@@ -9,6 +9,21 @@
 @import UIKit;
 @class HEROBaseCoordinator, HEROBaseTransition, HEROBaseWorkflow;
 
+
+/**
+  The Router component is a module's connection to the workflow. No database entities or PONSOs shall be used in this component only identifiers or.
+ 
+  Use this component to connect to a workflow using the WorkflowInput which has to be implemented by the chosen workflow.
+ 
+  @b Protocols to implement
+ 
+  The Router component implements a single protocol:
+
+  @p RouterInput
+ 
+ @code
+ -(void)didFinishEditingSuperHeroOnRouter:(HEROBAseRouter*)router;
+ */
 @interface HEROBaseRouter : NSObject <FMRouterInterface>
 @property (nonatomic, weak) HEROBaseWorkflow* workflow;
 @property (nonatomic, weak) HEROBaseCoordinator* coordinator;
@@ -16,10 +31,27 @@
 @property (nonatomic, assign) BOOL hasNavigationInTabBar;
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(id)workflow;
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow;
 
+
+/**
+ Push Router on Router Similar to pushViewController:animated:
+ @Discussion if UINavigationController is present and PushViewController is possible
+ @Discussion Fallback: present Router (presentViewController:animated:)
+ @Discussion Similar to pushViewController:animated:
+ 
+ @param router presentingRouter
+ */
 - (void)pushOnRouter:(HEROBaseRouter*)router;
 
+
+
+/**
+ ONLY use as first attempt to display Module on Window
+
+ @param window The windows where the module is set as root Module (setRootViewcontroller)
+ @param hasNavigation does Router needs
+ */
 - (void)presentOnWindow:(UIWindow*)window withNavigation:(BOOL)hasNavigation;
 - (void)presentOnRouter:(HEROBaseRouter*)router inNavigationController:(BOOL)inNavigationController setAsRootView:(BOOL)setAsRootView transition:(HEROBaseTransition*)transition;
 

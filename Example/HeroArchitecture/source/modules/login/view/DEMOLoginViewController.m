@@ -39,7 +39,6 @@
 
 -(void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
-//	[Smooch show];
 }
 
 - (void)userDidSelectLogin{
