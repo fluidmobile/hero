@@ -8,7 +8,8 @@
 
 #import "HEROBaseRouter.h"
 
+@class HEROBaseCoordinator, HEROBaseTransition, HEROBaseWorkflow;
 @interface HEROBaseTabbarRouter : HEROBaseRouter
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter;
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter;
 - (UITabBarController*)tabBarController;
 @end

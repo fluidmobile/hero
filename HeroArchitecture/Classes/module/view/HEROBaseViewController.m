@@ -18,6 +18,7 @@
         return nil;
     }
     self.edgesForExtendedLayout = UIRectEdgeNone;
+	self.title = [[self.class description] stringByReplacingOccurrencesOfString:@"ViewController" withString:@""];
     return self;
 }
 

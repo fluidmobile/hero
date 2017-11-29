@@ -9,7 +9,7 @@
 #import "HEROBaseTabbarRouter.h"
 #import "HERORouterReference.h"
 #import "HEROBaseCoordinator.h"
-
+#import "HEROBaseWorkflow.h"
 
 @interface HEROBaseTabbarRouter ()
 @property (nonatomic, strong) NSArray <HEROBaseCoordinator*>* coordinators;
@@ -22,6 +22,7 @@
 
 
 - (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter{
+	self = [super initWithCoordinator:coordinator workflow:workflowControl];
 	if (!self){
 		return nil;
 	}

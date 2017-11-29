@@ -20,7 +20,7 @@
 @implementation HEROBaseRouter
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(id)workflow{
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow{
 	self = [super init];
 	if (!self) {
 		return nil;
@@ -120,5 +120,10 @@
 	return [NSString stringWithFormat:@"%@ workflowControl: %@ coordinator: %@ viewLayer: %@ hasNavigationbar: %@ navigationController: %@",[self class],[self.workflow class], [self.coordinator class], [self.viewLayer class], self.hasNavigationInTabBar?@"NO":@"YES" ,self.viewLayer.navigationController];
 }
 
+- (void)dealloc{
+#ifdef DEBUG
+	NSLog(@"DEALLOC on %@",[[self class] description]);
+#endif
+}
 @end
 
