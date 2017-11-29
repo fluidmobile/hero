@@ -1,9 +1,9 @@
 //
-//  HEROBaseWorkflow.m
-//  fluidArchitecture
+// HEROBaseWorkflow.m
+// fluidArchitecture
 //
-//  Created by Moritz Ellerbrock on 16/01/17.
-//  Copyright © 2017 fluidmobile GmbH. All rights reserved.
+// Created by Moritz Ellerbrock on 16/01/17.
+// Copyright © 2017 fluidmobile GmbH. All rights reserved.
 //
 #import "HEROBaseWorkflow.h"
 #import "HEROBaseUsecase.h"
@@ -15,70 +15,101 @@
 
 @implementation HEROBaseWorkflow
 
-- (instancetype)init{
-	self = [super init];
-	if (!self) {
-		return nil;
-	}
-	_routers = [@[] mutableCopy];
-	return self;
+- (instancetype)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    _routers = [@[] mutableCopy];
+    return self;
 }
 
 - (HEROBaseCoordinator*)initialCoordinator {
-	
-		HEROBaseCoordinator* initialCoordinator = [self createInitialCoordinator];
-		NSAssert(initialCoordinator, @"createInitialCoordinator returns nil");
-	
-	return initialCoordinator;
+    
+    HEROBaseCoordinator* initialCoordinator = [self createInitialCoordinator];
+    NSAssert(initialCoordinator, @"createInitialCoordinator returns nil");
+    
+    return initialCoordinator;
 }
 
 - (HEROBaseCoordinator *)createInitialCoordinator {
-	NSAssert(NO, @"OVERRIDE: createInitialCoordinator in %@",[[self class] description]);
-	return nil;
+    NSAssert(NO, @"OVERRIDE: createInitialCoordinator in %@",[[self class] description]);
+    return nil;
 }
 
 - (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
-	HEROBaseRouter* router = [self existingRouterForClass:routerClass];
-	if (!router) {
-		return [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
-	}
-	else{
-		return router.coordinator;
-	}
+    NSArray<HEROBaseRouter*>* routers = [self allExistingRouterForClass:routerClass];
+    routers = [self filterRouters:routers withCoordinatorClass:coordinatorClass];
+    routers = [self filterRouters:routers withUsecase:usecaseClass];
+    if ([routers count] > 0) {
+        return [routers firstObject].coordinator;
+    }
+    return [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
 }
 
 - (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
-	HEROBaseUsecase* usecase = [usecaseClass new];
-	HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
-	HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
-	router.workflow = self;
-	[self addRouter:router];
-	return coordinator;
+    HEROBaseUsecase* usecase = [usecaseClass new];
+    HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
+    HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
+    router.workflow = self;
+    [self addRouter:router];
+    return coordinator;
 }
 
 - (void)addRouter:(HEROBaseRouter*)router {
-	HERORouterReference* reference = [HERORouterReference new];
-	reference.router = router;
-	[self.routers addObject:reference];
+    HERORouterReference* reference = [HERORouterReference new];
+    reference.router = router;
+    [self.routers addObject:reference];
 }
 
 - (HEROBaseRouter*)existingRouterForClass:(Class)routerClass {
-	for (HERORouterReference* reference in self.routers) {
-		if ([reference.router isKindOfClass:routerClass]) {
-			return reference.router;
-		}
-	}
-	return nil;
+    for (HERORouterReference* reference in self.routers) {
+        if ([reference.router isKindOfClass:routerClass]) {
+            return reference.router;
+        }
+    }
+    return nil;
 }
 
+- (NSArray<HEROBaseRouter*>*)allExistingRouterForClass:(Class)routerClass {
+    NSMutableArray<HEROBaseRouter*>* allExistingRouterForClass = [@[] mutableCopy];
+    for (HERORouterReference* reference in self.routers) {
+        if ([reference.router isKindOfClass:routerClass]) {
+            [allExistingRouterForClass addObject:reference.router];
+        }
+    }
+    return allExistingRouterForClass;
+}
+
+- (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withCoordinatorClass:(Class)coordinatorClass {
+    NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingCoordinator = [@[] mutableCopy];
+    for (HEROBaseRouter* router in routers) {
+        if ([router.coordinator isKindOfClass:coordinatorClass]) {
+            [filteredRouterWithMatchingCoordinator addObject:router];
+        }
+    }
+    return filteredRouterWithMatchingCoordinator;
+}
+
+- (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withUsecase:(Class)usecaseClass {
+    NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingUsecase = [@[] mutableCopy];
+    for (HEROBaseRouter* router in routers) {
+        if ([router.coordinator.usecase isKindOfClass:usecaseClass]) {
+            [filteredRouterWithMatchingUsecase addObject:router];
+        }
+    }
+    return filteredRouterWithMatchingUsecase;
+}
+
+
 - (HEROBaseWorkflow*)createAndConnectWorkflowForClass:(Class)workflowClass {
-	HEROBaseWorkflow* workflow = [workflowClass new];
-	workflow.parentWorkflow = self;
-	return workflow;
+    HEROBaseWorkflow* workflow = [workflowClass new];
+    workflow.parentWorkflow = self;
+    return workflow;
 }
 
 - (void)tabbarDidSelectRouter:(HEROBaseRouter*)router {
-	//if needed implement in subclass
+    //if needed implement in subclass
 }
 
 @end
