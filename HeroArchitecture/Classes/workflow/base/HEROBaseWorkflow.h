@@ -17,6 +17,7 @@
 - (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
 - (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
 - (HEROBaseCoordinator *)initialCoordinator;
+- (HEROBaseRouter*)existingRouterForClass:(Class)routerClass:
 - (void)addRouter:(HEROBaseRouter*)router;
 - (HEROBaseWorkflow*)createAndConnectWorkflowForClass:(Class)workflowClass;
 @end
