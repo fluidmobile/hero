@@ -50,11 +50,10 @@
 
 
 - (void)pushOnRouter:(HEROBaseRouter*)router{
-	if ([router viewLayer].navigationController) {
+	if ([router viewLayer].navigationController) { // use navigationController
 		[[router viewLayer].navigationController pushViewController:[self viewLayer] animated:YES];
-	}else {
-		// FALLBACK
-		[[router viewLayer] presentViewController:[self viewLayer] animated:YES completion:nil];
+	}else { // FALLBACK
+		[self presentOnRouter:router inNavigationController:NO setAsRootView:NO transition:nil];
 	}
 }
 

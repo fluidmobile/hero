@@ -10,7 +10,7 @@
 
 @class HEROBaseRouter,HEROBaseUsecase, HEROBaseViewController;
 
-@interface HEROBaseCoordinator : NSObject 
+@interface HEROBaseCoordinator : NSObject
 @property (nonatomic, readonly) HEROBaseUsecase* usecase;
 @property (nonatomic, strong) HEROBaseRouter* router;
 @property (nonatomic, weak) HEROBaseViewController* viewLayer;
