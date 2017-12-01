@@ -5,7 +5,7 @@
 //  Created by Moritz Ellerbrock on 16/01/17.
 //  Copyright © 2017 fluidmobile GmbH. All rights reserved.
 //
-#import "HERORouterInterface.h"
+#import "HEROBaseRouterInterface.h"
 @import UIKit;
 @class HEROBaseCoordinator, HEROBaseTransition, HEROBaseWorkflow;
 
@@ -24,7 +24,7 @@
  @code
  -(void)didFinishEditingSuperHeroOnRouter:(HEROBAseRouter*)router;
  */
-@interface HEROBaseRouter : NSObject <FMRouterInterface>
+@interface HEROBaseRouter : NSObject <HEROBaseRouterInterface>
 @property (nonatomic, weak) HEROBaseWorkflow* workflow;
 @property (nonatomic, weak) HEROBaseCoordinator* coordinator;
 @property (nonatomic, weak) UIViewController* viewLayer;

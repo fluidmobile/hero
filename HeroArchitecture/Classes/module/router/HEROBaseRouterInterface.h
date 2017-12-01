@@ -1,8 +1,5 @@
 @import Foundation;
-@class HEROBaseCoordinator, HEROBaseRouter;
-
-@protocol FMRouterInterface
-
+@protocol HEROBaseRouterInterface
 @required
 //lazy loading viewController+View
 - (Class)viewControllerClass;

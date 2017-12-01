@@ -9,7 +9,5 @@
 #import "HEROBaseUsecase.h"
 
 @implementation HEROBaseUsecase
-
 - (void)requestContentUpdate{}
-
 @end
