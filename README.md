@@ -111,7 +111,7 @@ Once `Generamba` is set up correctly just run the command `generamba gen [MODULE
 
 ##### Sample
 ```ruby
-generamba gen Login heroTemplate
+generamba gen Login HeroModule
 ```
 Creating a workflow can be done the same way. However if your module has a workflow you need to add the router to workflow protocol manually.
 
