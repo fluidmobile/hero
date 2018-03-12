@@ -9,6 +9,7 @@
 #import "DEMOPictureView.h"
 #import "HEROViewFactory.h"
 #import "DEMOPicturePonso.h"
+#import "DEMOAppColor.h"
 
 @interface DEMOPictureView()
 @property (nonatomic, strong) UIImageView* imageView;
@@ -21,6 +22,7 @@
     if (!self) {
         return nil;
     }
+    self.backgroundColor = [[DEMOAppColor currentTheme] viewBackground];
 	_imageView = [HEROViewFactory imageViewWithImageNamed:@""];
 	UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidSelectimage:)];
 	[self addGestureRecognizer:tapGesture];

@@ -126,7 +126,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HeroArchitecture.podspec; path = ../HeroArchitecture.podspec; sourceTree = "<group>"; };
+		799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HeroArchitecture.podspec; path = ../HeroArchitecture.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7FC1D29C053F3FC5FC5E91F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8EDA89A21F879B2F00770C40 /* DEMONoteEditPonso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditPonso.h; sourceTree = "<group>"; };
 		8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditPonso.m; sourceTree = "<group>"; };

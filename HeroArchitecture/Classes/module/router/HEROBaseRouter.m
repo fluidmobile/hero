@@ -75,23 +75,18 @@
 	else{
 		viewControllerNew = [self viewLayer];
 	}
-	
 	if (transition) {
 		self.transition = transition;
 		viewControllerNew.transitioningDelegate = self.transition;
 	}
-	
-	[viewController presentViewController:viewControllerNew animated:YES completion:^{
-		if (setAsRootView) {
-			UIWindow* window = [[UIApplication sharedApplication] keyWindow];
-			[window.rootViewController dismissViewControllerAnimated:NO completion:^{
-				NSLog(@"OldRootViewController: %@",[window.rootViewController class]);
-				[window setRootViewController:viewControllerNew];
-				NSLog(@"NewRootViewController: %@",[window.rootViewController class]);
-			}];
-			
-		}
-	}];	
+    if (setAsRootView) {
+        UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+        [window setRootViewController:viewControllerNew];
+    }else {
+        [viewController presentViewController:viewControllerNew animated:YES completion:^{
+            
+        }];
+    }
 }
 
 - (UIViewController *)viewLayer{
