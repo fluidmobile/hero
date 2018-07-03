@@ -17,4 +17,8 @@
 - (BOOL)prefersStatusBarHidden{
     return [self.viewControllers lastObject].prefersStatusBarHidden;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return [self.viewControllers lastObject].preferredStatusBarStyle;
+}
 @end
