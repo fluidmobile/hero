@@ -12,6 +12,7 @@
 #import "HEROBaseTransition.h"
 #import "HEROBaseWorkflow.h"
 #import "HEROBaseViewController.h"
+#import "HERONavigationController.h"
 
 @interface HEROBaseRouter()
 @property (nonatomic, strong) HEROBaseTransition* transition;
@@ -60,7 +61,7 @@
 - (void)presentOnWindow:(UIWindow*)window withNavigation:(BOOL)hasNavigation{
 	UIViewController* viewController = [self viewLayer];
 	if (hasNavigation){
-		viewController = [[UINavigationController alloc] initWithRootViewController:viewController];
+		viewController = [[HERONavigationController alloc] initWithRootViewController:viewController];
 	}
 	window.rootViewController = viewController;
 
@@ -70,7 +71,7 @@
 	UIViewController* viewControllerNew;
 	UIViewController* viewController = [router viewLayer];
 	if (inNavigationController) {
-		viewControllerNew = [[UINavigationController alloc] initWithRootViewController:[self viewLayer]];
+		viewControllerNew = [[HERONavigationController alloc] initWithRootViewController:[self viewLayer]];
 	}
 	else{
 		viewControllerNew = [self viewLayer];
