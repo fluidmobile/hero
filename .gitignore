@@ -32,3 +32,4 @@ Carthage
 #
 Pods/
 Example/Index
+/Example/HeroArchitecture.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist

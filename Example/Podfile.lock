@@ -1,5 +1,5 @@
 PODS:
-  - HeroArchitecture (0.4.3)
+  - HeroArchitecture (0.4.7)
   - MBProgressHUD (1.0.0)
   - Realm (2.10.2):
     - Realm/Headers (= 2.10.2)
@@ -10,15 +10,20 @@ DEPENDENCIES:
   - MBProgressHUD
   - Realm
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MBProgressHUD
+    - Realm
+
 EXTERNAL SOURCES:
   HeroArchitecture:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  HeroArchitecture: f3c855b3c2a507f9167f8a2730a33e59e0511720
+  HeroArchitecture: 6a6f89883f8e24e70819c78ef76e2e0130c641d4
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
 
 PODFILE CHECKSUM: 7f0c400043ef5012c27450ee4cc5ea69da9bc001
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
