@@ -22,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7BAD4A5513E5B34FDA3090E7 /* libPods-HeroArchitecture_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E57A26A00883ACD194CDF9AD /* libPods-HeroArchitecture_Tests.a */; };
+		8EA2BCE420F78A260030246A /* DEMOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA2BCE320F78A260030246A /* DEMOViewController.m */; };
 		8EA7D2DD1F87A2E10083CF55 /* DEMONoteEditPonso.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */; };
 		96837D031F86770E00591FFD /* img0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96837D011F86770E00591FFD /* img0.jpg */; };
 		96837D041F86770E00591FFD /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96837D021F86770E00591FFD /* img1.jpg */; };
@@ -128,6 +129,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HeroArchitecture.podspec; path = ../HeroArchitecture.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7FC1D29C053F3FC5FC5E91F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8EA2BCE220F78A260030246A /* DEMOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEMOViewController.h; sourceTree = "<group>"; };
+		8EA2BCE320F78A260030246A /* DEMOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMOViewController.m; sourceTree = "<group>"; };
 		8EDA89A21F879B2F00770C40 /* DEMONoteEditPonso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditPonso.h; sourceTree = "<group>"; };
 		8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditPonso.m; sourceTree = "<group>"; };
 		95A6F7447C4E1A553078CE0D /* libPods-HeroArchitecture_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroArchitecture_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -419,6 +422,15 @@
 				D37FEAC505E09AFB0AA1622A /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		8EA2BCE120F78A0B0030246A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8EA2BCE220F78A260030246A /* DEMOViewController.h */,
+				8EA2BCE320F78A260030246A /* DEMOViewController.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		8EA7D2DC1F87A2870083CF55 /* launchStoryboard */ = {
@@ -984,6 +996,7 @@
 		96837DAC1F86775A00591FFD /* base */ = {
 			isa = PBXGroup;
 			children = (
+				8EA2BCE120F78A0B0030246A /* view */,
 				96837DAD1F86775A00591FFD /* service */,
 			);
 			path = base;
@@ -1332,6 +1345,7 @@
 				96837DEF1F86775A00591FFD /* DEMOContainerRouter.m in Sources */,
 				96837DEB1F86775A00591FFD /* DEMOContainerCoordinator.m in Sources */,
 				96837E131F86775A00591FFD /* DEMONoteEntity.m in Sources */,
+				8EA2BCE420F78A260030246A /* DEMOViewController.m in Sources */,
 				96837DEC1F86775A00591FFD /* DEMOContainerViewController.m in Sources */,
 				96837E061F86775A00591FFD /* DEMOLoginRouter.m in Sources */,
 				96837DF21F86775A00591FFD /* DEMOSizeCategoryService.m in Sources */,

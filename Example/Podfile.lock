@@ -1,4 +1,5 @@
 PODS:
+  - FLEX (2.4.0)
   - HeroArchitecture (0.4.7)
   - MBProgressHUD (1.0.0)
   - Realm (2.10.2):
@@ -6,12 +7,14 @@ PODS:
   - Realm/Headers (2.10.2)
 
 DEPENDENCIES:
+  - FLEX
   - HeroArchitecture (from `../`)
   - MBProgressHUD
   - Realm
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - FLEX
     - MBProgressHUD
     - Realm
 
@@ -20,10 +23,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   HeroArchitecture: 6a6f89883f8e24e70819c78ef76e2e0130c641d4
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
 
-PODFILE CHECKSUM: 7434e0bfe9e090e973867b3323f3d6cb37817085
+PODFILE CHECKSUM: 2809e04eef85dfbf9b4a092b441a4a71ad18cac5
 
 COCOAPODS: 1.5.3

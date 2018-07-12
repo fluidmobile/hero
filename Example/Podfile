@@ -4,6 +4,7 @@ target 'HeroArchitecture_Example' do
   pod 'HeroArchitecture', :path => '../'
   pod 'Realm', :inhibit_warnings => true
   pod 'MBProgressHUD', :inhibit_warnings => true
+  pod 'FLEX', :inhibit_warnings => true
 
   target 'HeroArchitecture_Tests' do
     inherit! :search_paths

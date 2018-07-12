@@ -33,6 +33,10 @@
 	[self setupViewPreserveContent:YES];
 }
 
+-(void)updateSizeClass:(UIUserInterfaceSizeClass)sizeClass{
+}
+
+
 
 - (void)setupViewPreserveContent:(BOOL)preserveContent{
 	NSAssert(NO, @"OVERRIDE: setupViewPreserveContent: in %@",[[self class] description]);

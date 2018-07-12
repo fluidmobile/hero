@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeroViewControllerProtocol.h"
 @class HEROBaseCoordinator;
 
-@interface HEROBaseViewController : UIViewController
-@property (nonatomic, strong) HEROBaseCoordinator* coordinator;
-- (void)requestContentUpdate;
+@interface HEROBaseViewController : UIViewController <HEROViewControllerProtocol>
 @end

@@ -17,4 +17,8 @@
     _router = router;
     return self;
 }
+
+-(NSString *)debugDescription{
+    return [NSString stringWithFormat:@"HERORouterReference: %@",[self.router class]];
+}
 @end

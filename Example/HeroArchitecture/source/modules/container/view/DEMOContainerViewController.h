@@ -6,9 +6,9 @@
 //  Copyright © 2017 fluidmobile GmbH. All rights reserved.
 //
 
-#import "HEROBaseViewController.h"
+#import "DEMOViewController.h"
 #import "DEMOContainerContracts.h"
 
-@interface DEMOContainerViewController : HEROBaseViewController <DEMOContainerViewInput>
+@interface DEMOContainerViewController : DEMOViewController <DEMOContainerViewInput>
 
 @end

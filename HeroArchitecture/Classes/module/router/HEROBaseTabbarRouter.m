@@ -11,6 +11,7 @@
 #import "HEROBaseCoordinator.h"
 #import "HEROBaseWorkflow.h"
 #import "HERONavigationController.h"
+#import "HEROBaseTabBarController.h"
 
 @interface HEROBaseTabbarRouter ()
 @property (nonatomic, strong) NSArray <HEROBaseCoordinator*>* coordinators;
@@ -41,9 +42,10 @@
 
 - (UIViewController *)viewLayer{
 	if (!_viewLayer){
-		UITabBarController* tabBarController = [UITabBarController new];
+		HEROBaseTabBarController* tabBarController = [HEROBaseTabBarController new];
         NSMutableArray* viewControllers = [self tabbarViewControllers];
 		tabBarController.viewControllers = viewControllers;
+        tabBarController.coordinator = self.coordinator;
 		_viewLayer = tabBarController;
 		return tabBarController;
 	}

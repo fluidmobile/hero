@@ -10,8 +10,5 @@
 #import "HEROBaseViewInterface.h"
 
 @interface HEROBaseView : UIView <HEROBaseViewInterface>
-
-
-
-
+-(void)updateSizeClass:(UIUserInterfaceSizeClass)sizeClass;
 @end

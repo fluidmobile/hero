@@ -7,6 +7,7 @@
 //
 #import "HEROBaseViewController.h"
 #import "HEROBaseCoordinator.h"
+#import "HEROBaseView.h"
 
 @interface HEROBaseViewController ()
 @end
@@ -17,7 +18,6 @@
     if (!self) {
         return nil;
     }
-    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self.class description] stringByReplacingOccurrencesOfString:@"ViewController" withString:@""];
     return self;
 }
@@ -30,5 +30,14 @@
 - (void)requestContentUpdate{
 	[self.coordinator requestContentUpdate];
 }
+
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection{
+    [super traitCollectionDidChange:previousTraitCollection];
+    if ([self.view isKindOfClass:[HEROBaseView class]]){
+        [((HEROBaseView*)self.view) updateSizeClass:self.traitCollection.horizontalSizeClass];
+    }
+    [self requestContentUpdate];
+}
+
 
 @end

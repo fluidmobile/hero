@@ -13,6 +13,7 @@
 #import "HEROBaseWorkflow.h"
 #import "HEROBaseViewController.h"
 #import "HERONavigationController.h"
+#import "HEROViewControllerProtocol.h"
 
 @interface HEROBaseRouter()
 @property (nonatomic, strong) HEROBaseTransition* transition;
@@ -94,12 +95,11 @@
 	UIViewController* viewLayer;
 	if (_viewLayer){
 		return _viewLayer;
-		
 	}
 	else{
 		viewLayer = [[self viewControllerClass] new];
 		_viewLayer = viewLayer;
-		((HEROBaseViewController*)_viewLayer).coordinator = self.coordinator;
+		((id<HEROViewControllerProtocol>)_viewLayer).coordinator = self.coordinator;
 		self.coordinator.viewLayer = (HEROBaseViewController*)viewLayer;
 	}
 	return viewLayer;

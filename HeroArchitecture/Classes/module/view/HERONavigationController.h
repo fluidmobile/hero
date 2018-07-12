@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeroViewControllerProtocol.h"
 
-@interface HERONavigationController : UINavigationController
-
+@interface HERONavigationController : UINavigationController <HEROViewControllerProtocol>
 @end

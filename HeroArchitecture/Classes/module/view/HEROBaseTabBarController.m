@@ -1,18 +1,17 @@
 //
-//  LORENavigationController.m
-//  loreical
+//  HEROBaseTabBarController.m
+//  HeroArchitecture
 //
-//  Created by Thomas on 03.07.18.
-//  Copyright © 2018 fluidmobile GmbH. All rights reserved.
+//  Created by Moritz Ellerbrock on 12.07.18.
 //
 
-#import "HERONavigationController.h"
+#import "HEROBaseTabBarController.h"
 #import "HEROBaseCoordinator.h"
 
-@interface HERONavigationController ()
+@interface HEROBaseTabBarController ()
 @end
 
-@implementation HERONavigationController
+@implementation HEROBaseTabBarController
 @synthesize coordinator;
 
 - (instancetype)init{
@@ -33,12 +32,6 @@
     [self.coordinator requestContentUpdate];
 }
 
-- (BOOL)prefersStatusBarHidden{
-    return [self.viewControllers lastObject].prefersStatusBarHidden;
-}
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return [self.viewControllers lastObject].preferredStatusBarStyle;
-}
 
 @end

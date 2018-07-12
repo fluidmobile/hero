@@ -39,18 +39,11 @@
 -(HEROBaseCoordinator *)tabbarCoordinator{
     HEROBaseCoordinator* coordinator = [self dequeueCoordinatorForRouter:[HEROBaseTabbarRouter class] coordinator:nil usecase:nil];
     HEROBaseTabbarRouter* tabbarRouter = ((HEROBaseTabbarRouter*)coordinator.router);
-    if ([tabbarRouter isInitialized]) {
-        return coordinator;
-    }
-	NSArray* coordinators = @[[self.workflowMain initialCoordinator],  [self.workflowNotes initialCoordinator], [self.workflowEditing initialCoordinator]];
-    if (!tabbarRouter) {
-        coordinator = [[HEROBaseCoordinator alloc] initWithUsecase:nil];
-        tabbarRouter = [[DEMOTabbarRouter alloc] initWithCoordinator:coordinator workflowControl:self coordinators:coordinators transition:[DEMOTabbarTransition new] selectedRouter:nil];
-        coordinator.router = tabbarRouter;
-    }
-    else{
+    NSArray* coordinators = @[[self.workflowMain initialCoordinator],  [self.workflowNotes initialCoordinator], [self.workflowEditing initialCoordinator]];
+    if (![tabbarRouter isInitialized]) {
         [tabbarRouter updateWithCoordinators:coordinators];
     }
+    
 	return coordinator;
 }
 
