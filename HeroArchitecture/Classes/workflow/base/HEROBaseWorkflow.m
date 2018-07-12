@@ -8,6 +8,7 @@
 #import "HEROBaseWorkflow.h"
 #import "HEROBaseUsecase.h"
 #import "HERORouterReference.h"
+#import "HEROBaseTabbarRouter.h"
 
 @interface HEROBaseWorkflow()
 @property (nonatomic, strong) NSMutableArray <HERORouterReference*>* routers;
@@ -38,29 +39,38 @@
 }
 
 - (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
+    NSAssert(routerClass, @"NO router");
     NSArray<HEROBaseRouter*>* routers = [self allExistingRouterForClass:routerClass];
-    routers = [self filterRouters:routers withCoordinatorClass:coordinatorClass];
-    routers = [self filterRouters:routers withUsecase:usecaseClass];
-    if ([routers count] > 0) {
+    if (coordinatorClass) {
+        routers = [self filterRouters:routers withCoordinatorClass:coordinatorClass];
+    }
+    if (usecaseClass) {
+        routers = [self filterRouters:routers withUsecase:usecaseClass];
+    }
+    
+    if (routers && [routers count] > 0) {
         return [routers firstObject].coordinator;
     }
-    return [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
+    HEROBaseCoordinator* coordinator = [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
+    return coordinator;
 }
 
 - (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
     HEROBaseUsecase* usecase = [usecaseClass new];
     HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
+    if (!coordinator && routerClass == [HEROBaseTabbarRouter class]) {
+        coordinator = [[HEROBaseCoordinator alloc] initWithUsecase:usecase];
+    }
     HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
     router.workflow = self;
     [self addRouter:router];
     return coordinator;
 }
-
 - (void)addRouter:(HEROBaseRouter*)router {
-    HERORouterReference* reference = [HERORouterReference new];
-    reference.router = router;
+    NSAssert(router, @"NO Router");
+    HERORouterReference* reference = [[HERORouterReference alloc] initWithRouter:router];
     [self.routers addObject:reference];
-}
+} 
 
 - (HEROBaseRouter*)existingRouterForClass:(Class)routerClass {
     for (HERORouterReference* reference in self.routers) {
