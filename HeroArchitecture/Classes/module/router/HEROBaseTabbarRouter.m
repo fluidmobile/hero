@@ -32,6 +32,11 @@
 	return self;
 }
 
+- (BOOL)isInitialized{
+    return [self.coordinators count] > 0;
+}
+
+
 //NEVER CALL
 - (Class)viewControllerClass{
 	NSAssert(NO, @"NEVER CALL");
