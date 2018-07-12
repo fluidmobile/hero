@@ -10,5 +10,6 @@
 #import <Foundation/Foundation.h>
 
 @interface HERORouterReference : NSObject
+-(instancetype)initWithRouter:(HEROBaseRouter*)router;
 @property (nonatomic, weak) HEROBaseRouter* router;
 @end

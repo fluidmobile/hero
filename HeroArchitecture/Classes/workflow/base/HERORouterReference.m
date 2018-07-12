@@ -9,5 +9,12 @@
 #import "HERORouterReference.h"
 
 @implementation HERORouterReference
-
+-(instancetype)initWithRouter:(HEROBaseRouter*)router{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    _router = router;
+    return self;
+}
 @end
