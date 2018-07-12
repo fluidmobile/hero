@@ -50,6 +50,10 @@
 	[(id<DEMOMainViewOutput>)self.coordinator selectedSegmentAtIndex:index];
 }
 
+-(void)selectButtonCallWorkflow{
+    [(id<DEMOMainViewOutput>)self.coordinator selectButtonCallWorkflow];
+}
+
 #pragma mark - Public
 -(UIView*)detailView{
     return self.viewMain.detailView;

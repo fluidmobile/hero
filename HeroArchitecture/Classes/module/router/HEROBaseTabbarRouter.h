@@ -13,4 +13,5 @@
 - (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter;
 - (BOOL)isInitialized;
 - (UITabBarController*)tabBarController;
+- (void)updateWithCoordinators:(NSArray <HEROBaseCoordinator*>*)coordinators;
 @end

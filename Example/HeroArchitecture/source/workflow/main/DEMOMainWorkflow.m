@@ -9,10 +9,9 @@
 #import "DEMOMainWorkflow.h"
 #import "DEMOMainWorkflowContract.h"
 
-#import "DEMOMainCoordinator.h"
+#import "DEMOMainRouter.h"
 #import "DEMOMainUsecase.h"
-
-
+#import "DEMOMainCoordinator.h"
 #import "DEMOMainContracts.h"
 
 //SettingsModule
@@ -78,7 +77,7 @@
 
 #pragma mark - DEMOSettingsWorkflowOutput
 -(void)loggedOutOnRouter:(HEROBaseRouter*)router{
-	[(id<DEMOMainParentWorkflowInput>)self.parentWorkflow loggedOutOnRouter:router];
+	[(id<DEMOMainWorkflowParentInput>)self.parentWorkflow loggedOutOnRouter:router];
 }
 
 - (void)selectedSelection:(DEMOMainSelection)selection onRouter:(HEROBaseRouter *)router {
@@ -101,6 +100,10 @@
 		default:
 			break;
 	}
+}
+
+- (void)selectButtonCallWorkflowOnRouter:(HEROBaseRouter *)router{
+    [(id<DEMOMainWorkflowParentInput>)self.parentWorkflow selectButtonCallWorkflowOnRouter:router];
 }
 
 -(void)dismissOnRouter:(HEROBaseRouter*)router{

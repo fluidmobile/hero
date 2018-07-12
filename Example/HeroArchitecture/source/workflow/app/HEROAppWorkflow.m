@@ -14,7 +14,7 @@
 #import "DEMOLoginTransition.h"
 #import "DEMOTabbarTransition.h"
 
-@interface HEROAppWorkflow ()<DEMOLoginParentWorkflowInput, DEMOTabbarParentWorkflowInput>
+@interface HEROAppWorkflow ()<DEMOLoginWorkflowParentInput, DEMOTabbarParentWorkflowInput>
     @property (nonatomic, strong) HEROBaseWorkflow* workflow;
 @end
 

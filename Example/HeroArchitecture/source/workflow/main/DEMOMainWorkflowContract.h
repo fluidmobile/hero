@@ -1,4 +1,9 @@
 @class HEROBaseRouter;
-@protocol DEMOMainParentWorkflowInput
+
+@protocol DEMOMainWorkflowParentInput
 -(void)loggedOutOnRouter:(HEROBaseRouter*)router;
+- (void)selectButtonCallWorkflowOnRouter:(HEROBaseRouter *)router;
+@end
+
+@protocol DEMOMainWorkflowOutput
 @end

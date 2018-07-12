@@ -16,6 +16,7 @@
 @interface DEMOMainView()
 @property (nonatomic, strong) UILabel* label;
 @property (nonatomic, strong) UIButton* buttonSettings;
+@property (nonatomic, strong) UIButton* buttonCallWorkflow;
 @property (nonatomic, strong) UISegmentedControl* segmentedControlView;
 @property (nonatomic, strong) DEMOExplanationView* explanationView;
 @end
@@ -38,6 +39,10 @@
     [self.delegate didSelectButton:1];
 }
 
+-(void)actionSelectButtonCallWorkflow:(id)sender{
+    [self.delegate selectButtonCallWorkflow];
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
 	
@@ -47,7 +52,8 @@
     //primitive layout for demo, NO production code
     self.label.frame = (CGRect){0,[self.explanationView pointRightBottom].y + LAYOUT_BORDER_DEFAULT,self.bounds.size.width,44};
     self.buttonSettings.frame = (CGRect){0,[self.label pointRightBottom].y,self.bounds.size.width,44};
-    self.segmentedControlView.frame = (CGRect){0,[self.buttonSettings pointRightBottom].y + LAYOUT_BORDER_DEFAULT,self.bounds.size.width,44};
+    self.buttonCallWorkflow.frame = (CGRect){0,[self.buttonSettings pointRightBottom].y,self.bounds.size.width,44};
+    self.segmentedControlView.frame = (CGRect){0,[self.buttonCallWorkflow pointRightBottom].y + LAYOUT_BORDER_DEFAULT,self.bounds.size.width,44};
     self.detailView.frame = (CGRect){LAYOUT_BORDER_DEFAULT*3,[self.segmentedControlView pointRightBottom].y+(LAYOUT_BORDER_DEFAULT*2),self.bounds.size.width-(LAYOUT_BORDER_DEFAULT*6),self.bounds.size.height-[self.segmentedControlView pointRightBottom].y-(LAYOUT_BORDER_DEFAULT*2)};
 }
 
@@ -93,6 +99,10 @@
 	[self.buttonSettings removeFromSuperview];
 	self.buttonSettings = [HEROViewFactory buttonWithTitle:@"Settings" target:self selector:@selector(actionSelectButtonLogout:)];
 	[self addSubview:self.buttonSettings];
+    
+    [self.buttonCallWorkflow removeFromSuperview];
+    self.buttonCallWorkflow = [HEROViewFactory buttonWithTitle:@"CallWorkflow" target:self selector:@selector(actionSelectButtonCallWorkflow:)];
+    [self addSubview:self.buttonCallWorkflow];
 	
 	[self.segmentedControlView removeFromSuperview];
 	self.segmentedControlView = [[UISegmentedControl alloc] initWithItems:@[@"Notes",@"Pictures",@"Switches"]];

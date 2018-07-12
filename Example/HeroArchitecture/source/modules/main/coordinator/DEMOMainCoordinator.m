@@ -29,5 +29,9 @@
 	[(id<DEMOMainRouterInput>)self.router selectedSelection:selection];
 }
 
+-(void)selectButtonCallWorkflow{
+    [(id<DEMOMainRouterInput>)self.router selectButtonCallWorkflow];
+}
+
 
 @end

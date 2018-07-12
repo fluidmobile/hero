@@ -1,3 +1,3 @@
-@protocol DEMOLoginParentWorkflowInput <NSObject>
+@protocol DEMOLoginWorkflowParentInput <NSObject>
 -(void)loggedInOnRouter:(HEROBaseRouter*)router;
 @end

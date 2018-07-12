@@ -32,7 +32,7 @@
 }
 
 -(void)loggedInOnRouter:(HEROBaseRouter *)router{
-	[(id<DEMOLoginParentWorkflowInput>)self.parentWorkflow loggedInOnRouter:router] ;
+	[(id<DEMOLoginWorkflowParentInput>)self.parentWorkflow loggedInOnRouter:router] ;
 }
 
 -(HEROBaseCoordinator *)routerLoggedOut{

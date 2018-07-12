@@ -22,7 +22,10 @@
 	//ipad way
 	UIViewController* viewController = [router viewLayer];
 	[(id<DEMOMainViewInput>)self.viewLayer setDetailViewController:viewController];
-	
+}
+
+-(void)selectButtonCallWorkflow{
+    [(id<DEMOMainWorkflowInput>)self.workflow selectButtonCallWorkflowOnRouter:self];
 }
 
 @end

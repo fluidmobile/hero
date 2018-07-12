@@ -11,6 +11,7 @@
 @protocol DEMOMainViewDelegate <NSObject>
 -(void)didSelectButton:(int)button;
 -(void)selectedSegmentAtIndex:(int)index;
+-(void)selectButtonCallWorkflow;
 @end
 
 @interface DEMOMainView : HEROBaseView

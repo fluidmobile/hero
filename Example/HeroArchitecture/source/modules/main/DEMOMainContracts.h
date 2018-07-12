@@ -4,6 +4,7 @@
 
 @protocol DEMOMainRouterInput <NSObject>
 -(void)selectedSelection:(DEMOMainSelection)selection;
+-(void)selectButtonCallWorkflow;
 @end
 
 @protocol DEMOMainRouterOutput <NSObject>
@@ -11,6 +12,7 @@
 
 @protocol DEMOMainWorkflowInput <NSObject>
 -(void)selectedSelection:(DEMOMainSelection)selection onRouter:(HEROBaseRouter*)router;
+-(void)selectButtonCallWorkflowOnRouter:(HEROBaseRouter*)router;
 @end
 
 @protocol DEMOMainUsecaseOutput <NSObject>
@@ -26,6 +28,7 @@
 @protocol DEMOMainViewOutput <NSObject>
 -(void)selectedButtonIndex:(int)index;
 -(void)selectedSegmentAtIndex:(int)index;
+-(void)selectButtonCallWorkflow;
 @end
 
 @protocol DEMOMainViewInput  <NSObject>

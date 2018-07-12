@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "HEROBaseWorkflow.h"
-#import "DEMOMainRouter.h"
 
 @interface DEMOMainWorkflow : HEROBaseWorkflow
 @end

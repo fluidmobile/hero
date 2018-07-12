@@ -1,2 +1,2 @@
-@protocol DEMONotesParentWorkflowInput <NSObject>
+@protocol DEMONotesWorkflowParentInput <NSObject>
 @end

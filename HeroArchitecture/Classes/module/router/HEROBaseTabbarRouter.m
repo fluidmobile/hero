@@ -32,11 +32,6 @@
 	return self;
 }
 
-- (BOOL)isInitialized{
-    return [self.coordinators count] > 0;
-}
-
-
 //NEVER CALL
 - (Class)viewControllerClass{
 	NSAssert(NO, @"NEVER CALL");
@@ -46,16 +41,8 @@
 
 - (UIViewController *)viewLayer{
 	if (!_viewLayer){
-		NSMutableArray* viewControllers = [@[] mutableCopy];
-		for (HEROBaseCoordinator* coordinator in self.coordinators){
-			if (coordinator.router.hasNavigationInTabBar) {
-				[viewControllers addObject:[coordinator.router viewLayer]];
-			}
-			else{
-				[viewControllers addObject:[[HERONavigationController alloc] initWithRootViewController:[coordinator.router viewLayer]]];
-			}
-		}
 		UITabBarController* tabBarController = [UITabBarController new];
+        NSMutableArray* viewControllers = [self tabbarViewControllers];
 		tabBarController.viewControllers = viewControllers;
 		_viewLayer = tabBarController;
 		return tabBarController;
@@ -63,12 +50,39 @@
 	else{
 		return _viewLayer;
 	}
-	
+}
+
+-(NSArray<UIViewController*>*)tabbarViewControllers{
+    NSMutableArray* viewControllers = [@[] mutableCopy];
+    for (HEROBaseCoordinator* coordinator in self.coordinators){
+        if (coordinator.router.hasNavigationInTabBar) {
+            [viewControllers addObject:[coordinator.router viewLayer]];
+        }
+        else{
+            [viewControllers addObject:[[HERONavigationController alloc] initWithRootViewController:[coordinator.router viewLayer]]];
+        }
+    }
+    return viewControllers;
+}
+
+
+#pragma mark - Public
+- (BOOL)isInitialized{
+    return [self.coordinators count] > 0;
 }
 
 - (UITabBarController*)tabBarController{
 	return (UITabBarController*)self.viewLayer;
 }
+
+- (void)updateWithCoordinators:(NSArray <HEROBaseCoordinator*>*)coordinators{
+    self.coordinators = coordinators;
+    if (_viewLayer) {
+        NSMutableArray* viewControllers = [self tabbarViewControllers];
+        [self tabBarController].viewControllers = viewControllers;
+    }
+}
+
 
 @end
 
