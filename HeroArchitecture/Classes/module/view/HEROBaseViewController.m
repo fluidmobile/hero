@@ -13,6 +13,7 @@
 @end
 
 @implementation HEROBaseViewController
+@synthesize coordinator;
 - (instancetype)init{
     self = [super init];
     if (!self) {
