@@ -13,7 +13,7 @@
 #import "HEROBaseWorkflow.h"
 #import "HEROBaseViewController.h"
 #import "HERONavigationController.h"
-#import "HEROViewControllerProtocol.h"
+//#import "HEROViewControllerProtocol.h"
 
 @interface HEROBaseRouter()
 @property (nonatomic, strong) HEROBaseTransition* transition;

@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HEROViewControllerProtocol.h"
+//#import "HEROViewControllerProtocol.h"
 
 @class HEROBaseRouter,HEROBaseUsecase, HEROBaseViewController;
 
 @interface HEROBaseCoordinator : NSObject
 @property (nonatomic, readonly) HEROBaseUsecase* usecase;
 @property (nonatomic, strong) HEROBaseRouter* router;
-@property (nonatomic, weak) id<HEROViewControllerProtocol> viewLayer;
+@property (nonatomic, weak) id viewLayer;
 
 - (instancetype)initWithUsecase:(HEROBaseUsecase*)usecase;
 
