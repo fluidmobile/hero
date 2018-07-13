@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "HEROViewControllerProtocol.h"
+#import "HEROViewControllerProtocol.h"
 @class HEROBaseCoordinator;
 
-//@interface HEROBaseViewController : UIViewController <HEROViewControllerProtocol>
-@interface HEROBaseViewController : UIViewController
+@interface HEROBaseViewController : UIViewController <HEROViewControllerProtocol>
 @end
