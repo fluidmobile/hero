@@ -14,7 +14,7 @@
 #import "HEROBaseTabBarController.h"
 #import "HEROBaseViewController.h"
 
-@interface HEROBaseTabbarRouter () <HEROBaseTabBarControllerDelegte>
+@interface HEROBaseTabbarRouter () <UITabBarControllerDelegate>
 @property (nonatomic, strong) NSArray <HEROBaseCoordinator*> *coordinators;
 @property (nonatomic, weak) HEROBaseRouter *selectedRouter;
 
@@ -44,7 +44,7 @@
 - (UIViewController *)viewLayer {
     if (!_viewLayer){
         HEROBaseTabBarController* tabBarController = [HEROBaseTabBarController new];
-        tabBarController.tabBarDelegate = self;
+        tabBarController.delegate = self;
         NSArray<__kindof UIViewController *> *viewControllers = [self tabbarViewControllers];
         tabBarController.viewControllers = viewControllers;
         tabBarController.coordinator = self.coordinator;
@@ -69,7 +69,7 @@
     return viewControllers;
 }
 
-- (void)userDidSelectViewController:(UIViewController *)viewController {
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     UIViewController* viewControllerSelected = viewController;
     if ([viewControllerSelected isKindOfClass:[UINavigationController class]]) {
         viewControllerSelected = [viewControllerSelected.childViewControllers firstObject];
