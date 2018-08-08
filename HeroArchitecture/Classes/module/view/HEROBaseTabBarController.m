@@ -8,7 +8,7 @@
 #import "HEROBaseTabBarController.h"
 #import "HEROBaseCoordinator.h"
 
-@interface HEROBaseTabBarController () <HEROBaseTabBarControllerDelegte>
+@interface HEROBaseTabBarController ()
 @end
 
 @implementation HEROBaseTabBarController
@@ -20,7 +20,6 @@
         return nil;
     }
     self.title = [[self.class description] stringByReplacingOccurrencesOfString:@"ViewController" withString:@""];
-    self.delegate = self;
     return self;
 }
 
@@ -31,10 +30,6 @@
 
 - (void)requestContentUpdate{
     [self.coordinator requestContentUpdate];
-}
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    [self.tabBarDelegate userDidSelectViewController:viewController];
 }
 
 
