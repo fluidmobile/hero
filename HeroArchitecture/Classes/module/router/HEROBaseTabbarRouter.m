@@ -12,8 +12,9 @@
 #import "HEROBaseWorkflow.h"
 #import "HERONavigationController.h"
 #import "HEROBaseTabBarController.h"
+#import "HEROBaseViewController.h"
 
-@interface HEROBaseTabbarRouter ()
+@interface HEROBaseTabbarRouter () <HEROBaseTabBarControllerDelegte>
 @property (nonatomic, strong) NSArray <HEROBaseCoordinator*>* coordinators;
 @property (nonatomic, weak) HEROBaseRouter* selectedRouter;
 
@@ -24,34 +25,35 @@
 
 
 - (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter{
-	self = [super initWithCoordinator:coordinator workflow:workflowControl];
-	if (!self){
-		return nil;
-	}
-	_selectedRouter = selectedRouter;
-	_coordinators = coordinators;
-	return self;
+    self = [super initWithCoordinator:coordinator workflow:workflowControl];
+    if (!self){
+        return nil;
+    }
+    _selectedRouter = selectedRouter;
+    _coordinators = coordinators;
+    return self;
 }
 
 //NEVER CALL
 - (Class)viewControllerClass{
-	NSAssert(NO, @"NEVER CALL");
-	return nil;
+    NSAssert(NO, @"NEVER CALL");
+    return nil;
 }
 
 
 - (UIViewController *)viewLayer{
-	if (!_viewLayer){
-		HEROBaseTabBarController* tabBarController = [HEROBaseTabBarController new];
+    if (!_viewLayer){
+        HEROBaseTabBarController* tabBarController = [HEROBaseTabBarController new];
+        tabBarController.tabBarDelegate = self;
         NSMutableArray* viewControllers = [self tabbarViewControllers];
-		tabBarController.viewControllers = viewControllers;
+        tabBarController.viewControllers = viewControllers;
         tabBarController.coordinator = self.coordinator;
-		_viewLayer = tabBarController;
-		return tabBarController;
-	}
-	else{
-		return _viewLayer;
-	}
+        _viewLayer = tabBarController;
+        return tabBarController;
+    }
+    else{
+        return _viewLayer;
+    }
 }
 
 -(NSArray<UIViewController*>*)tabbarViewControllers{
@@ -67,6 +69,16 @@
     return viewControllers;
 }
 
+- (void)userDidSelectViewController:(UIViewController *)viewController {
+    UIViewController* viewControllerSelected = viewController;
+    if ([viewControllerSelected isKindOfClass:[UINavigationController class]]) {
+        viewControllerSelected = [viewControllerSelected.childViewControllers firstObject];
+    }
+    if ([viewControllerSelected isKindOfClass:[HEROBaseViewController class]]) {
+        HEROBaseRouter* router = ((HEROBaseViewController*)viewControllerSelected).coordinator.router;
+        [self.workflow tabbarDidSelectRouter:router];
+    }
+}
 
 #pragma mark - Public
 - (BOOL)isInitialized{
@@ -74,7 +86,7 @@
 }
 
 - (UITabBarController*)tabBarController{
-	return (UITabBarController*)self.viewLayer;
+    return (UITabBarController*)self.viewLayer;
 }
 
 - (void)updateWithCoordinators:(NSArray <HEROBaseCoordinator*>*)coordinators{
