@@ -58,7 +58,7 @@
 - (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
     HEROBaseUsecase* usecase = [usecaseClass new];
     HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
-    if (!coordinator && routerClass == [HEROBaseTabbarRouter class]) {
+    if (!coordinator && [[[routerClass alloc] init] isKindOfClass:[HEROBaseTabbarRouter class]]) {
         coordinator = [[HEROBaseCoordinator alloc] initWithUsecase:usecase];
     }
     HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
