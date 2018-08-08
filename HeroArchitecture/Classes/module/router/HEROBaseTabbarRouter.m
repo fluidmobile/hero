@@ -15,8 +15,8 @@
 #import "HEROBaseViewController.h"
 
 @interface HEROBaseTabbarRouter () <HEROBaseTabBarControllerDelegte>
-@property (nonatomic, strong) NSArray <HEROBaseCoordinator*>* coordinators;
-@property (nonatomic, weak) HEROBaseRouter* selectedRouter;
+@property (nonatomic, strong) NSArray <HEROBaseCoordinator*> *coordinators;
+@property (nonatomic, weak) HEROBaseRouter *selectedRouter;
 
 @end
 
@@ -35,17 +35,17 @@
 }
 
 //NEVER CALL
-- (Class)viewControllerClass{
+- (Class)viewControllerClass {
     NSAssert(NO, @"NEVER CALL");
     return nil;
 }
 
 
-- (UIViewController *)viewLayer{
+- (UIViewController *)viewLayer {
     if (!_viewLayer){
         HEROBaseTabBarController* tabBarController = [HEROBaseTabBarController new];
         tabBarController.tabBarDelegate = self;
-        NSMutableArray* viewControllers = [self tabbarViewControllers];
+        NSArray<__kindof UIViewController *> *viewControllers = [self tabbarViewControllers];
         tabBarController.viewControllers = viewControllers;
         tabBarController.coordinator = self.coordinator;
         _viewLayer = tabBarController;
@@ -56,7 +56,7 @@
     }
 }
 
--(NSArray<UIViewController*>*)tabbarViewControllers{
+- (NSArray<UIViewController*>*)tabbarViewControllers {
     NSMutableArray* viewControllers = [@[] mutableCopy];
     for (HEROBaseCoordinator* coordinator in self.coordinators){
         if (coordinator.router.hasNavigationInTabBar) {
@@ -81,18 +81,18 @@
 }
 
 #pragma mark - Public
-- (BOOL)isInitialized{
+- (BOOL)isInitialized {
     return [self.coordinators count] > 0;
 }
 
-- (UITabBarController*)tabBarController{
+- (UITabBarController*)tabBarController {
     return (UITabBarController*)self.viewLayer;
 }
 
-- (void)updateWithCoordinators:(NSArray <HEROBaseCoordinator*>*)coordinators{
+- (void)updateWithCoordinators:(NSArray<HEROBaseCoordinator *> *)coordinators {
     self.coordinators = coordinators;
     if (_viewLayer) {
-        NSMutableArray* viewControllers = [self tabbarViewControllers];
+        NSArray<__kindof UIViewController *> *viewControllers = [self tabbarViewControllers];
         [self tabBarController].viewControllers = viewControllers;
     }
 }
