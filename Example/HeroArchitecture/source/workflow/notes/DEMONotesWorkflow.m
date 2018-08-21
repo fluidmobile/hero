@@ -10,14 +10,16 @@
 #import "DEMONotesCoordinator.h"
 #import "DEMONotesWorkflow.h"
 
+NSString *const DEMONotesModule = @"DEMONotesModule";
+
 @implementation DEMONotesWorkflow
 
--(HEROBaseCoordinator *)createInitialCoordinator{
+- (HEROBaseCoordinator *)createInitialCoordinator {
 	return [self notesCoordinator];
 }
 
--(HEROBaseCoordinator *)notesCoordinator{
-	return [self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
+- (HEROBaseCoordinator *)notesCoordinator {
+	return [self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class] workflowKey:DEMONotesModule];
 }
 
 

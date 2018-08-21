@@ -134,6 +134,7 @@
 		8EDA89A21F879B2F00770C40 /* DEMONoteEditPonso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DEMONoteEditPonso.h; sourceTree = "<group>"; };
 		8EDA89A31F879B2F00770C40 /* DEMONoteEditPonso.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMONoteEditPonso.m; sourceTree = "<group>"; };
 		95A6F7447C4E1A553078CE0D /* libPods-HeroArchitecture_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeroArchitecture_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9634A8DC212C426500760B8C /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = Changelog.md; path = ../Changelog.md; sourceTree = "<group>"; };
 		96837D011F86770E00591FFD /* img0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img0.jpg; sourceTree = "<group>"; };
 		96837D021F86770E00591FFD /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
 		96837D071F86775A00591FFD /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -417,6 +418,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				9634A8DC212C426500760B8C /* Changelog.md */,
 				799CB5E36A421335EAA9E18E /* HeroArchitecture.podspec */,
 				7FC1D29C053F3FC5FC5E91F4 /* README.md */,
 				D37FEAC505E09AFB0AA1622A /* LICENSE */,

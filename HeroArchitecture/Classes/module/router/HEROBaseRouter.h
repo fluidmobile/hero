@@ -29,9 +29,10 @@
 @property (nonatomic, weak) HEROBaseCoordinator* coordinator;
 @property (nonatomic, weak) UIViewController* viewLayer;
 @property (nonatomic, assign) BOOL hasNavigationInTabBar;
+@property (nonatomic, strong) NSString* workflowKey;
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow;
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow workflowKey:(NSString*)workflowKey;
 
 
 /**

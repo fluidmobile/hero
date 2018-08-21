@@ -27,17 +27,19 @@
 @property (nonatomic, strong) DEMOMainWorkflow* workflowMain;
 @property (nonatomic, strong) DEMONotesWorkflow* workflowNotes;
 @property (nonatomic, strong) DEMOContainerWorkflow* workflowEditing;
-
 @end
+
+NSString *const DEMOTabBarModule = @"DEMOTabBarModule";
 
 @implementation DEMOTabbarWorkflow 
 
--(HEROBaseCoordinator *)initialCoordinator{
+- (HEROBaseCoordinator *)initialCoordinator {
 	return [self tabbarCoordinator];
 }
 
--(HEROBaseCoordinator *)tabbarCoordinator{
-    HEROBaseCoordinator* coordinator = [self dequeueCoordinatorForRouter:[HEROBaseTabbarRouter class] coordinator:nil usecase:nil];
+- (HEROBaseCoordinator *)tabbarCoordinator {
+    
+    HEROBaseCoordinator* coordinator = [self dequeueCoordinatorForRouter:[HEROBaseTabbarRouter class] coordinator:nil usecase:nil workflowKey:DEMOTabBarModule];
     HEROBaseTabbarRouter* tabbarRouter = ((HEROBaseTabbarRouter*)coordinator.router);
     NSArray* coordinators = @[[self.workflowMain initialCoordinator],  [self.workflowNotes initialCoordinator], [self.workflowEditing initialCoordinator]];
     if (![tabbarRouter isInitialized]) {
@@ -47,7 +49,7 @@
 	return coordinator;
 }
 
--(DEMOMainWorkflow*)workflowMain{
+- (DEMOMainWorkflow*)workflowMain {
 	if (!_workflowMain){
 		self.workflowMain = [DEMOMainWorkflow new];
 		self.workflowMain.parentWorkflow = self;
@@ -55,7 +57,7 @@
 	return _workflowMain;
 }
 
--(DEMONotesWorkflow*)workflowNotes{
+- (DEMONotesWorkflow*)workflowNotes {
 	if (!_workflowNotes){
 		self.workflowNotes = [DEMONotesWorkflow new];
 		self.workflowNotes.parentWorkflow = self;
@@ -63,7 +65,7 @@
 	return _workflowNotes;
 }
 
--(DEMOContainerWorkflow *)workflowEditing{
+- (DEMOContainerWorkflow *)workflowEditing {
 	if (!_workflowEditing){
 		self.workflowEditing = [DEMOContainerWorkflow new];
 		self.workflowEditing.parentWorkflow = self;
@@ -72,17 +74,17 @@
 }
 
 #pragma mark - DEMOLoginWorkflowParentInput
--(void)loggedInOnRouter:(HEROBaseRouter*)router{
+- (void)loggedInOnRouter:(HEROBaseRouter*)router {
 	[(id<DEMOTabbarParentWorkflowInput>)self.parentWorkflow tabbarLoggedInOnRouter:router];
 }
 
 #pragma mark - DEMOLoginWorkflowParentInput
-- (void)loggedOutOnRouter:(HEROBaseRouter *)router{
+- (void)loggedOutOnRouter:(HEROBaseRouter *)router {
 	[(id<DEMOTabbarParentWorkflowInput>)self.parentWorkflow tabbarLoggedOutOnRouter:router];
 }
 
 #pragma mark - DEMOMainWorkflowOutput
-- (void)selectButtonCallWorkflowOnRouter:(HEROBaseRouter *)router{
+- (void)selectButtonCallWorkflowOnRouter:(HEROBaseRouter *)router {
     HEROBaseCoordinator* coordinator = [self tabbarCoordinator];
     HEROBaseTabbarRouter* tabbarRouter = (HEROBaseTabbarRouter*)coordinator.router;
     [[tabbarRouter tabBarController] setSelectedIndex:1];

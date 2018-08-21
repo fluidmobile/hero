@@ -26,10 +26,8 @@
 }
 
 - (HEROBaseCoordinator*)initialCoordinator {
-    
     HEROBaseCoordinator* initialCoordinator = [self createInitialCoordinator];
     NSAssert(initialCoordinator, @"createInitialCoordinator returns nil");
-    
     return initialCoordinator;
 }
 
@@ -38,30 +36,34 @@
     return nil;
 }
 
-- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey{
     NSAssert(routerClass, @"NO router");
     NSArray<HEROBaseRouter*>* routers = [self allExistingRouterForClass:routerClass];
     if (coordinatorClass) {
-        routers = [self filterRouters:routers withCoordinatorClass:coordinatorClass];
+        routers = [[self class] filterRouters:routers withCoordinatorClass:coordinatorClass];
     }
     if (usecaseClass) {
-        routers = [self filterRouters:routers withUsecase:usecaseClass];
+        routers = [[self class] filterRouters:routers withUsecase:usecaseClass];
+    }
+    
+    if(workflowKey){
+        routers = [[self class] filterRouters:routers withWorkflowKey:workflowKey];
     }
     
     if (routers && [routers count] > 0) {
         return [routers firstObject].coordinator;
     }
-    HEROBaseCoordinator* coordinator = [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass];
+    HEROBaseCoordinator* coordinator = [self newCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass workflowKey:workflowKey];
     return coordinator;
 }
 
-- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass {
+- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey{
     HEROBaseUsecase* usecase = [usecaseClass new];
     HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
     if (!coordinator && [[[routerClass alloc] init] isKindOfClass:[HEROBaseTabbarRouter class]]) {
         coordinator = [[HEROBaseCoordinator alloc] initWithUsecase:usecase];
     }
-    HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self];
+    HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self workflowKey:workflowKey];
     router.workflow = self;
     [self addRouter:router];
     return coordinator;
@@ -91,7 +93,7 @@
     return allExistingRouterForClass;
 }
 
-- (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withCoordinatorClass:(Class)coordinatorClass {
++ (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withCoordinatorClass:(Class)coordinatorClass {
     NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingCoordinator = [@[] mutableCopy];
     for (HEROBaseRouter* router in routers) {
         if ([router.coordinator isKindOfClass:coordinatorClass]) {
@@ -101,7 +103,7 @@
     return filteredRouterWithMatchingCoordinator;
 }
 
-- (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withUsecase:(Class)usecaseClass {
++ (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withUsecase:(Class)usecaseClass {
     NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingUsecase = [@[] mutableCopy];
     for (HEROBaseRouter* router in routers) {
         if ([router.coordinator.usecase isKindOfClass:usecaseClass]) {
@@ -109,6 +111,13 @@
         }
     }
     return filteredRouterWithMatchingUsecase;
+}
+
++ (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withWorkflowKey:(NSString*)worflowKey {
+    NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingUsecase = [@[] mutableCopy];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"workflowKey == %@", worflowKey];
+    NSArray* routersWithIdentifier = [routers filteredArrayUsingPredicate:predicate];
+    return routersWithIdentifier;
 }
 
 

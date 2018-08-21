@@ -14,8 +14,7 @@
 @property (nonatomic, weak) HEROBaseWorkflow* parentWorkflow;
 
 - (void)tabbarDidSelectRouter:(HEROBaseRouter*)router;
-- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
-- (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey;
 - (HEROBaseCoordinator *)initialCoordinator;
 - (HEROBaseRouter*)existingRouterForClass:(Class)routerClass;
 - (void)addRouter:(HEROBaseRouter*)router;

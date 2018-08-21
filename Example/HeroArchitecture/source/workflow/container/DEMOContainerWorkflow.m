@@ -26,6 +26,10 @@
 @interface DEMOContainerWorkflow () <DEMOContainerWorkflowInput, DEMONotesWorkflowInput>
 @end
 
+NSString *const DEMONoteEditingModuleIdentifier = @"DEMONoteEditingModuleIdentifier";
+NSString *const DEMONotesModuleIdentifier       = @"DEMONotesModuleIdentifier";
+NSString *const DEMOContainerModuleIdentifier   = @"DEMOContainerModuleIdentifier";
+
 @implementation DEMOContainerWorkflow
 
 - (HEROBaseCoordinator*)createInitialCoordinator{
@@ -39,15 +43,15 @@
 #pragma mark - router creation
 
 - (DEMONoteEditingCoordinator*)editCoordinator{
-	return (DEMONoteEditingCoordinator*)[self dequeueCoordinatorForRouter:[DEMONoteEditingRouter class] coordinator:[DEMONoteEditingCoordinator class] usecase:[DEMONoteEditingUsecase class]];
+	return (DEMONoteEditingCoordinator*)[self dequeueCoordinatorForRouter:[DEMONoteEditingRouter class] coordinator:[DEMONoteEditingCoordinator class] usecase:[DEMONoteEditingUsecase class] workflowKey:DEMONoteEditingModuleIdentifier];
 }
 
 - (DEMONotesCoordinator*)notesCoordinator{
-	return (DEMONotesCoordinator*)[self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
+	return (DEMONotesCoordinator*)[self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class] workflowKey:DEMONotesModuleIdentifier];
 }
 
 - (DEMOContainerCoordinator*)containerCoordinator{
-	return (DEMOContainerCoordinator*)[self dequeueCoordinatorForRouter:[DEMOContainerRouter class] coordinator:[DEMOContainerCoordinator class] usecase:[DEMOContainerUsecase class]];
+	return (DEMOContainerCoordinator*)[self dequeueCoordinatorForRouter:[DEMOContainerRouter class] coordinator:[DEMOContainerCoordinator class] usecase:[DEMOContainerUsecase class] workflowKey:DEMOContainerModuleIdentifier];
 }
 
 

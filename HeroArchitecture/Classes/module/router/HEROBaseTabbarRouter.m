@@ -24,8 +24,8 @@
 @synthesize viewLayer = _viewLayer;
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter{
-    self = [super initWithCoordinator:coordinator workflow:workflowControl];
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey{
+    self = [super initWithCoordinator:coordinator workflow:workflowControl workflowKey:workflowKey];
     if (!self){
         return nil;
     }

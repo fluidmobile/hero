@@ -22,11 +22,12 @@
 @implementation HEROBaseRouter
 
 
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow{
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow workflowKey:(NSString*)workflowKey{
 	self = [super init];
 	if (!self) {
 		return nil;
 	}
+    _workflowKey = workflowKey;
 	_coordinator = coordinator;
 	self.coordinator.router = self;
 	_workflow = workflow;

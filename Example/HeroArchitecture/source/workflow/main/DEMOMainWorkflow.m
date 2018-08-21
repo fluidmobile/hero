@@ -36,6 +36,11 @@
 @interface DEMOMainWorkflow() <DEMOMainWorkflowInput, DEMOSettingsWorkflowControl, DEMOPictureWorkflowInput>
 @end
 
+NSString *const DEMOMainModuleIdentifier        = @"DEMOMainModuleIdentifier";
+NSString *const DEMOSettingsModuleIdentifier    = @"DEMOSettingsModuleIdentifier";
+NSString *const DEMONotesMainModuleIdentifier   = @"DEMONotesMainModuleIdentifier";
+NSString *const DEMOPictureModuleIdentifier     = @"DEMOPictureModuleIdentifier";
+
 @implementation DEMOMainWorkflow
 -(HEROBaseCoordinator*)createInitialCoordinator{
 	HEROBaseCoordinator* coordinator = [self mainCoordinator];
@@ -46,21 +51,20 @@
 #pragma mark - router creation
 
 - (HEROBaseCoordinator*)mainCoordinator{
-	return [self dequeueCoordinatorForRouter:[DEMOMainRouter class] coordinator:[DEMOMainCoordinator class] usecase:[DEMOMainUsecase class]];
+	return [self dequeueCoordinatorForRouter:[DEMOMainRouter class] coordinator:[DEMOMainCoordinator class] usecase:[DEMOMainUsecase class] workflowKey:DEMOMainModuleIdentifier];
 }
 
 - (HEROBaseCoordinator*)settingsCoordinator{
-	return [self dequeueCoordinatorForRouter:[DEMOSettingsRouter class] coordinator:[DEMOSettingsCoordinator class] usecase:[DEMOSettingsUsecase class]];
+	return [self dequeueCoordinatorForRouter:[DEMOSettingsRouter class] coordinator:[DEMOSettingsCoordinator class] usecase:[DEMOSettingsUsecase class] workflowKey:DEMOSettingsModuleIdentifier];
 }
 
 - (HEROBaseCoordinator*)notesCoordinator{
-	return [self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class]];
+	return [self dequeueCoordinatorForRouter:[DEMONotesRouter class] coordinator:[DEMONotesCoordinator class] usecase:[DEMONotesUsecase class] workflowKey:DEMONotesMainModuleIdentifier];
 }
 
 - (HEROBaseCoordinator*)pictureCoordinator{
-	return [self dequeueCoordinatorForRouter:[DEMOPictureRouter class] coordinator:[DEMOPictureCoordinator class] usecase:[DEMOPictureUsecase class]];
+	return [self dequeueCoordinatorForRouter:[DEMOPictureRouter class] coordinator:[DEMOPictureCoordinator class] usecase:[DEMOPictureUsecase class] workflowKey:DEMOPictureModuleIdentifier];
 }
-
 
 #pragma mark private
 
@@ -72,8 +76,6 @@
 		[coordinator.router pushOnRouter:[self mainCoordinator].router];
 	}
 }
-
-
 
 #pragma mark - DEMOSettingsWorkflowOutput
 -(void)loggedOutOnRouter:(HEROBaseRouter*)router{

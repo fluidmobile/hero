@@ -21,22 +21,22 @@
 
 #import "HEROAppWorkflow.h"
 @interface DEMOLoginWorkflow () <DEMOLoginWorkflowInput>
-
 @end
+
+NSString *const DEMOLoginModuleIdentifier = @"DEMOLoginModuleIdentifier";
 
 @implementation DEMOLoginWorkflow
 
-
-- (HEROBaseCoordinator*)initialCoordinator{
-	return [self routerLoggedOut];
+- (HEROBaseCoordinator*)initialCoordinator {
+	return [self coordinatorLogin];
 }
 
--(void)loggedInOnRouter:(HEROBaseRouter *)router{
+- (void)loggedInOnRouter:(HEROBaseRouter *)router {
 	[(id<DEMOLoginWorkflowParentInput>)self.parentWorkflow loggedInOnRouter:router] ;
 }
 
--(HEROBaseCoordinator *)routerLoggedOut{
-	return [self dequeueCoordinatorForRouter:[DEMOLoginRouter class] coordinator:[DEMOLoginCoordinator class] usecase:[DEMOLoginUsecase class]];
+- (HEROBaseCoordinator *)coordinatorLogin {
+	return [self dequeueCoordinatorForRouter:[DEMOLoginRouter class] coordinator:[DEMOLoginCoordinator class] usecase:[DEMOLoginUsecase class] workflowKey:DEMOLoginModuleIdentifier];
 }
 
 
