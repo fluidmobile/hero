@@ -23,9 +23,9 @@
     return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-	[super viewWillAppear:animated];
-	[self requestContentUpdate];
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self requestContentUpdate];
 }
 
 - (void)requestContentUpdate{
