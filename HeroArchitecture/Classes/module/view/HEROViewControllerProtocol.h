@@ -10,4 +10,5 @@
 @protocol HEROViewControllerProtocol <NSObject>
 @property (nonatomic, strong) HEROBaseCoordinator* coordinator;
 - (void)requestContentUpdate;
+- (void)contentDidChange;
 @end

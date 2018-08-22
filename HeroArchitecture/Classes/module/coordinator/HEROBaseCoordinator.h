@@ -17,6 +17,6 @@
 @property (nonatomic, weak) id <HEROViewControllerProtocol> viewLayer;
 
 - (instancetype)initWithUsecase:(HEROBaseUsecase*)usecase;
-
+- (void)contentDidChange;
 - (void)requestContentUpdate;
 @end

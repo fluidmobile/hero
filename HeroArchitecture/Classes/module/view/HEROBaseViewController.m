@@ -40,5 +40,9 @@
     [self requestContentUpdate];
 }
 
+-(void)contentDidChange{
+    NSAssert(NO,@"implement!");
+}
+
 
 @end

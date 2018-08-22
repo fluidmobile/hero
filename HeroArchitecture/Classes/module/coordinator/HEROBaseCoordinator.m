@@ -25,6 +25,9 @@
 - (void)requestContentUpdate{
 	[self.usecase requestContentUpdate];
 }
+- (void)contentDidChange{
+    [self.viewLayer contentDidChange];
+}
 
 - (void)dealloc{
 #ifdef DEBUG
