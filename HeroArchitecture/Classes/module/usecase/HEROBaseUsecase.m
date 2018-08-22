@@ -9,5 +9,9 @@
 #import "HEROBaseUsecase.h"
 
 @implementation HEROBaseUsecase
-- (void)requestContentUpdate{}
+- (void)requestContentUpdate {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.coordinator contentDidChange];
+    });
+}
 @end
