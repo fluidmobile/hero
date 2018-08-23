@@ -36,6 +36,10 @@
     return nil;
 }
 
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
+    return [self dequeueCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass workflowKey:@"DEFAULT"];
+}
+
 - (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey{
     NSAssert(routerClass, @"NO router");
     NSArray<HEROBaseRouter*>* routers = [self allExistingRouterForClass:routerClass];

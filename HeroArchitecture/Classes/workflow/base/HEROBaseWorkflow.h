@@ -15,6 +15,7 @@
 
 - (void)tabbarDidSelectRouter:(HEROBaseRouter*)router;
 - (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey;
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass;
 - (HEROBaseCoordinator *)initialCoordinator;
 - (HEROBaseRouter*)existingRouterForClass:(Class)routerClass;
 - (void)addRouter:(HEROBaseRouter*)router;
