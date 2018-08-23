@@ -15,18 +15,14 @@
 #import "HEROBaseViewController.h"
 #import "HEROBaseSplitViewController.h"
 
-
 @interface HEROBaseSplitViewRouter ()
 @property (nonatomic, strong) HEROBaseCoordinator* coordinatorRoot;
 @property (nonatomic, strong) HEROBaseCoordinator* coordinatorDetail;
 @property (nonatomic, weak) HEROBaseRouter *selectedRouter;
-
 @end
 
 @implementation HEROBaseSplitViewRouter
 @synthesize viewLayer = _viewLayer;
-
-
 - (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl rootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey{
     self = [super initWithCoordinator:coordinator workflow:workflowControl workflowKey:workflowKey];
     if (!self){
@@ -39,12 +35,10 @@
     return self;
 }
 
-//NEVER CALL
 - (Class)viewControllerClass {
     NSAssert(NO, @"NEVER CALL");
     return nil;
 }
-
 
 - (UIViewController *)viewLayer {
     if (!_viewLayer){
@@ -89,8 +83,6 @@
     return (UITabBarController*)self.viewLayer;
 }
 
-
-
 - (void)updateWithRootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator{
     self.coordinatorRoot = rootCoordinator;
     self.coordinatorDetail = detailCoordinator;
@@ -102,15 +94,12 @@
         UIViewController* detailViewController = (UIViewController*)self.coordinatorDetail.viewLayer;
         UINavigationController* navControllerDetail = [[HERONavigationController alloc] initWithRootViewController:detailViewController];
         _navControllerDetail = navControllerDetail;
-        
-        
         ((HEROBaseSplitViewController*)self.viewLayer).viewControllers = @[navControllerRoot,navControllerDetail];
     }
     else{
         NSAssert (NO,@"no layer");
     }
 }
-
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController
 collapseSecondaryViewController:(UIViewController *)secondaryViewController
@@ -134,4 +123,3 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
     return YES;
 }
 @end
-
