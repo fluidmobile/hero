@@ -56,6 +56,7 @@
 	if ([router viewLayer].navigationController) { // use navigationController
 		[[router viewLayer].navigationController pushViewController:[self viewLayer] animated:YES];
 	}else { // FALLBACK
+        NSAssert(router, @"no router");
 		[self presentOnRouter:router inNavigationController:NO setAsRootView:NO transition:nil];
 	}
 }

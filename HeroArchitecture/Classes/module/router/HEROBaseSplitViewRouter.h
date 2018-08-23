@@ -17,4 +17,7 @@
 - (UISplitViewController*)splitViewController;
 - (void)updateWithRootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator;
 -(void)bringDetailToFront;
+
+//implement to set;
+-(UISplitViewControllerDisplayMode)displayMode;
 @end
