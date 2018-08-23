@@ -64,7 +64,7 @@
 - (HEROBaseCoordinator*)newCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey{
     HEROBaseUsecase* usecase = [usecaseClass new];
     HEROBaseCoordinator* coordinator = [[coordinatorClass alloc] initWithUsecase:usecase];
-    if (!coordinator && [[[routerClass alloc] init] isKindOfClass:[HEROBaseTabbarRouter class]]) {
+    if (!coordinator) {
         coordinator = [[HEROBaseCoordinator alloc] initWithUsecase:usecase];
     }
     HEROBaseRouter* router = [[routerClass alloc] initWithCoordinator:coordinator workflow:self workflowKey:workflowKey];
