@@ -45,17 +45,18 @@
     return nil;
 }
 
-
 - (UIViewController *)viewLayer {
     if (!_viewLayer){
         HEROBaseSplitViewController* splitViewController = [HEROBaseSplitViewController new];
-        splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModePrimaryOverlay;//[self displayMode];
+        splitViewController.preferredDisplayMode = [self displayMode];
+        splitViewController.maximumPrimaryColumnWidth = 500;
+        splitViewController.preferredPrimaryColumnWidthFraction = 0.3f;
         splitViewController.delegate = self;
         NSArray<__kindof UIViewController *> *viewControllers = [self tabbarViewControllers];
         splitViewController.viewControllers = viewControllers;
         splitViewController.coordinator = self.coordinator;
-        //splitViewController.hidesBottomBarWhenPushed = YES; not working
         _viewLayer = splitViewController;
+        
         return splitViewController;
     }
     else{
@@ -137,5 +138,18 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController showViewController:(UIViewController *)vc sender:(nullable id)sender NS_AVAILABLE_IOS(8_0){
     return YES;
 }
+
+- (void)splitViewController:(UISplitViewController *)svc willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode NS_AVAILABLE_IOS(8_0){
+    NSLog(@"hitShowExpandButton");
+    
+    [self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
+
+   // self.navigationItem.leftBarButtonItem = bbi;
+}
+
+-(void)showList:(id)sender{
+    [self.splitViewController showViewController:self.navControllerRoot sender:self];
+}
+
 @end
 
