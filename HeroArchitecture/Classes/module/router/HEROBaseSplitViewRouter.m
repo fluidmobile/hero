@@ -17,6 +17,7 @@
 
 
 @interface HEROBaseSplitViewRouter ()
+#warning weak?
 @property (nonatomic, strong) HEROBaseCoordinator* coordinatorRoot;
 @property (nonatomic, strong) HEROBaseCoordinator* coordinatorDetail;
 @property (nonatomic, weak) HEROBaseRouter *selectedRouter;
@@ -74,17 +75,6 @@
     return @[[_coordinatorRoot.router viewLayer], [_coordinatorDetail.router viewLayer]];
 }
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    UIViewController* viewControllerSelected = viewController;
-    if ([viewControllerSelected isKindOfClass:[UINavigationController class]]) {
-        viewControllerSelected = [viewControllerSelected.childViewControllers firstObject];
-    }
-    if ([viewControllerSelected isKindOfClass:[HEROBaseViewController class]]) {
-        HEROBaseRouter* router = ((HEROBaseViewController*)viewControllerSelected).coordinator.router;
-        [self.workflow tabbarDidSelectRouter:router];
-    }
-}
-
 #pragma mark - Public
 - (BOOL)isInitialized {
     return self.coordinatorRoot != nil;
@@ -93,8 +83,6 @@
 - (UITabBarController*)tabBarController {
     return (UITabBarController*)self.viewLayer;
 }
-
-
 
 - (void)updateWithRootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator{
     self.coordinatorRoot = rootCoordinator;
@@ -117,9 +105,7 @@
 }
 
 
-- (BOOL)splitViewController:(UISplitViewController *)splitViewController
-collapseSecondaryViewController:(UIViewController *)secondaryViewController
-  ontoPrimaryViewController:(UIViewController *)primaryViewController {
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
     return YES;
 }
 
@@ -132,19 +118,21 @@ collapseSecondaryViewController:(UIViewController *)secondaryViewController
 }
 
 -(void)bringDetailToFront{
+    //self.displayMode == UISplitViewControllerDisplayModePrimaryHidden;
+   
     [self.splitViewController showDetailViewController:self.navControllerDetail sender:self];
+
+    if ([self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems.count == 0){
+        [self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
+        [self.navControllerDetail.viewControllers firstObject].navigationItem.leftItemsSupplementBackButton = YES;
+    }
 }
 
-- (BOOL)splitViewController:(UISplitViewController *)splitViewController showViewController:(UIViewController *)vc sender:(nullable id)sender NS_AVAILABLE_IOS(8_0){
-    return YES;
-}
 
 - (void)splitViewController:(UISplitViewController *)svc willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode NS_AVAILABLE_IOS(8_0){
     NSLog(@"hitShowExpandButton");
     
-    [self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
-
-   // self.navigationItem.leftBarButtonItem = bbi;
+//[self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
 }
 
 -(void)showList:(id)sender{
