@@ -41,4 +41,5 @@
 -(void)contentDidChange{
     NSAssert(NO, @"OVERRIDE: contentDidChange: in %@",[[self class] description]);
 }
+
 @end

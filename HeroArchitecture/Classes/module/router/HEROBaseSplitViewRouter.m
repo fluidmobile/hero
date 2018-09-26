@@ -93,6 +93,7 @@
         
         
         ((HEROBaseSplitViewController*)self.viewLayer).viewControllers = @[navControllerRoot,navControllerDetail];
+          [self updateBarItem];
     }
     else{
         NSAssert (NO,@"no layer");
@@ -113,11 +114,8 @@
 
 -(void)bringDetailToFront{
     [self.splitViewController showDetailViewController:self.navControllerDetail sender:self];
-
-    if ([self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems.count == 0){
-        [self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
-        [self.navControllerDetail.viewControllers firstObject].navigationItem.leftItemsSupplementBackButton = YES;
-    }
+[self updateBarItem];
+    
 }
 
 - (void)splitViewController:(UISplitViewController *)svc willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode NS_AVAILABLE_IOS(8_0){
@@ -128,5 +126,11 @@
     [self.splitViewController showViewController:self.navControllerRoot sender:self];
 }
 
+- (void)updateBarItem {
+    if ([self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems.count == 0){
+        [self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
+        [self.navControllerDetail.viewControllers firstObject].navigationItem.leftItemsSupplementBackButton = YES;
+    }
+}
 @end
 
