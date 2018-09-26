@@ -2,5 +2,5 @@
 @protocol HEROBaseRouterInterface
 @required
 //lazy loading viewController+View
-- (Class)viewControllerClass;
+- (nonnull Class)viewControllerClass;
 @end

@@ -7,11 +7,12 @@
 //
 
 #import "HEROBaseRouter.h"
-
+NS_ASSUME_NONNULL_BEGIN
 @class HEROBaseCoordinator, HEROBaseTransition, HEROBaseWorkflow;
 @interface HEROBaseTabbarRouter : HEROBaseRouter
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey;
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(nullable HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey;
 - (BOOL)isInitialized;
 - (UITabBarController*)tabBarController;
 - (void)updateWithCoordinators:(NSArray <HEROBaseCoordinator*>*)coordinators;
 @end
+NS_ASSUME_NONNULL_END

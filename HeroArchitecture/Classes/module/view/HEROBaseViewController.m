@@ -19,7 +19,7 @@
     if (!self) {
         return nil;
     }
-	self.title = [[self.class description] stringByReplacingOccurrencesOfString:@"ViewController" withString:@""];
+	self.title = [[self.class description] stringByReplacingOccurrencesOfString:@"ViewController" withString:@"VC"];
     return self;
 }
 
@@ -41,8 +41,6 @@
 }
 
 -(void)contentDidChange{
-    NSAssert(NO,@"implement!");
+    NSAssert(NO, @"OVERRIDE: contentDidChange: in %@",[[self class] description]);
 }
-
-
 @end

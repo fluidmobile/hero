@@ -16,30 +16,12 @@
 	if (!self) {
 		return nil;
 	}
-	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(updateSizeCategoryInView)
-												 name:UIContentSizeCategoryDidChangeNotification
-											   object:nil];
 	return self;
 }
 
-- (void)dealloc{
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:UIContentSizeCategoryDidChangeNotification
-												  object:nil];
-}
-
-- (void)updateSizeCategoryInView{
-	[self setupViewPreserveContent:YES];
-}
-
 -(void)updateSizeClass:(UIUserInterfaceSizeClass)sizeClass{
+    //no different behavior in base
 }
 
-
-
-- (void)setupViewPreserveContent:(BOOL)preserveContent{
-	NSAssert(NO, @"OVERRIDE: setupViewPreserveContent: in %@",[[self class] description]);
-}
 
 @end

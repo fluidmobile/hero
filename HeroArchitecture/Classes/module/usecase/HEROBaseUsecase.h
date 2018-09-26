@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "HEROBaseCoordinator.h"
-
+NS_ASSUME_NONNULL_BEGIN
 @interface HEROBaseUsecase : NSObject
 @property (nonatomic, weak) HEROBaseCoordinator* coordinator;
 - (void)requestContentUpdate;
 @end
+NS_ASSUME_NONNULL_END

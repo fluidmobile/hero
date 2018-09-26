@@ -9,7 +9,7 @@
 @import UIKit;
 @class HEROBaseCoordinator, HEROBaseTransition, HEROBaseWorkflow;
 
-
+NS_ASSUME_NONNULL_BEGIN
 /**
   The Router component is a module's connection to the workflow. No database entities or PONSOs shall be used in this component only identifiers or.
  
@@ -54,7 +54,7 @@
  @param hasNavigation does Router needs
  */
 - (void)presentOnWindow:(UIWindow*)window withNavigation:(BOOL)hasNavigation;
-- (void)presentOnRouter:(HEROBaseRouter*)router inNavigationController:(BOOL)inNavigationController setAsRootView:(BOOL)setAsRootView transition:(HEROBaseTransition*)transition;
-
+- (void)presentOnRouter:(HEROBaseRouter*)router inNavigationController:(BOOL)inNavigationController setAsRootView:(BOOL)setAsRootView transition:(nullable HEROBaseTransition*)transition;
 - (void)exposeRouter;
 @end
+NS_ASSUME_NONNULL_END

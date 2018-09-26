@@ -5,10 +5,9 @@
 //  Created by Moritz Ellerbrock on 16/01/17.
 //  Copyright © 2017 fluidmobile GmbH. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 #import "HEROViewControllerProtocol.h"
-
+NS_ASSUME_NONNULL_BEGIN
 @class HEROBaseRouter,HEROBaseUsecase, HEROBaseViewController;
 
 @interface HEROBaseCoordinator : NSObject
@@ -20,3 +19,4 @@
 - (void)contentDidChange;
 - (void)requestContentUpdate;
 @end
+NS_ASSUME_NONNULL_END

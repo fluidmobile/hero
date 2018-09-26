@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HEROViewControllerProtocol.h"
 @class HEROBaseCoordinator;
-
+NS_ASSUME_NONNULL_BEGIN
 @interface HEROBaseViewController : UIViewController <HEROViewControllerProtocol>
 @end
+NS_ASSUME_NONNULL_END

@@ -2,6 +2,6 @@
 #import "HEROBaseCoordinator.h"
 
 @protocol HEROBaseWorkflowInterface <NSObject>
-//never call this method!
+//never direct call this method!
 - (HEROBaseCoordinator*)createInitialCoordinator;
 @end

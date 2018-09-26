@@ -5,11 +5,10 @@
 //  Created by Moritz Ellerbrock on 16/01/17.
 //  Copyright © 2017 fluidmobile GmbH. All rights reserved.
 //
-
 #import <UIKit/UIKit.h>
 #import "HEROBaseRouter.h"
 #import "HEROBaseCoordinator.h"
-#import "HEROBaseTransition.h"
+//#import "HEROBaseTransition.h"
 #import "HEROBaseWorkflow.h"
 #import "HEROBaseViewController.h"
 #import "HERONavigationController.h"
@@ -20,8 +19,6 @@
 @end
 
 @implementation HEROBaseRouter
-
-
 - (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflow:(HEROBaseWorkflow*)workflow workflowKey:(NSString*)workflowKey{
 	self = [super init];
 	if (!self) {
@@ -31,7 +28,6 @@
 	_coordinator = coordinator;
 	self.coordinator.router = self;
 	_workflow = workflow;
-	
 	return self;
 }
 
@@ -43,7 +39,6 @@
 	if (viewController.presentedViewController){
 		[HEROBaseRouter dismissAndPopParentsFromViewController:viewController.presentedViewController];
 		[viewController.presentedViewController dismissViewControllerAnimated:YES completion:^{
-			
 		}];
 	}
 	else if (viewController.navigationController.viewControllers){
@@ -51,8 +46,7 @@
 		 }
 }
 
-
-- (void)pushOnRouter:(HEROBaseRouter*)router{
+- (void)pushOnRouter:(nonnull HEROBaseRouter*)router{
 	if ([router viewLayer].navigationController) { // use navigationController
 		[[router viewLayer].navigationController pushViewController:[self viewLayer] animated:YES];
 	}else { // FALLBACK
@@ -61,16 +55,15 @@
 	}
 }
 
-- (void)presentOnWindow:(UIWindow*)window withNavigation:(BOOL)hasNavigation{
+- (void)presentOnWindow:(nonnull UIWindow*)window withNavigation:(BOOL)hasNavigation{
 	UIViewController* viewController = [self viewLayer];
 	if (hasNavigation){
 		viewController = [[HERONavigationController alloc] initWithRootViewController:viewController];
 	}
 	window.rootViewController = viewController;
-
 }
 
-- (void)presentOnRouter:(HEROBaseRouter*)router inNavigationController:(BOOL)inNavigationController setAsRootView:(BOOL)setAsRootView transition:(HEROBaseTransition*)transition{
+- (void)presentOnRouter:(HEROBaseRouter*)router inNavigationController:(BOOL)inNavigationController setAsRootView:(BOOL)setAsRootView transition:(nullable HEROBaseTransition*)transition{
 	UIViewController* viewControllerNew;
 	UIViewController* viewController = [router viewLayer];
 	if (inNavigationController) {
@@ -123,4 +116,3 @@
 #endif
 }
 @end
-

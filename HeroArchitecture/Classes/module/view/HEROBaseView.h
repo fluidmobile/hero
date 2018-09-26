@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "HEROBaseViewInterface.h"
-
+NS_ASSUME_NONNULL_BEGIN
 @interface HEROBaseView : UIView <HEROBaseViewInterface>
 -(void)updateSizeClass:(UIUserInterfaceSizeClass)sizeClass;
 @end
+NS_ASSUME_NONNULL_END

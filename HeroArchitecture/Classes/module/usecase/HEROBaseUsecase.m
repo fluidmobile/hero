@@ -10,6 +10,7 @@
 
 @implementation HEROBaseUsecase
 - (void)requestContentUpdate {
+    //default, content is always ready. async callback
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.coordinator contentDidChange];
     });

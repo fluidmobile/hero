@@ -11,19 +11,18 @@
 #import "HEROBaseRouter.h"
 
 @implementation HEROBaseCoordinator
-
 - (instancetype)initWithUsecase:(HEROBaseUsecase*)usecase{
-	self = [super init];
-	if (!self) {
-		return nil;
-	}
-	_usecase = usecase;
-	self.usecase.coordinator = self;
-	return self;
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    _usecase = usecase;
+    self.usecase.coordinator = self;
+    return self;
 }
 
 - (void)requestContentUpdate{
-	[self.usecase requestContentUpdate];
+    [self.usecase requestContentUpdate];
 }
 - (void)contentDidChange{
     [self.viewLayer contentDidChange];
@@ -31,7 +30,7 @@
 
 - (void)dealloc{
 #ifdef DEBUG
-	NSLog(@"DEALLOC on %@",[[self class] description]);
+    NSLog(@"DEALLOC on %@",[[self class] description]);
 #endif
 }
 @end

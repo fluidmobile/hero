@@ -36,16 +36,21 @@
     return nil;
 }
 
-- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass{
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(nullable Class)coordinatorClass usecase:(nullable Class)usecaseClass{
     return [self dequeueCoordinatorForRouter:routerClass coordinator:coordinatorClass usecase:usecaseClass workflowKey:@"DEFAULT"];
 }
 
-- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(Class)coordinatorClass usecase:(Class)usecaseClass workflowKey:(NSString*)workflowKey{
+- (HEROBaseCoordinator*)dequeueCoordinatorForRouter:(Class)routerClass coordinator:(nullable Class)coordinatorClass usecase:(nullable Class)usecaseClass workflowKey:(NSString*)workflowKey{
     NSAssert(routerClass, @"NO router");
     NSArray<HEROBaseRouter*>* routers = [self allExistingRouterForClass:routerClass];
     if (coordinatorClass) {
         routers = [[self class] filterRouters:routers withCoordinatorClass:coordinatorClass];
     }
+    else{
+        //setup router with default coordinator
+        routers = [[self class] filterRouters:routers withCoordinatorClass:[HEROBaseCoordinator class]];
+    }
+    
     if (usecaseClass) {
         routers = [[self class] filterRouters:routers withUsecase:usecaseClass];
     }
@@ -108,22 +113,26 @@
 }
 
 + (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withUsecase:(Class)usecaseClass {
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"coordinator.usecase isKindOfClass: %@", usecaseClass];
+    NSArray* filtered =  [routers filteredArrayUsingPredicate:predicate];
+    //return filtered;
+    //if working apply above
+    
     NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingUsecase = [@[] mutableCopy];
     for (HEROBaseRouter* router in routers) {
         if ([router.coordinator.usecase isKindOfClass:usecaseClass]) {
             [filteredRouterWithMatchingUsecase addObject:router];
         }
     }
+    NSAssert (NO, working?);
     return filteredRouterWithMatchingUsecase;
 }
 
 + (NSArray<HEROBaseRouter*>*)filterRouters:(NSArray<HEROBaseRouter*>*)routers withWorkflowKey:(NSString*)worflowKey {
-    NSMutableArray<HEROBaseRouter*>* filteredRouterWithMatchingUsecase = [@[] mutableCopy];
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"workflowKey == %@", worflowKey];
     NSArray* routersWithIdentifier = [routers filteredArrayUsingPredicate:predicate];
     return routersWithIdentifier;
 }
-
 
 - (HEROBaseWorkflow*)createAndConnectWorkflowForClass:(Class)workflowClass {
     HEROBaseWorkflow* workflow = [workflowClass new];
@@ -134,6 +143,4 @@
 - (void)tabbarDidSelectRouter:(HEROBaseRouter*)router {
     //if needed implement in subclass
 }
-
 @end
-

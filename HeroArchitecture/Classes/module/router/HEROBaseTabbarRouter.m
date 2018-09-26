@@ -17,14 +17,11 @@
 @interface HEROBaseTabbarRouter () <UITabBarControllerDelegate>
 @property (nonatomic, strong) NSArray <HEROBaseCoordinator*> *coordinators;
 @property (nonatomic, weak) HEROBaseRouter *selectedRouter;
-
 @end
 
 @implementation HEROBaseTabbarRouter
 @synthesize viewLayer = _viewLayer;
-
-
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(id)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey{
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl coordinators:(NSArray <HEROBaseCoordinator*>*)coordinators transition:(nullable HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey{
     self = [super initWithCoordinator:coordinator workflow:workflowControl workflowKey:workflowKey];
     if (!self){
         return nil;
@@ -39,7 +36,6 @@
     NSAssert(NO, @"NEVER CALL");
     return nil;
 }
-
 
 - (UIViewController *)viewLayer {
     if (!_viewLayer){
@@ -85,18 +81,15 @@
     return [self.coordinators count] > 0;
 }
 
-- (UITabBarController*)tabBarController {
+- (nonnull UITabBarController*)tabBarController {
     return (UITabBarController*)self.viewLayer;
 }
 
-- (void)updateWithCoordinators:(NSArray<HEROBaseCoordinator *> *)coordinators {
+- (void)updateWithCoordinators:(nonnull NSArray<HEROBaseCoordinator *> *)coordinators {
     self.coordinators = coordinators;
     if (_viewLayer) {
         NSArray<__kindof UIViewController *> *viewControllers = [self tabbarViewControllers];
         [self tabBarController].viewControllers = viewControllers;
     }
 }
-
-
 @end
-

@@ -15,20 +15,16 @@
 #import "HEROBaseViewController.h"
 #import "HEROBaseSplitViewController.h"
 
-
 @interface HEROBaseSplitViewRouter ()
-#warning weak?
 @property (nonatomic, strong) HEROBaseCoordinator* coordinatorRoot;
 @property (nonatomic, strong) HEROBaseCoordinator* coordinatorDetail;
 @property (nonatomic, weak) HEROBaseRouter *selectedRouter;
-
 @end
 
 @implementation HEROBaseSplitViewRouter
 @synthesize viewLayer = _viewLayer;
 
-
-- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl rootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator transition:(HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey{
+- (instancetype)initWithCoordinator:(HEROBaseCoordinator*)coordinator workflowControl:(HEROBaseWorkflow*)workflowControl rootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator transition:(nullable HEROBaseTransition*)transition selectedRouter:(HEROBaseRouter *)selectedRouter workflowKey:(NSString*)workflowKey{
     self = [super initWithCoordinator:coordinator workflow:workflowControl workflowKey:workflowKey];
     if (!self){
         return nil;
@@ -36,11 +32,9 @@
     _selectedRouter = selectedRouter;
     _coordinatorRoot = rootCoordinator;
     _coordinatorDetail = detailCoordinator;
-    
     return self;
 }
 
-//NEVER CALL
 - (Class)viewControllerClass {
     NSAssert(NO, @"NEVER CALL");
     return nil;
@@ -64,8 +58,9 @@
         return _viewLayer;
     }
 }
+
 -(UISplitViewControllerDisplayMode)displayMode{
-    return UISplitViewControllerDisplayModeAllVisible;
+    return UISplitViewControllerDisplayModeAutomatic;
 }
 
 -(UISplitViewController *)splitViewController{
@@ -84,7 +79,7 @@
     return (UITabBarController*)self.viewLayer;
 }
 
-- (void)updateWithRootCoordinator:(HEROBaseCoordinator*)rootCoordinator detailCoordinator:(HEROBaseCoordinator*)detailCoordinator{
+- (void)updateWithRootCoordinator:(nonnull HEROBaseCoordinator*)rootCoordinator detailCoordinator:(nonnull HEROBaseCoordinator*)detailCoordinator{
     self.coordinatorRoot = rootCoordinator;
     self.coordinatorDetail = detailCoordinator;
     if (self.viewLayer){
@@ -104,7 +99,6 @@
     }
 }
 
-
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
     return YES;
 }
@@ -118,8 +112,6 @@
 }
 
 -(void)bringDetailToFront{
-    //self.displayMode == UISplitViewControllerDisplayModePrimaryHidden;
-   
     [self.splitViewController showDetailViewController:self.navControllerDetail sender:self];
 
     if ([self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems.count == 0){
@@ -128,11 +120,8 @@
     }
 }
 
-
 - (void)splitViewController:(UISplitViewController *)svc willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode NS_AVAILABLE_IOS(8_0){
-    NSLog(@"hitShowExpandButton");
-    
-//[self.navControllerDetail.viewControllers firstObject].navigationItem.leftBarButtonItems = @[self.splitViewController.displayModeButtonItem];
+    //change behavior
 }
 
 -(void)showList:(id)sender{
